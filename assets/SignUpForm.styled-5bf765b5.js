@@ -1,4 +1,4 @@
-import{s as r}from"./index-873d2208.js";import{d as i}from"./index.esm-7adc9f23.js";const o={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},s=r(i)`
+import{s as r}from"./index-da9a6f6d.js";import{F as i}from"./index.esm-ddfc91ed.js";const o={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},s=r(i)`
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
   width: 100%;
@@ -67,7 +67,7 @@ import{s as r}from"./index-873d2208.js";import{d as i}from"./index.esm-7adc9f23.
   }
 `,e=r.button`
   background-color: var(--primary-color-green-lite);
-  color: var(--primary-color-white);
+  color: var(--primary-color-black-two);
   padding: 15px;
   border: none;
   border-radius: 5px;
