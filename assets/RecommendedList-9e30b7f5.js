@@ -1,4 +1,4 @@
-import{s as i,j as e,N as g,d,r as c,a as f}from"./index-f46c0c9f.js";const w=i.li`
+import{s as i,j as e,N as g,g as d,r as c,b as f}from"./index-f2f0600c.js";const w=i.li`
 border-radius: 12px;
 background: var(--primary-color-black-two);
 
@@ -111,7 +111,7 @@ line-height: 0.7 ;
 
 
 
-`,E=i(g)`
+`,b=i(g)`
 font-size: 15px;
 display: flex ; 
 justify-content: center;
@@ -120,13 +120,13 @@ font-size: 16px;
 font-weight: 500;
 line-height: 0.7;
 color: var(--primary-color-grey );
-`,F=i.svg`
+`,E=i.svg`
 width: 16px;
 height: 16px;
 fill: var(--primary-color-grey);
 align-items: center;
 
-`,W=i.div`
+`,F=i.div`
 display: flex ; 
 gap: 6px;
 align-items: center;
@@ -145,4 +145,4 @@ flex-wrap: wrap;
     align-items: center;
   
 }
-`,P=()=>{const n=d(m),o=d(p),r=d(x),[s,a]=c.useState(2);return c.useEffect(()=>{const t=()=>{window.innerWidth>=834?a(4):a(2)};return t(),window.addEventListener("resize",t),()=>{window.removeEventListener("resize",t)}},[]),o?e.jsx("div",{children:"Loading..."}):r?e.jsxs("div",{children:["Error: ",r]}):e.jsxs(C,{children:[e.jsx(z,{children:"Recommended food"}),e.jsx(h,{className:"rec-list",children:n.slice(0,s).map(t=>e.jsx(l,{...t},t.name))}),e.jsx(W,{children:e.jsxs(E,{to:"/recommended-food",children:["See more",e.jsx(F,{children:e.jsx("use",{href:`${f}#icon-arrowright`})})]})})]})},S=()=>{const n=d(m),o=d(p),r=d(x);return o?e.jsx("div",{children:"Loading..."}):r?e.jsxs("div",{children:["Error: ",r]}):e.jsx(h,{children:n.slice(0,10).map(s=>e.jsx(l,{...s},s.name))})};export{P as R,T as a,I as b,k as c,N as d,S as e};
+`,P=()=>{const n=d(m),o=d(p),r=d(x),[s,a]=c.useState(2);return c.useEffect(()=>{const t=()=>{window.innerWidth>=834?a(4):a(2)};return t(),window.addEventListener("resize",t),()=>{window.removeEventListener("resize",t)}},[]),o?e.jsx("div",{children:"Loading..."}):r?e.jsxs("div",{children:["Error: ",r]}):e.jsxs(C,{children:[e.jsx(z,{children:"Recommended food"}),e.jsx(h,{className:"rec-list",children:n.slice(0,s).map(t=>e.jsx(l,{...t},t.name))}),e.jsx(F,{children:e.jsxs(b,{to:"/recommended-food",children:["See more",e.jsx(E,{children:e.jsx("use",{href:`${f}#icon-arrowright`})})]})})]})},S=()=>{const n=d(m),o=d(p),r=d(x);return o?e.jsx("div",{children:"Loading..."}):r?e.jsxs("div",{children:["Error: ",r]}):e.jsx(h,{children:n.slice(0,10).map(s=>e.jsx(l,{...s},s.name))})};export{P as R,T as a,I as b,k as c,N as d,S as e};
