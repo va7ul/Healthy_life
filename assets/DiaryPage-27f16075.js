@@ -1,4 +1,4 @@
-import{s as i,j as e}from"./index-f2f0600c.js";const c=i.p`
+import{s as i,j as e}from"./index-e5e60a42.js";const c=i.p`
   font-size: 24px;
   fontWeight: : 500;
   font-family: 'Poppins500';
