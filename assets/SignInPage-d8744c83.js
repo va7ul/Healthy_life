@@ -1,4 +1,4 @@
-import{s as e,r as p,a as c,u as k,j as r,l as I,n as d,b as P,c as E,L as m}from"./index-93734b18.js";import{i as $}from"./welcomepage-690c85c9.js";import{c as z,a as x,b as M,d as U}from"./index.esm-dbf1f536.js";import{W as C,L as g,I as f,e as u,f as y,E as h,a as F,S as L}from"./SignUpForm.styled-44047ffa.js";const T=z().shape({email:x().email("Invalid email").required("Required!"),password:x().min(6,"Too Short!").required("Required!")});e.div`
+import{s as e,r as p,a as c,u as k,j as r,l as I,n as d,b as P,c as E,L as m}from"./index-f46c0c9f.js";import{i as $}from"./welcomepage-690c85c9.js";import{c as z,a as x,b as M,d as U}from"./index.esm-3789903f.js";import{W as C,L as g,I as f,e as u,f as y,E as h,a as F,S as L}from"./SignUpForm.styled-8ffcfea4.js";const T=z().shape({email:x().email("Invalid email").required("Required!"),password:x().min(6,"Too Short!").required("Required!")});e.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
