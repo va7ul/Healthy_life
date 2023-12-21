@@ -1,4 +1,4 @@
-import{s as r}from"./index-c899be68.js";import{F as i}from"./index.esm-4396ed78.js";const o={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},s=r(i)`
+import{s as r}from"./index-6bf3420c.js";import{F as i}from"./index.esm-5a326af2.js";const o={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},s=r(i)`
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
   width: 100%;
