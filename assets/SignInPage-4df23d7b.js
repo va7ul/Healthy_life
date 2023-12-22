@@ -1,4 +1,4 @@
-import{s as o,r as l,b as s,u as I,j as r,l as $,n as x,c as z,L as m}from"./index-bbf07062.js";import{i as P}from"./welcomepage-690c85c9.js";import{c as v,a as d,d as E,F as C,b as B}from"./index.esm-72d623f5.js";const M=v().shape({email:d().email("Invalid email").required("Required!"),password:d().min(6,"Too Short!").required("Required!")});o.div`
+import{s as o,r as l,b as s,u as I,j as r,l as $,n as x,c as z,L as m}from"./index-c8be8ddf.js";import{i as P}from"./welcomepage-690c85c9.js";import{c as v,a as d,d as E,F as C,b as B}from"./index.esm-1c93ce6a.js";const M=v().shape({email:d().email("Invalid email").required("Required!"),password:d().min(6,"Too Short!").required("Required!")});o.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
