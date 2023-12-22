@@ -1,4 +1,4 @@
-import{s as r,u as c,d as p,j as o,L as d,f as m}from"./index-95993abd.js";import{c as h,a as g,F as x,b as u,d as f,E as y}from"./index.esm-31cdef9e.js";import{n as i}from"./notiflix-notify-aio-cd51e5d6.js";import{i as b}from"./welcomepage-690c85c9.js";const v=r.div`
+import{s as r,u as c,d as p,j as o,L as d,f as m}from"./index-a3bd04cf.js";import{c as h,a as g,F as x,b as u,d as f,E as y}from"./index.esm-4a1d3f04.js";import{n as i}from"./notiflix-notify-aio-b81a158d.js";import{i as b}from"./welcomepage-690c85c9.js";const v=r.div`
   display: flex;
   flex-direction: column;
   align-items: center;
