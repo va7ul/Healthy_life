@@ -1,4 +1,4 @@
-import{s as i,j as e,N as g,e as s,r as c,b as f}from"./index-62072c66.js";const w=i.li`
+import{s as i,j as e,N as g,e as s,r as c,b as f}from"./index-fa623c81.js";const w=i.li`
 border-radius: 12px;
 background: var(--primary-color-black-two);
 
