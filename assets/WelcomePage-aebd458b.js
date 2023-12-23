@@ -1,4 +1,4 @@
-import{s as t,j as i,L as n}from"./index-1f7ab0ee.js";import{i as a}from"./welcomepage-690c85c9.js";const d=t.li`
+import{s as t,j as i,L as n}from"./index-1cde3463.js";import{i as a}from"./welcomepage-690c85c9.js";const o=t.li`
   color: white;
   font-size: 14px;
   font-family: 'Poppins400';
@@ -17,15 +17,7 @@ import{s as t,j as i,L as n}from"./index-1f7ab0ee.js";import{i as a}from"./welco
     vertical-align: middle;
     padding-right: 8px;
   }
-/* 
-  @media screen and (min-width: 834px) {
-    width: calc((100% - 16px) / 2);
-  }
-
-  @media screen and (min-width: 1440px) {
-    width: 100%;
-  } */
-`,e=({children:r})=>i.jsx(d,{children:r}),o=t.div`
+`,e=({children:r})=>i.jsx(o,{children:r}),d=t.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +46,7 @@ import{s as t,j as i,L as n}from"./index-1f7ab0ee.js";import{i as a}from"./welco
     padding-top: 20px;
     padding-bottom: 72px;
   }
-`,c=t.img`
+`,l=t.img`
   height: 296px;
   width: 300px;
   background: transparent;
@@ -68,7 +60,7 @@ import{s as t,j as i,L as n}from"./index-1f7ab0ee.js";import{i as a}from"./welco
     width: 592px;
     height: 588px;
   }
-`,p=t.div`
+`,c=t.div`
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -84,11 +76,11 @@ import{s as t,j as i,L as n}from"./index-1f7ab0ee.js";import{i as a}from"./welco
     padding-top: 80px;
     align-items: flex-start;
   }
-`,l=t.div`
+`,s=t.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-`,s=t.div`
+`,p=t.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -144,7 +136,30 @@ import{s as t,j as i,L as n}from"./index-1f7ab0ee.js";import{i as a}from"./welco
   @media screen and (min-width: 1440px) {
     justify-content: flex-start;
   }
-`,g=t.button`
+`;t.button`
+  display: inline-flex;
+  min-width: 142px;
+  padding: 8px 10px;
+  text-align: center;
+  font-family: 'Poppins500';
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  letter-spacing: var(--main-letter-spacing);
+  color: var(--primary-color-black-two);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border 0.3s var(--transition-dur-and-func);
+  align-items: center;
+  gap: 16px;
+
+  @media screen and (min-width: 834px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1440px) {
+    justify-content: flex-start;
+  }
+`;const g=t.button`
   background-color: var(--primary-color-green-lite);
   color: var(--primary-color-black-two);
   padding: 8px 10px;
@@ -158,7 +173,7 @@ import{s as t,j as i,L as n}from"./index-1f7ab0ee.js";import{i as a}from"./welco
 
   &:hover,
   &:focus {
-    background-color: var(--primary-color-lite-green);
+    background-color: var(--secondary-color-yellow);
   }
 
   @media screen and (min-width: 834px) {
@@ -178,7 +193,8 @@ import{s as t,j as i,L as n}from"./index-1f7ab0ee.js";import{i as a}from"./welco
 
   &:hover,
   &:focus {
-    border-color: var(--primary-color-green-lite);
+    border-color: var(--secondary-color-yellow);
+    color: var(--secondary-color-yellow);
   }
 `,f=t.ul`
   list-style: none;
@@ -211,17 +227,18 @@ import{s as t,j as i,L as n}from"./index-1f7ab0ee.js";import{i as a}from"./welco
 
   @media screen and (min-width: 1440px) {
     flex-direction: column;
+
+    :nth-child(1) {
+      width: 100%;
+    }
+    :nth-child(2) {
+      width: 100%;
+    }
+    :nth-child(3) {
+      width: 100%;
+    }
+    :nth-child(4) {
+      width: 100%;
+    }
   }
-  :nth-child(1) {
-    width: 100%;
-  }
-  :nth-child(2) {
-    width: 100%;
-  }
-  :nth-child(3) {
-    width: 100%;
-  }
-  :nth-child(4) {
-    width: 100%;
-  }
-`,j=()=>i.jsxs(o,{children:[i.jsx(c,{src:a,alt:"Activity trtacker"}),i.jsxs(p,{children:[i.jsxs(l,{children:[i.jsxs(s,{children:[i.jsx(x,{children:"Set goals and achieve them"}),i.jsx(h,{children:"The service will help you set goals and follow them."})]}),i.jsxs(m,{children:[i.jsx(n,{to:"/signin",children:i.jsx(g,{children:"Sign in"})}),i.jsx(n,{to:"/signup",children:i.jsx(w,{children:"Sign up"})})]})]}),i.jsxs(f,{children:[i.jsx(e,{children:"Set goals"}),i.jsx(e,{children:"Watch your calories"}),i.jsx(e,{children:"Keep track of your water intake"}),i.jsx(e,{children:"Control your weight"})]})]})]});export{j as default};
+`,j=()=>i.jsxs(d,{children:[i.jsx(l,{src:a,alt:"Activity tracker"}),i.jsxs(c,{children:[i.jsxs(s,{children:[i.jsxs(p,{children:[i.jsx(x,{children:"Set goals and achieve them"}),i.jsx(h,{children:"The service will help you set goals and follow them."})]}),i.jsxs(m,{children:[i.jsx(n,{to:"/signin",children:i.jsx(g,{children:"Sign in"})}),i.jsx(n,{to:"/signup",children:i.jsx(w,{children:"Sign up"})})]})]}),i.jsxs(f,{children:[i.jsx(e,{children:"Set goals"}),i.jsx(e,{children:"Watch your calories"}),i.jsx(e,{children:"Keep track of your water intake"}),i.jsx(e,{children:"Control your weight"})]})]})]});export{j as default};
