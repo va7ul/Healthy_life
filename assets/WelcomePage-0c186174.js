@@ -1,4 +1,4 @@
-import{s as t,j as i,L as n}from"./index-f74ee9e1.js";import{i as a}from"./welcomepage-690c85c9.js";const d=t.li`
+import{s as t,j as i,L as n}from"./index-1f7ab0ee.js";import{i as a}from"./welcomepage-690c85c9.js";const d=t.li`
   color: white;
   font-size: 14px;
   font-family: 'Poppins400';

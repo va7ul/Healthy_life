@@ -1,4 +1,4 @@
-import{s as i,j as e,N as g,e as s,r as c,b as f}from"./index-f74ee9e1.js";const w=i.li`
+import{s as i,j as e,N as g,d,r as c,h as f}from"./index-1f7ab0ee.js";const w=i.li`
 border-radius: 12px;
 background: var(--primary-color-black-two);
 
@@ -45,7 +45,7 @@ line-height: 1.4;
 color: var(--primary-color-grey);
 font-weight: 500;
 line-height: 1.4;
-`,l=({name:n,amount:d,img:r,calories:t})=>e.jsxs(w,{children:[e.jsx(u,{src:r,alt:"img"}),e.jsxs(v,{children:[e.jsx(y,{children:n}),e.jsxs(j,{children:[e.jsx(R,{children:d}),e.jsxs(L,{children:[t," calories"]})]})]})]}),p=n=>n.recommendedFoods.isLoading,x=n=>n.recommendedFoods.error,m=n=>n.recommendedFoods.recomendedFoods,W=i.div`
+`,l=({name:n,amount:s,img:r,calories:t})=>e.jsxs(w,{children:[e.jsx(u,{src:r,alt:"img"}),e.jsxs(v,{children:[e.jsx(y,{children:n}),e.jsxs(j,{children:[e.jsx(R,{children:s}),e.jsxs(L,{children:[t," calories"]})]})]})]}),p=n=>n.recommendedFoods.isLoading,x=n=>n.recommendedFoods.error,m=n=>n.recommendedFoods.recomendedFoods,W=i.div`
 display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -206,4 +206,4 @@ padding: 30px 0;
     width: 212px;
   }
 
-`,B=()=>{const n=s(m),d=s(p),r=s(x),[t,a]=c.useState(2);return c.useEffect(()=>{const o=()=>{window.innerWidth>=834?a(4):a(2)};return o(),window.addEventListener("resize",o),()=>{window.removeEventListener("resize",o)}},[]),d?e.jsx("div",{children:"Loading..."}):r?e.jsxs("div",{children:["Error: ",r]}):e.jsxs(b,{children:[e.jsx(C,{children:"Recommended food"}),e.jsx(h,{className:"rec-list",children:n.slice(0,t).map(o=>e.jsx(l,{...o},o.name))}),e.jsx(E,{children:e.jsxs(z,{to:"/recommended-food",children:["See more",e.jsx(k,{children:e.jsx("use",{href:`${f}#icon-arrowright`})})]})})]})},M=({numberOfCardsToRender:n})=>{const d=s(m),r=s(p),t=s(x);return r?e.jsx("div",{children:"Loading..."}):t?e.jsxs("div",{children:["Error: ",t]}):e.jsx(h,{children:d.slice(0,n).map(a=>e.jsx(l,{...a},a.name))})};export{N as B,B as R,P as S,W as a,S as b,T as c,I as d,M as e};
+`,B=()=>{const n=d(m),s=d(p),r=d(x),[t,a]=c.useState(2);return c.useEffect(()=>{const o=()=>{window.innerWidth>=834?a(4):a(2)};return o(),window.addEventListener("resize",o),()=>{window.removeEventListener("resize",o)}},[]),s?e.jsx("div",{children:"Loading..."}):r?e.jsxs("div",{children:["Error: ",r]}):e.jsxs(b,{children:[e.jsx(C,{children:"Recommended food"}),e.jsx(h,{className:"rec-list",children:n.slice(0,t).map(o=>e.jsx(l,{...o},o.name))}),e.jsx(E,{children:e.jsxs(z,{to:"/recommended-food",children:["See more",e.jsx(k,{children:e.jsx("use",{href:`${f}#icon-arrowright`})})]})})]})},M=({numberOfCardsToRender:n})=>{const s=d(m),r=d(p),t=d(x);return r?e.jsx("div",{children:"Loading..."}):t?e.jsxs("div",{children:["Error: ",t]}):e.jsx(h,{children:s.slice(0,n).map(a=>e.jsx(l,{...a},a.name))})};export{N as B,B as R,P as S,W as a,S as b,T as c,I as d,M as e};
