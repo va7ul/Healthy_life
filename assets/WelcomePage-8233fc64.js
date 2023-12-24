@@ -1,4 +1,4 @@
-import{s as t,j as i,L as n}from"./index-d7d548af.js";import{i as a}from"./welcomepage-690c85c9.js";const o=t.li`
+import{s as t,j as i,L as n}from"./index-022e5f0c.js";import{i as o}from"./welcomepage-690c85c9.js";const a=t.li`
   color: white;
   font-size: 14px;
   font-family: 'Poppins400';
@@ -17,7 +17,7 @@ import{s as t,j as i,L as n}from"./index-d7d548af.js";import{i as a}from"./welco
     vertical-align: middle;
     padding-right: 8px;
   }
-`,e=({children:r})=>i.jsx(o,{children:r}),d=t.div`
+`,e=({children:r})=>i.jsx(a,{children:r}),d=t.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,6 +70,7 @@ import{s as t,j as i,L as n}from"./index-d7d548af.js";import{i as a}from"./welco
   @media screen and (min-width: 834px) {
     align-items: center;
     gap: 80px;
+    width: 444px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -100,11 +101,6 @@ import{s as t,j as i,L as n}from"./index-d7d548af.js";import{i as a}from"./welco
 
   @media screen and (min-width: 834px) {
     font-size: 30px;
-    padding-right: 20px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    padding-right: 0px;
   }
 `,h=t.p`
   color: var(--primary-color-grey);
@@ -241,4 +237,4 @@ import{s as t,j as i,L as n}from"./index-d7d548af.js";import{i as a}from"./welco
       width: 100%;
     }
   }
-`,j=()=>i.jsxs(d,{children:[i.jsx(l,{src:a,alt:"Activity tracker"}),i.jsxs(c,{children:[i.jsxs(s,{children:[i.jsxs(p,{children:[i.jsx(x,{children:"Set goals and achieve them"}),i.jsx(h,{children:"The service will help you set goals and follow them."})]}),i.jsxs(m,{children:[i.jsx(n,{to:"/signin",children:i.jsx(g,{children:"Sign in"})}),i.jsx(n,{to:"/signup",children:i.jsx(w,{children:"Sign up"})})]})]}),i.jsxs(f,{children:[i.jsx(e,{children:"Set goals"}),i.jsx(e,{children:"Watch your calories"}),i.jsx(e,{children:"Keep track of your water intake"}),i.jsx(e,{children:"Control your weight"})]})]})]});export{j as default};
+`,j=()=>i.jsxs(d,{children:[i.jsx(l,{src:o,alt:"Activity tracker"}),i.jsxs(c,{children:[i.jsxs(s,{children:[i.jsxs(p,{children:[i.jsx(x,{children:"Set goals and achieve them"}),i.jsx(h,{children:"The service will help you set goals and follow them."})]}),i.jsxs(m,{children:[i.jsx(n,{to:"/signin",children:i.jsx(g,{children:"Sign in"})}),i.jsx(n,{to:"/signup",children:i.jsx(w,{children:"Sign up"})})]})]}),i.jsxs(f,{children:[i.jsx(e,{children:"Set goals"}),i.jsx(e,{children:"Watch your calories"}),i.jsx(e,{children:"Keep track of your water intake"}),i.jsx(e,{children:"Control your weight"})]})]})]});export{j as default};
