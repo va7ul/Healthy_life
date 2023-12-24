@@ -1,4 +1,4 @@
-import{s as i,N as v,F as y,r as k,u as j,j as e,a as F,b as S,l as z,L as E}from"./index-ae01c17d.js";import{i as x,a as m}from"./eye-off-f72da7f5.js";import{c as P,a}from"./index.esm-c1727bb5.js";import{i as $}from"./welcomepage-690c85c9.js";const I=i.div`
+import{s as i,N as v,c as y,a,F as k,r as j,u as F,j as e,b as S,d as z,l as E,L as P}from"./index-ab2ba5fd.js";import{i as x,a as m}from"./eye-off-b9932693.js";import{i as $}from"./welcomepage-690c85c9.js";const I=i.div`
   margin: 0 auto;
   padding: 10px;
   background-color: var(--primary-color-black-one);
@@ -247,12 +247,12 @@ import{s as i,N as v,F as y,r as k,u as j,j as e,a as F,b as S,l as z,L as E}fro
   &:focus {
     text-decoration: underline;
   }
-`,s=P().shape({email:a().trim().strict().email("Enter a valid Email*").required("Email is required!"),password:a().trim().strict().min(6,"Enter a valid Password*").required("Password is required!")});i.div`
+`,s=y().shape({email:a().trim().strict().email("Enter a valid Email*").required("Email is required!"),password:a().trim().strict().min(6,"Enter a valid Password*").required("Password is required!")});i.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
-`;const n={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},l=i(y)`
+`;const n={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},l=i(k)`
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
   width: 100%;
@@ -367,4 +367,4 @@ import{s as i,N as v,F as y,r as k,u as j,j as e,a as F,b as S,l as z,L as E}fro
   @media screen and (min-width: 1440px) {
     width: 212px;
   }
-`,D={email:"",password:""},M=()=>{const[o,g]=k.useState(!1),h=j(),f=(r,t)=>{h(z(r)),t.resetForm()},u=()=>{g(!o)};return e.jsx(F,{initialValues:D,validationSchema:s,onSubmit:f,children:({errors:r,touched:t})=>{const b=t.email?r.email?"1px solid #e74a3b":"1px solid #3cbc81":"1px solid var(--primary-color-green-lite)",w=t.password?r.password?"1px solid #e74a3b":"1px solid #3cbc81":"1px solid var(--primary-color-green-lite)";return e.jsxs(S,{autoComplete:"off",children:[e.jsxs(Q,{children:[e.jsx(c,{children:e.jsx(l,{border:b,type:"text",name:"email",validate:s,placeholder:"Email"})}),r.email&&t.email||!r.email&&t.email?e.jsx(p,{children:e.jsx(d,{color:!r.email&&t.email?"#3cbc81":null,children:r.email?r.email:"Email is valid"})}):null,e.jsxs(c,{children:[e.jsx(l,{border:w,type:o?"text":"password",name:"password",placeholder:"Password"}),e.jsx(V,{children:e.jsx(U,{onClick:u,children:e.jsx("image",{href:o?x:m})})})]}),r.password&&t.password||!r.password&&t.password?e.jsx(p,{children:e.jsx(d,{color:!r.password&&t.password?"#3cbc81":null,children:r.password?r.password:"Password is secure"})}):null]}),e.jsx(A,{type:"submit",children:"Sign In"})]})}})},O=()=>e.jsxs(I,{children:[e.jsx(q,{src:$,alt:"Activity tracker"}),e.jsxs(B,{children:[e.jsxs(C,{children:[e.jsx(L,{children:"Sign in"}),e.jsx(W,{children:"You need to login to use the service"})]}),e.jsx(M,{}),e.jsx(E,{to:"/forgot-password",children:e.jsx(Y,{children:"Forgot your password?"})}),e.jsxs(N,{children:[e.jsx(T,{children:"If you do not have an account yet"}),e.jsx(H,{to:"/signup",children:"Sign up"})]})]})]});export{O as default};
+`,D={email:"",password:""},M=()=>{const[o,g]=j.useState(!1),h=F(),f=(r,t)=>{h(E(r)),t.resetForm()},u=()=>{g(!o)};return e.jsx(S,{initialValues:D,validationSchema:s,onSubmit:f,children:({errors:r,touched:t})=>{const b=t.email?r.email?"1px solid #e74a3b":"1px solid #3cbc81":"1px solid var(--primary-color-green-lite)",w=t.password?r.password?"1px solid #e74a3b":"1px solid #3cbc81":"1px solid var(--primary-color-green-lite)";return e.jsxs(z,{autoComplete:"off",children:[e.jsxs(Q,{children:[e.jsx(c,{children:e.jsx(l,{border:b,type:"text",name:"email",validate:s,placeholder:"Email"})}),r.email&&t.email||!r.email&&t.email?e.jsx(p,{children:e.jsx(d,{color:!r.email&&t.email?"#3cbc81":null,children:r.email?r.email:"Email is valid"})}):null,e.jsxs(c,{children:[e.jsx(l,{border:w,type:o?"text":"password",name:"password",placeholder:"Password"}),e.jsx(V,{children:e.jsx(U,{onClick:u,children:e.jsx("image",{href:o?x:m})})})]}),r.password&&t.password||!r.password&&t.password?e.jsx(p,{children:e.jsx(d,{color:!r.password&&t.password?"#3cbc81":null,children:r.password?r.password:"Password is secure"})}):null]}),e.jsx(A,{type:"submit",children:"Sign In"})]})}})},K=()=>e.jsxs(I,{children:[e.jsx(q,{src:$,alt:"Activity tracker"}),e.jsxs(B,{children:[e.jsxs(C,{children:[e.jsx(L,{children:"Sign in"}),e.jsx(W,{children:"You need to login to use the service"})]}),e.jsx(M,{}),e.jsx(P,{to:"/forgot-password",children:e.jsx(Y,{children:"Forgot your password?"})}),e.jsxs(N,{children:[e.jsx(T,{children:"If you do not have an account yet"}),e.jsx(H,{to:"/signup",children:"Sign up"})]})]})]});export{K as default};
