@@ -1,4 +1,4 @@
-import{s as i,j as e,N as g,d as s,r as c,h as f}from"./index-859a487c.js";const w=i.li`
+import{s as i,j as e,N as g,g as s,r as c,k as f}from"./index-d81440de.js";const w=i.li`
 border-radius: 12px;
 background: var(--primary-color-black-two);
 
@@ -112,7 +112,7 @@ line-height: 1.4;
     font-size: 22px;
     line-height: 1.4;
   }
-`,z=i(g)`
+`,k=i(g)`
   font-size: 15px;
   display: flex;
   justify-content: center;
@@ -125,7 +125,7 @@ line-height: 1.4;
   &:focus {
     color: var(--primary-color-green-lite);
   }
-`,k=i.svg`
+`,z=i.svg`
   width: 16px;
   height: 16px;
   fill: var(--primary-color-grey);
@@ -176,4 +176,4 @@ line-height: 1.4;
   @media screen and (min-width: 834px) {
     width: 212px;
   }
-`,B=()=>{const n=s(m),a=s(p),r=s(x),[t,d]=c.useState(2);return c.useEffect(()=>{const o=()=>{window.innerWidth>=834?d(4):d(2)};return o(),window.addEventListener("resize",o),()=>{window.removeEventListener("resize",o)}},[]),a?e.jsx("div",{children:"Loading..."}):r?e.jsxs("div",{children:["Error: ",r]}):e.jsxs(b,{children:[e.jsx(C,{children:"Recommended food"}),e.jsx(h,{className:"rec-list",children:n.slice(0,t).map(o=>e.jsx(l,{...o},o.name))}),e.jsx(E,{children:e.jsxs(z,{to:"/recommended-food",children:["See more",e.jsx(k,{children:e.jsx("use",{href:`${f}#icon-arrowright`})})]})})]})},M=({numberOfCardsToRender:n})=>{const a=s(m),r=s(p),t=s(x);return r?e.jsx("div",{children:"Loading..."}):t?e.jsxs("div",{children:["Error: ",t]}):e.jsx(h,{children:a.slice(0,n).map(d=>e.jsx(l,{...d},d.name))})};export{N as B,B as R,P as S,W as a,S as b,T as c,I as d,M as e,m as s};
+`,B=()=>{const n=s(m),a=s(p),r=s(x),[t,d]=c.useState(2);return c.useEffect(()=>{const o=()=>{window.innerWidth>=834?d(4):d(2)};return o(),window.addEventListener("resize",o),()=>{window.removeEventListener("resize",o)}},[]),a?e.jsx("div",{children:"Loading..."}):r?e.jsxs("div",{children:["Error: ",r]}):e.jsxs(b,{children:[e.jsx(C,{children:"Recommended food"}),e.jsx(h,{className:"rec-list",children:n.slice(0,t).map(o=>e.jsx(l,{...o},o.name))}),e.jsx(E,{children:e.jsxs(k,{to:"/recommended-food",children:["See more",e.jsx(z,{children:e.jsx("use",{href:`${f}#icon-arrowright`})})]})})]})},M=({numberOfCardsToRender:n})=>{const a=s(m),r=s(p),t=s(x);return r?e.jsx("div",{children:"Loading..."}):t?e.jsxs("div",{children:["Error: ",t]}):e.jsx(h,{children:a.slice(0,n).map(d=>e.jsx(l,{...d},d.name))})};export{N as B,B as R,P as S,W as a,S as b,T as c,I as d,M as e,m as s};
