@@ -1,4 +1,4 @@
-import{s as i}from"./index-4f766f15.js";const o=e=>e.dailyStatisticsFood.consumedFood.breakfast,n=e=>e.dailyStatisticsFood.consumedFood.lunch,a=e=>e.dailyStatisticsFood.consumedFood.dinner,r=e=>e.dailyStatisticsFood.consumedFood.snack,p=i.div`
+import{s as i}from"./index-3aa1b888.js";const o=e=>e.dailyStatisticsFood.consumedFood.breakfast,n=e=>e.dailyStatisticsFood.consumedFood.lunch,a=e=>e.dailyStatisticsFood.consumedFood.dinner,r=e=>e.dailyStatisticsFood.consumedFood.snack,p=i.div`
   display: flex;
   gap: 12px;
   @media screen and (min-width: 834px) {
