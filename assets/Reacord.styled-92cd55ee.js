@@ -1,4 +1,4 @@
-import{s as i}from"./index-f2585cdd.js";const n=t=>t.dailyStatisticsFood.consumedFood.breakfast,o=t=>t.dailyStatisticsFood.consumedFood.lunch,a=t=>t.dailyStatisticsFood.consumedFood.dinner,p=t=>t.dailyStatisticsFood.consumedFood.snack,d=i.p`
+import{s as i}from"./index-e69392ed.js";const n=t=>t.dailyStatisticsFood.consumedFood.breakfast,o=t=>t.dailyStatisticsFood.consumedFood.lunch,a=t=>t.dailyStatisticsFood.consumedFood.dinner,p=t=>t.dailyStatisticsFood.consumedFood.snack,d=i.p`
   font-size: 24px;
   font-weight: 500;
   font-family: 'Poppins500';
