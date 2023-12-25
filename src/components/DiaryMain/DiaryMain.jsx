@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import {
   selectBreakfast,
   selectDinner,
@@ -24,7 +25,7 @@ const DiaryMain = () => {
   const lunch = useSelector(selectLunch);
   const snack = useSelector(selectSnack);
   const dinner = useSelector(selectDinner);
-
+  const navigate = useNavigate();
 
   const totalFatBreakfast = breakfast.reduce(
     (sum, item) => sum + item.nutrition?.fat,
@@ -82,7 +83,7 @@ const DiaryMain = () => {
     <ContainerDiary>
       <div style={{ display: 'flex', gap: '16px', marginBottom: '16px' }}>
         <Title>Diary</Title>
-        <SeeMore>See more</SeeMore>
+        <SeeMore onClick={() => navigate('/diary')}>See more</SeeMore>
       </div>
       <FoodBlocks>
         <ContentBlock>
