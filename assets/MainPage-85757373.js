@@ -1,4 +1,4 @@
-import{s as t,k as h,m as P,n as S,j as e,o as m,t as g,p as _,q as H,v as V,r as w,u as y,w as q,x as N,L as R,y as Z,z as J,A as K,B as O}from"./index-4079d69f.js";import{C as T,A as Q,p as M,a as A,D as X,b as Y,L as ee,B as te,c as re,d as ie}from"./index-cf9beb04.js";import{R as ne}from"./RecommendedList-f6294735.js";import{M as oe,A as ae,s as se,a as le,b as ce,c as de}from"./Reacord.styled-09c95ee7.js";const pe=t.div`
+import{s as t,k as h,m as P,n as S,j as e,o as m,t as g,p as _,q as H,v as V,r as w,u as y,w as q,x as N,L as R,y as Z,z as J,A as K,B as O}from"./index-e85a2121.js";import{C as T,A as Q,p as M,a as A,D as X,b as Y,L as ee,B as te,c as re,d as ie}from"./index-9f25b2f2.js";import{R as ne}from"./RecommendedList-2fde985f.js";import{M as oe,A as ae,s as se,a as le,b as ce,c as de}from"./Reacord.styled-0d267890.js";const pe=t.div`
   width: 300px;
 
   @media screen and (min-width: 834px) {
@@ -509,9 +509,15 @@ import{s as t,k as h,m as P,n as S,j as e,o as m,t as g,p as _,q as H,v as V,r a
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-bottom: 80px;
+
+  @media screen and (min-width: 834px) {
+    padding-bottom: 40px;
+  }
   @media screen and (min-width: 1440px) {
     flex-direction: row;
     padding-top: 20px;
     gap: 138px;
+    padding-bottom: 52px;
   }
 `,Pt=()=>{const r=y();return w.useEffect(()=>{r(J()),r(K()),r(O())},[r]),e.jsxs(e.Fragment,{children:[e.jsx(pt,{}),e.jsxs(Wt,{children:[e.jsx($t,{}),e.jsx(ne,{})]})]})};export{Pt as default};
