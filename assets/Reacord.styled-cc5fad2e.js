@@ -1,8 +1,8 @@
-import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consumedFood.breakfast,a=t=>t.dailyStatisticsFood.consumedFood.lunch,n=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=i.div`
+import{s as i}from"./index-278de617.js";const o=t=>t.dailyStatisticsFood.consumedFood.breakfast,a=t=>t.dailyStatisticsFood.consumedFood.lunch,n=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=i.div`
   display: flex;
   gap: 12px;
   @media screen and (min-width: 834px) {
-    margin-right: 196px;
+    margin-right: 126px;
   }
   @media screen and (min-width: 1440px) {
     margin-right: 159px;
@@ -35,7 +35,9 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
   width: 32px;
   height: 32px;
 `,g=i.div`
-  width: 178px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   @media screen and (min-width: 834px) {
     width: 100%;
     display: flex;
@@ -53,6 +55,18 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
   font-size: 14px;
   font-weight: 400;
   margin-top: 20px;
+  width: 100%;
+  @media screen and (min-width: 834px) {
+    margin-top: 0px;
+    width: auto;
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+`,w=i.p`
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 20px;
 
   @media screen and (min-width: 834px) {
     margin-top: 0px;
@@ -60,43 +74,66 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`,y=i.p`
+`,y=i.div`
+  display: flex;
+  gap: 20px;
+`,u=i.p`
   font-size: 18px;
   font-weight: 800;
-`,w=i.p`
+`,b=i.p`
   color: var(--primary-color-white);
   text-align: center;
   font-weight: 600;
   line-height: 1.42;
-`,u=i.div`
+`,v=i.div`
   max-width: 676px;
   margin-bottom: 24px;
-`,b=i.div`
+`,k=i.div`
   min-width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-`,v=i.p`
+`,F=i.p`
   color: var(--primary-color-white);
+  width: calc(100% - 30px);
   /* Body text/1 */
   font-family: 'Poppins400';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 142.857% */
+
+  @media screen and (min-width: 834px) {
+    width: auto;
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+`,S=i.p`
+  color: var(--primary-color-white);
+  /* Body text/1 */
+  font-family: 'Poppins400';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
   max-height: 25px;
-`,k=i.div`
+`,B=i.div`
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+`,z=i.div`
   @media screen and (min-width: 834px) {
     /* width: 834px; */
     display: flex;
-    justify-content: space-between;
   }
 
   @media screen and (min-width: 1440px) {
     /* display: flex;
     flex-wrap: wrap; */
   }
-`,F=i.div`
+`,M=i.div`
   display: flex;
   gap: 6px;
   height: 20px;
@@ -104,7 +141,7 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
   top: 14px;
   right: 14px;
   color: var(--primary-color-green-lite);
-`,S=i.div`
+`,C=i.div`
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -121,7 +158,7 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
   justify-content: center;
   align-items: center;
   z-index: 1000;
-`,B=i.div`
+`,P=i.div`
   position: relative;
   padding: 10px;
   width: 300px;
@@ -137,14 +174,14 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`,z=i.h2`
+`,T=i.h2`
   color: var(--primary-color-white);
   font-family: 'Poppins500';
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.25;
-`,C=i.input`
+`,I=i.input`
   width: 276px;
   padding: 12px;
   border-radius: 12px;
@@ -191,7 +228,7 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`;const M=i.div`
+`;const R=i.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -205,12 +242,12 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`,P=i.div`
+`,j=i.div`
   width: 276px;
   display: flex;
   align-items: center;
   gap: 8px;
-`,T=i.input`
+`,W=i.input`
   display: flex;
   width: 120px;
   padding: 10px;
@@ -225,7 +262,7 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
     font-weight: 400;
     line-height: 20px;
   }
-`,I=i.div`
+`,N=i.div`
   margin-top: 60px;
   margin-top: 64px;
   display: flex;
@@ -241,7 +278,7 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`,j=i.button`
+`,D=i.button`
   display: block;
   width: 256px;
   padding: 8px 10px;
@@ -258,13 +295,13 @@ import{s as i}from"./index-2cc3b39a.js";const e=t=>t.dailyStatisticsFood.consume
   margin-left: auto;
   margin-right: auto;
   border: none;
-`,R=i.p`
+`,A=i.p`
   color: var(--primary-color-green-lite);
   font-weight: 500;
   line-height: 1.42;
-`,D=i.button`
+`,E=i.button`
   text-align: center;
   background-color: transparent;
   color: var(--primary-color-grey);
   border: none;
-`;export{R as A,I as B,B as C,F as E,M as I,x as M,w as N,C as R,P as S,z as T,k as W,s as a,l as b,c,h as d,y as e,j as f,D as g,p as h,e as i,a as j,n as k,r as l,S as m,T as n,u as o,g as p,f as q,m as r,d as s,b as t,v as u};
+`;export{A,N as B,P as C,M as E,R as I,x as M,b as N,I as R,j as S,T,z as W,s as a,l as b,c,h as d,u as e,D as f,E as g,p as h,o as i,a as j,n as k,r as l,C as m,W as n,v as o,g as p,f as q,y as r,d as s,w as t,m as u,k as v,F as w,B as x,S as y};
