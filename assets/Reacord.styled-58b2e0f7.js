@@ -1,4 +1,4 @@
-import{s as i}from"./index-d5a3f81a.js";const e=t=>t.dailyStatisticsFood.consumedFood.breakfast,a=t=>t.dailyStatisticsFood.consumedFood.lunch,n=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=i.div`
+import{s as i}from"./index-930f9377.js";const e=t=>t.dailyStatisticsFood.consumedFood.breakfast,a=t=>t.dailyStatisticsFood.consumedFood.lunch,n=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=i.div`
   display: flex;
   gap: 12px;
   @media screen and (min-width: 834px) {
@@ -267,4 +267,4 @@ import{s as i}from"./index-d5a3f81a.js";const e=t=>t.dailyStatisticsFood.consume
   background-color: transparent;
   color: var(--primary-color-grey);
   border: none;
-`;export{R as A,j as B,B as C,F as E,M as I,x as M,w as N,C as R,P as S,z as T,k as W,s as a,l as b,c,h as d,y as e,I as f,D as g,p as h,e as i,a as j,n as k,r as l,S as m,T as n,u as o,g as p,f as q,m as r,d as s,b as t,v as u};
+`;export{R as A,I as B,B as C,F as E,M as I,x as M,w as N,C as R,P as S,z as T,k as W,s as a,l as b,c,h as d,y as e,j as f,D as g,p as h,e as i,a as j,n as k,r as l,S as m,T as n,u as o,g as p,f as q,m as r,d as s,b as t,v as u};
