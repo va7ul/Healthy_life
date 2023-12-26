@@ -1,4 +1,4 @@
-import{s as e,u as j,r as n,j as o,z as F,as as C}from"./index-f998aedf.js";const E=t=>t.dailyStatisticsFood.consumedFood.breakfast,O=t=>t.dailyStatisticsFood.consumedFood.lunch,W=t=>t.dailyStatisticsFood.consumedFood.dinner,L=t=>t.dailyStatisticsFood.consumedFood.snack,$=t=>t.dailyStatisticsFood.isOpen,q=t=>t.dailyStatisticsFood.consumedFood.totalCalories,G=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,J=t=>t.dailyStatisticsFood.consumedFood.totalProtein,K=t=>t.dailyStatisticsFood.consumedFood.totalFat,S=e.div`
+import{s as e,u as j,r as n,j as o,z as F,at as C}from"./index-29824abf.js";const E=t=>t.dailyStatisticsFood.consumedFood.breakfast,O=t=>t.dailyStatisticsFood.consumedFood.lunch,W=t=>t.dailyStatisticsFood.consumedFood.dinner,L=t=>t.dailyStatisticsFood.consumedFood.snack,$=t=>t.dailyStatisticsFood.isOpen,q=t=>t.dailyStatisticsFood.consumedFood.totalCalories,G=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,J=t=>t.dailyStatisticsFood.consumedFood.totalProtein,K=t=>t.dailyStatisticsFood.consumedFood.totalFat,S=e.div`
   display: flex;
   gap: 12px;
   @media screen and (min-width: 834px) {
