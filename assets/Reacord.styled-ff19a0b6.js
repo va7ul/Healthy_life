@@ -1,8 +1,8 @@
-import{s as i}from"./index-7d225da6.js";const o=t=>t.dailyStatisticsFood.consumedFood.breakfast,a=t=>t.dailyStatisticsFood.consumedFood.lunch,n=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=i.div`
+import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consumedFood.breakfast,n=t=>t.dailyStatisticsFood.consumedFood.lunch,a=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=i.div`
   display: flex;
   gap: 12px;
   @media screen and (min-width: 834px) {
-    margin-right: 100px;
+    margin-right: 150px;
   }
   @media screen and (min-width: 1440px) {
     margin-right: 159px;
@@ -26,6 +26,7 @@ import{s as i}from"./index-7d225da6.js";const o=t=>t.dailyStatisticsFood.consume
     max-width: 780px;
     padding: 32px 14px;
     gap: 32px;
+    margin-top: 6px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -87,8 +88,16 @@ import{s as i}from"./index-7d225da6.js";const o=t=>t.dailyStatisticsFood.consume
   font-weight: 600;
   line-height: 1.42;
 `,v=i.div`
-  max-width: 676px;
-  margin-bottom: 24px;
+  max-width: 780px;
+  margin-bottom: 27px;
+
+  @media screen and (min-width: 834px) {
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 676px;
+    margin-bottom: 20px;
+  }
 `,k=i.div`
   position: relative;
   min-width: 100%;
@@ -311,4 +320,4 @@ import{s as i}from"./index-7d225da6.js";const o=t=>t.dailyStatisticsFood.consume
   background-color: transparent;
   color: var(--primary-color-grey);
   border: none;
-`;export{N as A,W as B,C,z as E,I,x as M,b as N,T as R,R as S,P as T,B as W,s as a,l as b,c,h as d,u as e,D as f,A as g,p as h,o as i,a as j,n as k,r as l,M as m,j as n,v as o,g as p,f as q,y as r,d as s,w as t,m as u,k as v,F as w,S as x};
+`;export{N as A,W as B,C,z as E,I,x as M,b as N,T as R,R as S,P as T,B as W,s as a,l as b,c,h as d,u as e,D as f,A as g,p as h,o as i,n as j,a as k,r as l,M as m,j as n,v as o,g as p,f as q,y as r,d as s,w as t,m as u,k as v,F as w,S as x};
