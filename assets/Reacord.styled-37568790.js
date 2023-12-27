@@ -1,4 +1,4 @@
-import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consumedFood.breakfast,n=t=>t.dailyStatisticsFood.consumedFood.lunch,a=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=i.div`
+import{s as i}from"./index-7b6ebf1f.js";const o=t=>t.dailyStatisticsFood.consumedFood.breakfast,n=t=>t.dailyStatisticsFood.consumedFood.lunch,a=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=t=>t.dailyStatisticsFood.inputCounter,m=i.div`
   display: flex;
   gap: 12px;
   @media screen and (min-width: 834px) {
@@ -7,7 +7,7 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
   @media screen and (min-width: 1440px) {
     margin-right: 159px;
   }
-`,m=i.div`
+`,h=i.div`
   margin-top: 12px;
   overflow: auto;
   display: flex;
@@ -33,10 +33,10 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
     width: 676px;
     height: 240px;
   }
-`,h=i.img`
+`,g=i.img`
   width: 32px;
   height: 32px;
-`,g=i.div`
+`,f=i.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +53,7 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
     align-items: center;
     justify-content: center;
   }
-`,f=i.p`
+`,w=i.p`
   font-size: 14px;
   font-weight: 400;
   margin-top: 12px;
@@ -65,7 +65,7 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`,w=i.p`
+`,y=i.p`
   font-size: 14px;
   font-weight: 400;
   margin-top: 12px;
@@ -76,18 +76,18 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`,y=i.div`
+`,u=i.div`
   display: flex;
   gap: 20px;
-`,u=i.p`
+`,b=i.p`
   font-size: 18px;
   font-weight: 800;
-`,b=i.p`
+`,v=i.p`
   color: var(--primary-color-white);
   text-align: center;
   font-weight: 600;
   line-height: 1.42;
-`,v=i.div`
+`,k=i.div`
   max-width: 780px;
   margin-bottom: 27px;
 
@@ -98,14 +98,14 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
     max-width: 676px;
     margin-bottom: 20px;
   }
-`,k=i.div`
+`,F=i.div`
   position: relative;
   min-width: 100%;
   display: flex;
   flex-wrap: wrap;
   row-gap: 8px;
   column-gap: 12px;
-`,F=i.p`
+`,S=i.p`
   color: var(--primary-color-white);
   width: calc(100% - 30px);
   /* Body text/1 */
@@ -121,7 +121,7 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`,S=i.p`
+`,B=i.p`
   margin-left: 20px;
   color: var(--primary-color-white);
   /* Body text/1 */
@@ -136,7 +136,7 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
     position: relative;
     left: 120px;
   }
-`,B=i.div`
+`,C=i.div`
   @media screen and (min-width: 834px) {
     /* width: 834px; */
     display: flex;
@@ -174,7 +174,7 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
   justify-content: center;
   align-items: center;
   z-index: 1000;
-`,C=i.div`
+`,P=i.div`
   position: relative;
   padding: 10px;
   width: 300px;
@@ -190,7 +190,7 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`,P=i.h2`
+`,I=i.h2`
   color: var(--primary-color-white);
   font-family: 'Poppins500';
   font-size: 24px;
@@ -244,7 +244,7 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`;const I=i.div`
+`;const R=i.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -258,12 +258,12 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`,R=i.div`
+`,j=i.div`
   width: 276px;
   display: flex;
   align-items: center;
   gap: 8px;
-`,j=i.input`
+`,W=i.input`
   display: flex;
   width: 120px;
   padding: 10px;
@@ -278,7 +278,7 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
     font-weight: 400;
     line-height: 20px;
   }
-`,W=i.div`
+`,D=i.div`
   margin-top: 60px;
   margin-top: 64px;
   display: flex;
@@ -294,7 +294,7 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
 
   @media screen and (min-width: 1440px) {
   }
-`,D=i.button`
+`,N=i.button`
   display: block;
   width: 256px;
   padding: 8px 10px;
@@ -311,13 +311,13 @@ import{s as i}from"./index-02caf8bd.js";const o=t=>t.dailyStatisticsFood.consume
   margin-left: auto;
   margin-right: auto;
   border: none;
-`,N=i.p`
+`,A=i.p`
   color: var(--primary-color-green-lite);
   font-weight: 500;
   line-height: 1.42;
-`,A=i.button`
+`,E=i.button`
   text-align: center;
   background-color: transparent;
   color: var(--primary-color-grey);
   border: none;
-`;export{N as A,W as B,C,z as E,I,x as M,b as N,T as R,R as S,P as T,B as W,s as a,l as b,c,h as d,u as e,D as f,A as g,p as h,o as i,n as j,a as k,r as l,M as m,j as n,v as o,g as p,f as q,y as r,d as s,w as t,m as u,k as v,F as w,S as x};
+`;export{A,D as B,P as C,z as E,R as I,m as M,v as N,T as R,j as S,I as T,C as W,s as a,l as b,c,x as d,g as e,b as f,N as g,E as h,p as i,o as j,n as k,a as l,r as m,M as n,W as o,k as p,f as q,w as r,d as s,u as t,y as u,h as v,F as w,S as x,B as y};
