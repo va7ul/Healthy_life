@@ -1,4 +1,4 @@
-import{s as i}from"./index-7b6ebf1f.js";const o=t=>t.dailyStatisticsFood.consumedFood.breakfast,n=t=>t.dailyStatisticsFood.consumedFood.lunch,a=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=t=>t.dailyStatisticsFood.inputCounter,m=i.div`
+import{s as i}from"./index-e4382a43.js";const o=t=>t.dailyStatisticsFood.consumedFood.breakfast,n=t=>t.dailyStatisticsFood.consumedFood.lunch,a=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=t=>t.dailyStatisticsFood.inputCounter,m=i.div`
   display: flex;
   gap: 12px;
   @media screen and (min-width: 834px) {
@@ -89,14 +89,11 @@ import{s as i}from"./index-7b6ebf1f.js";const o=t=>t.dailyStatisticsFood.consume
   line-height: 1.42;
 `,k=i.div`
   max-width: 780px;
-  margin-bottom: 27px;
 
   @media screen and (min-width: 834px) {
-    margin-bottom: 24px;
   }
   @media screen and (min-width: 1440px) {
     max-width: 676px;
-    margin-bottom: 20px;
   }
 `,F=i.div`
   position: relative;
