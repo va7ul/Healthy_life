@@ -113,7 +113,6 @@ export const ProfileSettingsCard = () => {
                   }
                   selectedImage = e.currentTarget.files[0];
                   formik.setFieldValue('avatar', selectedImage);
-                  console.log(selectedImage);
                 }}
               />
               <IconWrapper>
