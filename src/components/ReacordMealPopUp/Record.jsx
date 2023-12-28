@@ -75,7 +75,7 @@ export const Record = ({
   };
 
   return (
-    <BackDrop>
+    <BackDrop onClick={onCloseHandler}>
       <ContentBlock>
         <Title>Record your meal</Title>
         <MealContainer
