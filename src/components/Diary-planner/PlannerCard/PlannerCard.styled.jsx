@@ -50,6 +50,7 @@ export const MealSubscription = styled.div`
   @media screen and (min-width: 1440px) {
     display: flex;
     align-items: center;
+    margin-right: 40px;
   }
 `;
 
@@ -59,17 +60,12 @@ export const MealSubTextMain = styled.p`
     margin-top: 0px;
     width: 154px;
   }
-
-  @media screen and (min-width: 1440px) {
-  }
 `;
 
 export const MealSubText = styled.p`
   @media screen and (min-width: 834px) {
+    width: 92px;
     margin-top: 0px;
-  }
-
-  @media screen and (min-width: 1440px) {
   }
 `;
 
