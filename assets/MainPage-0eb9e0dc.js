@@ -1,4 +1,4 @@
-import{s as t,i as x,k as E,m as G,j as e,n as f,t as m,o as q,p as V,q as Z,r as b,u as k,v as J,w as K,L as U,x as Q,y as X,z as Y,A as ee,B as te,C as re}from"./index-78cbebac.js";import{C as _,A as ie,p as H,a as N,D as ne,b as oe,L as ae,B as se,c as le,d as ce}from"./index-323edcca.js";import{s as de,a as pe,b as xe,c as he,M as ge,d as me,A as ue,e as fe,f as we,g as ye,h as be,B as ve,L as je,D as ke,S as Ce}from"./MealPopUpModal-aaf8a3ed.js";import{R as $e}from"./RecommendedList-2804ad39.js";const We=t.div`
+import{s as t,i as x,k as E,m as G,j as e,n as f,t as m,o as q,p as V,q as Z,r as b,u as k,v as J,w as K,L as U,x as Q,y as X,z as Y,A as ee,B as te,C as re}from"./index-6101249e.js";import{C as _,A as ie,p as H,a as N,D as ne,b as oe,L as ae,B as se,c as le,d as ce}from"./index-3f9db5a4.js";import{s as de,a as pe,b as xe,c as he,M as ge,d as me,A as ue,e as fe,f as we,g as ye,h as be,B as ve,L as je,D as ke,S as Ce}from"./MealPopUpModal-3eb74e37.js";import{R as $e}from"./RecommendedList-c21c7dcc.js";const We=t.div`
   width: 300px;
 
   @media screen and (min-width: 834px) {
@@ -430,8 +430,15 @@ import{s as t,i as x,k as E,m as G,j as e,n as f,t as m,o as q,p as V,q as Z,r a
   align-items: center;
 `,Bt=t.h2`
   color: var(--primary-color-white);
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.33;
+
+  @media screen and (min-width: 834px) {
+    font-size: 22px;
+    line-height: 1.45;
+  }
 `,Dt=t(U)`
   color: var(--primary-color-grey);
   font-size: 14px;
@@ -472,7 +479,7 @@ import{s as t,i as x,k as E,m as G,j as e,n as f,t as m,o as q,p as V,q as Z,r a
   display: flex;
   gap: 4px;
   @media screen and (min-width: 834px) {
-    min-width: 160px;
+    width: auto;
   }
 `,A=t.p`
   color: var(--primary-color-white);
@@ -481,7 +488,7 @@ import{s as t,i as x,k as E,m as G,j as e,n as f,t as m,o as q,p as V,q as Z,r a
   display: flex;
   gap: 4px;
   @media screen and (min-width: 834px) {
-    min-width: 88px;
+    /* min-width: 88px; */
   }
 `,Rt=t.h3`
   min-width: 100px;
@@ -507,11 +514,18 @@ import{s as t,i as x,k as E,m as G,j as e,n as f,t as m,o as q,p as V,q as Z,r a
   display: inline-block;
   width: 16px;
   height: 16px;
+  margin-right: 6px;
   fill: var(--primary-color-green-lite);
 `,Et=t.div`
   display: flex;
-  flex-direction: row;
-  gap: 8px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  max-height: 20px;
+  background-color: transparent;
+  border: none;
+  flex-shrink: 0;
+  padding: 0;
   cursor: pointer;
 `,z=t.span`
   color: var(--primary-color-grey);
