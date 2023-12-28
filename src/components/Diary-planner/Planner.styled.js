@@ -1,9 +1,8 @@
 import { styled } from 'styled-components';
 
-export const Title = styled.p`
+export const Title = styled.h2`
   font-size: 24px;
   font-weight: 500;
-  font-family: 'Poppins500';
 `;
 export const Container = styled.div`
   width: 300px;
