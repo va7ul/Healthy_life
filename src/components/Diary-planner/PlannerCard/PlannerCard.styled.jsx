@@ -7,25 +7,13 @@ export const Wrapper = styled.div`
   justify-content: space-between;
 
   @media screen and (min-width: 834px) {
-    /* width: 834px; */
     flex-direction: row;
-  }
-
-  @media screen and (min-width: 1440px) {
-    /* display: flex;
-    flex-wrap: wrap; */
   }
 `;
 
 export const MealContainer = styled.div`
   display: flex;
   gap: 12px;
-  @media screen and (min-width: 834px) {
-    /* margin-right: 150px; */
-  }
-  @media screen and (min-width: 1440px) {
-    /* margin-right: 159px; */
-  }
 `;
 
 export const MealTitle = styled.h3`
@@ -49,19 +37,19 @@ export const MealSubscription = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  /* flex-wrap: wrap; */
+
   @media screen and (min-width: 834px) {
     width: 100%;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 74px;
     gap: 30px;
   }
 
   @media screen and (min-width: 1440px) {
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 `;
 
@@ -69,7 +57,7 @@ export const MealSubTextMain = styled.p`
   width: 100%;
   @media screen and (min-width: 834px) {
     margin-top: 0px;
-    width: auto;
+    width: 154px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -89,11 +77,13 @@ export const Amount = styled.span`
   color: var(--primary-color-grey);
   font-weight: 500;
   line-height: 1.42;
+  margin-left: 4px;
 `;
 
 export const MealDashbord = styled.div`
   margin-top: 12px;
-  overflow: auto;
+  overflow-y: scroll;
+
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -115,6 +105,28 @@ export const MealDashbord = styled.div`
   @media screen and (min-width: 1440px) {
     width: 676px;
     height: 240px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color-grey-one);
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background: var(--secondary-color-grey-one);
   }
 `;
 
@@ -167,18 +179,10 @@ export const RenderContainer = styled.div`
 
 export const RenderContainerItemName = styled.p`
   color: var(--primary-color-white);
-  /* width: calc(100% - 30px); */
   line-height: 1.42;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-
-  @media screen and (min-width: 834px) {
-    /* width: 105px; */
-  }
-
-  @media screen and (min-width: 1440px) {
-  }
 `;
 
 export const RenderItemText = styled.p`
@@ -196,10 +200,10 @@ export const RenderList = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 12px;
-  position: absolute;
-  right: 35px;
 
   @media screen and (min-width: 834px) {
+    position: absolute;
+    right: 34px;
     gap: 32px;
   }
 `;
@@ -228,15 +232,12 @@ export const EditWrapper = styled.button`
   background-color: transparent;
   border: none;
   padding: 0;
-
-  @media screen and (min-width: 834px) {
-  }
 `;
 
 export const EditIcon = styled.svg`
   width: 16px;
   height: 16px;
-  fill: var(--primary-color-grey);
+  stroke: var(--primary-color-grey);
 `;
 
 export const EditText = styled.p`
