@@ -96,6 +96,10 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Focusing on the architectural design and foundational aspects of the
     project.
   - Ensuring scalability and maintainability of the project structure.
+  - Implementing a Pop-up for recording meals, enhancing user interaction (Diary
+    section).
+  - Developing a modal Diary for detailed meal tracking and analysis (Diary
+    section).
 
   - **Yuliya Vorontsova** - [YuliyaGitHubProfile](LINK_TO_YULIYA_GITHUB_PROFILE)
   - **Scrum master**
@@ -103,13 +107,17 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Implementing Target selection feature for personalized user goals.
   - Creating a module for users to enter and track their current weight.
   - Developing a comprehensive user profile section for personalized experience.
+  - Implementing a Pop-up for recording meals, enhancing user interaction (Diary
+    section).
+  - Developing a modal Diary for detailed meal tracking and analysis (Diary
+    section).
 
 - **Andrij Csuhran** - [AndrijGitHubProfile](https://github.com/fairycreator)
 
   - Developing the Welcome, SignIn, SignUp, and ForgotPassword pages,
     emphasizing user-friendly design and streamlined user experience.
-  - Implementing a multi-step SignUp process, enhancing user engagement through
-    intuitive navigation and interactive design elements.
+  - Implementing a multi-step SignUp process, enhancing user engagement through.
+  - Intuitive navigation and interactive design elements.
   - Integrating Redux for robust state management, particularly for user
     authentication and data flow.
   - Crafting and maintaining Formik and Yup schemas for reliable form
@@ -122,13 +130,6 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Creating global variables for consistent and efficient component styling.
   - Enhancing user interface with interactive and visually appealing elements.
 
-- **Viktor Hachkajlo** - [ViktorGitHubProfile](LINK_TO_VIKTOR_GITHUB_PROFILE)
-
-  - Designing the MainPage, integrating a Diary feature with a user-friendly
-    interface.
-  - Implementing a Pop-up for recording meals, enhancing user interaction.
-  - Developing a modal Diary for detailed meal tracking and analysis.
-
 - **Rita Oleksenko** - [RitaGitHubProfile](LINK_TO_RITA_GITHUB_PROFILE)
 
   - Building the MainPage with features like Daily goal, Water, and Food
@@ -138,21 +139,17 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Focusing on user-friendly interfaces for daily nutritional goal setting.
 
 - **Petro Kasperskyi** - [PetroGitHubProfile](LINK_TO_PETRO_GITHUB_PROFILE)
+
   - Developing MainPage with a focus on Recommended food suggestions.
   - Enhancing user experience with a dedicated Page for Recommended food.
   - Implementing user-centric design principles for nutritional guidance.
 
+- **Viktor Hachkajlo** - [ViktorGitHubProfile](LINK_TO_VIKTOR_GITHUB_PROFILE)
+
+  - Designing the MainPage, integrating a Diary feature with a user-friendly
+    interface.
+
 **Backend Team**
-
-- **Iryna Tolkachova (Backend)** -
-  [IrynaGitHubProfile](LINK_TO_IRYNA_GITHUB_PROFILE)
-
-  - Leading the creation and management of the Database.
-  - Deploying the project on Render and configuring Cloudinary settings.
-  - Developing the Water Block with functionalities like adding, editing, and
-    deleting.
-  - Implementing swagger for API documentation and PUT request for user data
-    updates.
 
 - **Ivan Kimachuk (Backend, Team-Lead)** -
   [IvanGitHubProfile](LINK_TO_IVAN_GITHUB_PROFILE)
@@ -172,7 +169,17 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Ensuring user-friendly interaction with statistical data and product
     recommendations.
 
-- **Mira Dzyapko (Backend)** - [MiraGitHubProfile](LINK_TO_MIRA_GITHUB_PROFILE)
+- **Iryna Tolkachova (Backend)** -
+  [IrynaGitHubProfile](LINK_TO_IRYNA_GITHUB_PROFILE)
+
+  - Leading the creation and management of the Database.
+  - Deploying the project on Render and configuring Cloudinary settings.
+  - Developing the Water Block with functionalities like adding, editing, and
+    deleting.
+  - Implementing swagger for API documentation and PUT request for user data
+    updates.
+
+- **Mira Dzyapko (Backend)** - [MiraGitHubProfile] (LINK_TO_MIRA_GITHUB_PROFILE)
   - Crafting the Consumed Food Block for detailed tracking and analysis of
     dietary intake.
   - Focusing on user interaction and data visualization for better dietary
