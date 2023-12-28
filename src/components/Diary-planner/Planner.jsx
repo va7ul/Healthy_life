@@ -25,6 +25,7 @@ import Breakfast from '../../assets/images/Breakfast.png';
 import Dinner from '../../assets/images/Dinner.png';
 import Lunch from '../../assets/images/Lunch.png';
 import Snack from '../../assets/images/Snack.png';
+import { openHandler } from '../../redux/dailyFoodStatistics/foodSlice';
 
 export const Planner = () => {
   const location = useLocation();
@@ -95,6 +96,27 @@ export const Planner = () => {
   );
 
   const isOpen = useSelector(selectOpen);
+
+useEffect(() => {
+        const handleEsc = (e) => {
+          if (e.code === 'Escape') {
+            
+            dispatch(openHandler(false))
+
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener('keydown', handleEsc);
+            document.body.style.overflow = 'hidden';
+        } else document.body.style.overflow = 'unset';
+
+        return () => {
+            document.removeEventListener('keydown', handleEsc);
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen, dispatch]);
+
 
   useEffect(() => {
     dispatch(getFood());
