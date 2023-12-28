@@ -1,41 +1,41 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: space-between;
+
+  @media screen and (min-width: 834px) {
+    /* width: 834px; */
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: 1440px) {
+    /* display: flex;
+    flex-wrap: wrap; */
+  }
+`;
+
 export const MealContainer = styled.div`
   display: flex;
   gap: 12px;
   @media screen and (min-width: 834px) {
-    margin-right: 150px;
+    /* margin-right: 150px; */
   }
   @media screen and (min-width: 1440px) {
-    margin-right: 159px;
+    /* margin-right: 159px; */
   }
 `;
 
-export const MealDashbord = styled.div`
-  margin-top: 12px;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 16px 12px;
-  height: 232px;
-  background: #0f0f0f;
-  /* background: #fff; */
-  /* borderRadius: 52px; */
-  border-radius: 13px;
-  max-width: 300px;
-  position: relative;
-  /* width: 834px; */
-  @media screen and (min-width: 834px) {
-    max-width: 780px;
-    padding: 32px 14px;
-    gap: 32px;
-    margin-top: 6px;
-  }
+export const MealTitle = styled.h3`
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.44;
 
-  @media screen and (min-width: 1440px) {
-    width: 676px;
-    height: 240px;
+  @media screen and (min-width: 834px) {
+    font-size: 22px;
+    line-height: 1.45;
   }
 `;
 
@@ -47,10 +47,12 @@ export const MealImage = styled.img`
 export const MealSubscription = styled.div`
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 12px;
+  /* flex-wrap: wrap; */
   @media screen and (min-width: 834px) {
     width: 100%;
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 30px;
@@ -62,10 +64,8 @@ export const MealSubscription = styled.div`
     justify-content: center;
   }
 `;
+
 export const MealSubTextMain = styled.p`
-  font-size: 14px;
-  font-weight: 400;
-  margin-top: 12px;
   width: 100%;
   @media screen and (min-width: 834px) {
     margin-top: 0px;
@@ -77,10 +77,6 @@ export const MealSubTextMain = styled.p`
 `;
 
 export const MealSubText = styled.p`
-  font-size: 14px;
-  font-weight: 400;
-  margin-top: 12px;
-
   @media screen and (min-width: 834px) {
     margin-top: 0px;
   }
@@ -89,21 +85,61 @@ export const MealSubText = styled.p`
   }
 `;
 
+export const Amount = styled.span`
+  color: var(--primary-color-grey);
+  font-weight: 500;
+  line-height: 1.42;
+`;
+
+export const MealDashbord = styled.div`
+  margin-top: 12px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 12px;
+  height: 232px;
+  background-color: var(--primary-color-black-two);
+  border-radius: 13px;
+  width: 300px;
+  position: relative;
+
+  @media screen and (min-width: 834px) {
+    width: 780px;
+    height: 240px;
+    padding: 32px 14px;
+    gap: 32px;
+    margin-top: 6px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 676px;
+    height: 240px;
+  }
+`;
+
+export const SubNutrition = styled.span`
+  color: var(--primary-color-grey);
+  font-weight: 400;
+  line-height: 1.42;
+  margin-right: 6px;
+
+  @media screen and (min-width: 834px) {
+    display: none;
+  }
+`;
+
 export const MealSubWrapper = styled.div`
   display: flex;
   gap: 20px;
 `;
 
-export const MealTitle = styled.p`
-  font-size: 18px;
-  font-weight: 800;
-`;
-
-export const Numeration = styled.p`
+export const Numeration = styled.span`
   color: var(--primary-color-white);
   text-align: center;
   font-weight: 600;
   line-height: 1.42;
+  margin-right: 16px;
 `;
 
 export const RecordMealBlock = styled.div`
@@ -118,64 +154,67 @@ export const RecordMealBlock = styled.div`
 
 export const RenderContainer = styled.div`
   position: relative;
-  min-width: 100%;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   row-gap: 8px;
   column-gap: 12px;
+
+  @media screen and (min-width: 834px) {
+    flex-direction: row;
+  }
 `;
 
 export const RenderContainerItemName = styled.p`
   color: var(--primary-color-white);
-  width: calc(100% - 30px);
-  /* Body text/1 */
-  font-family: 'Poppins400';
+  /* width: calc(100% - 30px); */
+  line-height: 1.42;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
 
   @media screen and (min-width: 834px) {
-    width: 105px;
+    /* width: 105px; */
   }
 
   @media screen and (min-width: 1440px) {
   }
 `;
 
-export const RenderContainerItem = styled.p`
-  margin-left: 20px;
-  color: var(--primary-color-white);
-  /* Body text/1 */
-  font-family: 'Poppins400';
+export const RenderItemText = styled.p`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
-  max-height: 25px;
+  line-height: 1.5;
+
   @media screen and (min-width: 834px) {
-    min-width: 80px;
-    position: relative;
-    left: 120px;
+    font-size: 14px;
   }
 `;
 
-// export const NutrWrap = styled.div`
-//   display: flex;
-//   @media screen and (min-width: 834px) {
-//     gap: 32px;
-//   }
-// `;
+export const RenderList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  position: absolute;
+  right: 35px;
 
-export const Wrapper = styled.div`
   @media screen and (min-width: 834px) {
-    /* width: 834px; */
-    display: flex;
+    gap: 32px;
   }
+`;
 
-  @media screen and (min-width: 1440px) {
-    /* display: flex;
-    flex-wrap: wrap; */
+export const RenderContainerItem = styled.li`
+  color: var(--primary-color-white);
+  line-height: 1.42;
+  max-height: 25px;
+  width: 70px;
+
+  @media screen and (min-width: 834px) {
+    display: flex;
+    justify-content: flex-start;
+    width: 80px;
+    position: relative;
   }
 `;
 
@@ -184,10 +223,47 @@ export const EditWrapper = styled.button`
   gap: 6px;
   height: 20px;
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
   @media screen and (min-width: 834px) {
-    /* position: static; */
-    top: 0px;
   }
+`;
+
+export const EditIcon = styled.svg`
+  width: 16px;
+  height: 16px;
+  fill: var(--primary-color-grey);
+`;
+
+export const EditText = styled.p`
+  color: var(--primary-color-grey);
+  line-height: 1.42;
+
+  &:hover {
+    color: var(--primary-color-green-lite);
+  }
+`;
+
+export const AddMoreButton = styled.button`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  max-height: 20px;
+  background-color: transparent;
+  border: none;
+  flex-shrink: 0;
+  padding: 0;
+`;
+
+export const AddMoreIcon = styled.svg`
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  fill: var(--primary-color-green-lite);
 `;

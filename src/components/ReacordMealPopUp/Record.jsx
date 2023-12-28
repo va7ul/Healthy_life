@@ -18,12 +18,15 @@ import {
   Title,
   CancelButton,
 } from './Reacord.styled';
+import breakfast from '../../assets/images/Breakfast.png';
+import dinner from '../../assets/images/Dinner.png';
+import lunch from '../../assets/images/Lunch.png';
+import snack from '../../assets/images/Snack.png';
 import sprite from '../../assets/images/sprite.svg';
 import { capitalize } from '@mui/material';
 
 export const Record = ({
   type,
-  secondType,
   name,
   calories,
   carbogidrate,
@@ -56,6 +59,20 @@ export const Record = ({
     onCloseHandler();
   };
 
+
+  const img = type => {
+    if (type === "breakfast") {
+      return breakfast;
+    } else if (type === "dinner") {
+      return dinner;
+    } else if (type === "lunch") {
+      return lunch;
+    } else if (type === "snack") {
+      return snack;
+    }
+  };
+
+
   return (
     <BackDrop>
       <ContentBlock>
@@ -67,7 +84,7 @@ export const Record = ({
           }}
         >
           {/* виправити картинки!!!!!! */}
-          <MealImage src="src/assets/images/Breakfast.png" />
+          <MealImage src={img(type)} />
           <MealTitle>{capitalize(type)}</MealTitle>
         </MealContainer>
         <form onSubmit={formHandler}>
@@ -81,7 +98,6 @@ export const Record = ({
             />
             <RecordInputBig
               type={'number'}
-              min={1}
               onChange={(e) => {
                 setCarbogidrate(e.target.value);
               }}
