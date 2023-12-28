@@ -12,7 +12,6 @@ export const getMonthStatistics = createAsyncThunk(
   async (queryMonth, thuncAPI) => {
     try {
       const { token } = thuncAPI.getState().auth;
-      console.log(token);
       setAuthHeader(token);
       const response = await axios.get('user/statistics', {
         params: {

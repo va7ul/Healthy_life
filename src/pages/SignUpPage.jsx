@@ -22,11 +22,9 @@ Notify.init({
 const SignUpPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const nextPage = () => {
-    console.log('Next button clicked');
     setCurrentStep(currentStep + 1);
   };
   const backPage = () => {
-    console.log('Back button clicked');
     setCurrentStep(currentStep - 1);
   };
 
@@ -65,7 +63,6 @@ const SignUpPage = () => {
   const handleGoalSelectionStep = (values) => {
     const selectedGoal = values.goal;
     setGoal(selectedGoal);
-    console.log('Form data being sent:', values);
     nextPage();
   };
 
@@ -75,7 +72,6 @@ const SignUpPage = () => {
 
     setGender(selectedGender);
     setAge(selectedAge);
-    console.log('Form data being sent:', values);
     nextPage();
   };
 
@@ -85,7 +81,6 @@ const SignUpPage = () => {
 
     setHeight(selectedHeight);
     setWeight(selectedWeight);
-    console.log('Form data being sent:', values);
     nextPage();
   };
 

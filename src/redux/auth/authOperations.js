@@ -67,7 +67,6 @@ export const forgotPassword = createAsyncThunk(
     try {
       await axios.post('auth/forgot-password', dataUser);
 
-      console.log('Password send');
     } catch (error) {
       const errorMessage = handleError(error);
       return thunkAPI.rejectWithValue(errorMessage);
