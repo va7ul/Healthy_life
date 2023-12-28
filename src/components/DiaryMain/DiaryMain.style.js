@@ -18,8 +18,15 @@ export const TitleWrap = styled.div`
 
 export const Title = styled.h2`
   color: var(--primary-color-white);
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.33;
+
+  @media screen and (min-width: 834px) {
+    font-size: 22px;
+    line-height: 1.45;
+  }
 `;
 export const StyledLink = styled(Link)`
   color: var(--primary-color-grey);
