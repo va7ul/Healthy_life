@@ -12,7 +12,7 @@ import {
   AddIcon,
   AddMealWrap,
   MealOptionsSecond,
-  MealOptionsTrird,
+  Amount,
 } from './DiaryMainCard.styled';
 import sprite from '../../../assets/images/sprite.svg';
 import { useState } from 'react';
@@ -53,9 +53,15 @@ export const DiaryMainCard = ({
       <FoodBlock>
         {meal?.length > 0 ? (
           <>
-            <MealOptions>Carbonohidrates: {totalCarbs}</MealOptions>
-            <MealOptionsSecond>Protein: {totalProtein}</MealOptionsSecond>
-            <MealOptionsTrird>Fat: {totalFat}</MealOptionsTrird>
+            <MealOptions>
+              Carbonohidrates: <Amount> {totalCarbs}</Amount>
+            </MealOptions>
+            <MealOptionsSecond>
+              Protein: <Amount>{totalProtein}</Amount>
+            </MealOptionsSecond>
+            <MealOptionsSecond>
+              Fat: <Amount>{totalFat}</Amount>
+            </MealOptionsSecond>
             <DeleteIcon onClick={() => deleteMealHandler(title.toLowerCase())}>
               <use href={`${sprite}#trash-delete`}></use>
             </DeleteIcon>
