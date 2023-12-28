@@ -1,4 +1,4 @@
-import{r as a,c as F,a as j,s as t,L as ae,j as e,F as N,b as x,d as H,E as b,e as P,u as se,f as ce}from"./index-3dcf4052.js";import{n as E}from"./notiflix-notify-aio-e228c4ae.js";import{i as le}from"./welcomepage-479bde8c.js";import{i as de,a as pe}from"./eye-off-776e3a7b.js";const G=(i,r)=>{const[s,p]=a.useState(i),[n,c]=a.useState(null),[d,h]=a.useState(!1);return a.useEffect(()=>{d&&r.validate(s).then(()=>c(null)).catch(m=>c(m.message))},[s,d,r]),{value:s,error:n,onChange:m=>{p(m.target.value)},onBlur:()=>{h(!0),r.validate(s).then(()=>c(null)).catch(m=>c(m.message))}}},me=/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,u=F().shape({name:j().trim().strict().min(2,"Name is too short (minimum 2 characters)").max(50,"Name is too long (maximum 50 characters)").required("Name is required"),email:j().trim().strict().matches(me,"Oops! That doesn´t look like a valid email address. Try again?").required("Email is required"),password:j().trim().strict().min(6,"Password is too short (minimum 6 characters)").max(50,"Password is too long (maximum 50 characters)").required("Password is required")}),xe=async(i,r,s,p)=>{try{await u.fields.name.validate(i),await u.fields.email.validate(r),await u.fields.password.validate(s),p(!0)}catch{p(!1)}},X={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},he=t.div`
+import{r as a,c as F,a as j,s as t,L as ae,j as e,F as N,b as x,d as H,E as b,e as P,u as se,f as ce}from"./index-043ba948.js";import{n as E}from"./notiflix-notify-aio-a55e0f5c.js";import{i as le}from"./welcomepage-479bde8c.js";import{i as de,a as pe}from"./eye-off-080debf4.js";const G=(i,r)=>{const[s,p]=a.useState(i),[n,c]=a.useState(null),[d,h]=a.useState(!1);return a.useEffect(()=>{d&&r.validate(s).then(()=>c(null)).catch(m=>c(m.message))},[s,d,r]),{value:s,error:n,onChange:m=>{p(m.target.value)},onBlur:()=>{h(!0),r.validate(s).then(()=>c(null)).catch(m=>c(m.message))}}},me=/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,u=F().shape({name:j().trim().strict().min(2,"Name is too short (minimum 2 characters)").max(50,"Name is too long (maximum 50 characters)").required("Name is required"),email:j().trim().strict().matches(me,"Oops! That doesn´t look like a valid email address. Try again?").required("Email is required"),password:j().trim().strict().min(6,"Password is too short (minimum 6 characters)").max(50,"Password is too long (maximum 50 characters)").required("Password is required")}),xe=async(i,r,s,p)=>{try{await u.fields.name.validate(i),await u.fields.email.validate(r),await u.fields.password.validate(s),p(!0)}catch{p(!1)}},X={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},he=t.div`
   margin: 0 auto;
   background-color: var(--primary-color-black-one);
   display: flex;
@@ -267,6 +267,7 @@ import{r as a,c as F,a as j,s as t,L as ae,j as e,F as N,b as x,d as H,E as b,e 
   align-items: center;
   justify-content: center;
   gap: 24px;
+  padding: 0;
 
   @media screen and (min-width: 834px) {
     gap: 60px;
@@ -277,6 +278,7 @@ import{r as a,c as F,a as j,s as t,L as ae,j as e,F as N,b as x,d as H,E as b,e 
     gap: 104px;
     justify-content: center;
     align-items: flex-start;
+    padding-bottom: 72px;
   }
 `,Pe=t.img`
   height: 296px;
@@ -296,11 +298,9 @@ import{r as a,c as F,a as j,s as t,L as ae,j as e,F as N,b as x,d as H,E as b,e 
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /* gap: 40px; */
 
   @media screen and (min-width: 834px) {
     align-items: center;
-    /* gap: 80px; */
   }
   @media screen and (min-width: 1440px) {
     margin-top: 80px;
@@ -428,7 +428,6 @@ import{r as a,c as F,a as j,s as t,L as ae,j as e,F as N,b as x,d as H,E as b,e 
 `,Ie=F().shape({goal:j().required("Selecting a goal is required")});function Te({onForm:i,onBackPage:r}){return e.jsxs(Ae,{children:[e.jsx(Pe,{src:Be,alt:"illustration-summer-hiking"}),e.jsxs(Ne,{children:[e.jsx(He,{children:"Your goal"}),e.jsx(Le,{children:"Choose a goal so that we can help you effectively"}),e.jsx(H,{initialValues:{goal:""},validationSchema:Ie,onSubmit:i,children:()=>e.jsxs(Ee,{children:[e.jsxs(Ge,{children:[e.jsxs(I,{children:[e.jsx(A,{type:"radio",name:"goal",value:"Lose Fat"}),"Lose Fat"]}),e.jsxs(I,{children:[e.jsx(A,{type:"radio",name:"goal",value:"Maintain"}),"Maintain"]}),e.jsxs(I,{children:[e.jsx(A,{type:"radio",name:"goal",value:"Gain Muscle"}),"Gain Muscle"]})]}),e.jsx(b,{name:"goal",component:We}),e.jsx(qe,{type:"submit",children:"Next"}),e.jsx(Ve,{type:"button",onClick:r,children:"Back"})]})})]})]})}const Me="/Healthy_life/assets/genderAge-63bb302d.png",Re={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},Ue=t.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
 
   @media screen and (min-width: 834px) {
@@ -515,15 +514,8 @@ import{r as a,c as F,a as j,s as t,L as ae,j as e,F as N,b as x,d as H,E as b,e 
     width: 212px;
   }
 `,Ze=t.div`
-  /* display: flex;
-  flex-direction: column; */
   margin-bottom: 24px;
-  /* gap: 12px; */
   width: 234px;
-
-  @media screen and (min-width: 834px) {
-    /* align-items: center; */
-  }
 
   @media screen and (min-width: 1440px) {
     align-items: flex-start;
