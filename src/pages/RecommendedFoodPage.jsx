@@ -20,7 +20,8 @@ const RecommendedFoodPage = () => {
   const dispatch = useDispatch();
 
   const [numberOfCardsToRender, setNumberOfCardsToRender] = useState(10);
-  const isNotDesktop = useMediaQuery({ maxWidth: 1440 });
+  const isNotDesktop = useMediaQuery({ maxWidth: 2440 });
+
   useEffect(() => {
     dispatch(fetchRecFoods());
   }, [dispatch]);

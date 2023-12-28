@@ -1,5 +1,8 @@
 import * as Yup from 'yup';
 
+const EMAIL_REGX =
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 export const signUpSchema = Yup.object().shape({
   // Validation for the name field
   name: Yup.string()
@@ -13,7 +16,10 @@ export const signUpSchema = Yup.object().shape({
   email: Yup.string()
     .trim()
     .strict()
-    .email('Invalid email format (example: example@mail.com)')
+    .matches(
+      EMAIL_REGX,
+      'Oops! That doesn´t look like a valid email address. Try again?'
+    )
     .required('Email is required'),
 
   // Validation for the password field
