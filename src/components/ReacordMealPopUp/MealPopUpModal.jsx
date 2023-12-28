@@ -40,6 +40,7 @@ const customStyles = {
     width: '100vw',
     height: '100vh',
   },
+  
 };
 
 Modal.setAppElement('#root');
