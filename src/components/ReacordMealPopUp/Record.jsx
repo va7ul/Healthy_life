@@ -58,7 +58,6 @@ export const Record = ({
 
   const formHandler = (e) => {
     e.preventDefault();
-    console.log(arr);
     dispatch(updateFood({ id: productId, food: arr }));
     onCloseHandler();
   };
