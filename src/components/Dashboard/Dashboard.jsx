@@ -155,7 +155,7 @@ export const Dashboard = () => {
                 <Text>
                   Average value:{' '}
                   <AverageValue>
-                    {getAvarageValueWeight(weight, changedWeight)} kg
+                    {getAvarageValueWeight(month, weight, changedWeight)} kg
                   </AverageValue>
                 </Text>
               </ValueWrapper>
