@@ -8,19 +8,17 @@ import {
 import {
   Button,
   ButtonBlock,
-  ContentBlock,
-  Title,
-  CancelButton
+  Title
 } from './Reacord.styled';
 import { addFood } from '../../redux/dailyFoodStatistics/foodOperations';
-import { AddIcon, ButtonAdd } from './MealPopUpModal.styled';
+import { AddIcon, Box, ButtonAdd, ButtonDelete, RecordInputCalories, RecordInputCarbo, RecordInputFat, RecordInputName, RecordInputProtein, CancelButton, ContentBlock } from './MealPopUpModal.styled';
 import sprite from '../../assets/images/sprite.svg';
 import breakfast from '../../assets/images/Breakfast.png';
 import dinner from '../../assets/images/Dinner.png';
 import lunch from '../../assets/images/Lunch.png';
 import snack from '../../assets/images/Snack.png';
 import { Formik, Form, FieldArray } from 'formik';
-import { InputBlock, RecordInputBig } from '../../components/ReacordMealPopUp/MealPopUpModal.styled'
+import { InputBlock } from '../../components/ReacordMealPopUp/MealPopUpModal.styled'
 import { capitalize } from '@mui/material';
 
 const customStyles = {
@@ -34,7 +32,7 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     border: 'none',
-    background: 'none',
+    background: '#0F0F0F',
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
@@ -112,45 +110,42 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
                   <div>
                     {values.products.map((product, index) => (
                       <InputBlock key={index}>
-                        <RecordInputBig
-                          // id={`products.${dataIndex}.name`}
+                        <RecordInputName
                           name={`products.${index}.name`}
                           placeholder="The name of the product or dish"
                           value={values.products[index].name}
                         />
-                        <RecordInputBig
-                          // id={`products.carbogidrate${dataIndex}`}
+                        <RecordInputCarbo
                           name={`products.${index}.carbogidrate`}
                           placeholder="Carbonoh."
                           value={values.products[index].carbogidrate}
                           type="number"
                           min={1}
                         />
-                        <RecordInputBig
-                          // id={`products.protein${dataIndex}`}
+                        <RecordInputProtein
                           name={`products.${index}.protein`}
                           placeholder="Protein"
                           value={values.products[index].protein}
                           min={1}
                           type="number"
                         />
-                        <RecordInputBig
-                          // id={`products.fat${dataIndex}`}
+                        <Box>
+                        <RecordInputFat
                           name={`products.${index}.fat`}
                           placeholder="Fat"
                           value={values.products[index].fat}
                           min={1}
                           type="number"
                         />
-                        <RecordInputBig
-                          // id={`products.calories${dataIndex}`}
+                        <RecordInputCalories
                           name={`products.${index}.calories`}
                           placeholder="Calories"
                           value={values.products[index].calories}
                           min={1}
                           type="number"
-                        />
-                        <button
+                          />
+                         
+                        <ButtonDelete
                           data-set={index}
                           type="button"
                           onClick={(e) => {
@@ -166,12 +161,13 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
                               display: 'inline-block',
                               width: '20px',
                               height: ' 20px',
-                              fill: 'white',
+                              fill: '#E3FFA8',
                             }}
                           >
                             <use href={`${sprite}#trash-delete`}></use>
                           </svg>
-                        </button>
+                          </ButtonDelete>
+                           </Box>
                       </InputBlock>
                     ))}
                     <ButtonAdd type="button" onClick={() => push(initialCard)}>
