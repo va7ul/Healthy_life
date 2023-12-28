@@ -10,9 +10,6 @@ export const BackDrop = styled.div`
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
-  /* visibility: hidden; */
-  /* opacity: 0;    */
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,12 +25,9 @@ export const ContentBlock = styled.div`
   background-color: var(--primary-color-black-two);
 
   @media screen and (min-width: 834px) {
-    width: 756px;
-    height: 452px;
+    width: 708px;
+    height: 280px;
     padding: 24px;
-  }
-
-  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -46,9 +40,36 @@ export const Title = styled.h2`
   line-height: 1.25;
 `;
 
-export const RecordInputBig = styled.input`
+export const RecordInputName = styled.input`
   width: 276px;
-  padding: 12px;
+  height: 36px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--primary-color-green-lite);
+  background-color: var(--primary-color-black-two);
+  color: var(--primary-color-grey);
+  font-family: 'Poppins400';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  &::placeholder {
+    color: var(--primary-color-grey);
+    font-family: 'Poppins400';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 255px;
+  }
+`;
+
+export const RecordInputCarbo = styled.input`
+  width: 276px;
+  height: 36px;
+  padding: 8px 10px;
   border-radius: 12px;
   border: 1px solid var(--primary-color-green-lite);
   background-color: var(--primary-color-black-two);
@@ -69,10 +90,86 @@ export const RecordInputBig = styled.input`
   @media screen and (min-width: 834px) {
     width: 100px;
   }
+`;
 
-  @media screen and (min-width: 1440px) {
+export const RecordInputProtein = styled.input`
+  width: 276px;
+  height: 36px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--primary-color-green-lite);
+  background-color: var(--primary-color-black-two);
+  color: var(--primary-color-grey);
+  font-family: 'Poppins400';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  &::placeholder {
+    color: var(--primary-color-grey);
+    font-family: 'Poppins400';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 86px;
   }
 `;
+
+export const RecordInputFat = styled.input`
+  width: 120px;
+  height: 36px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--primary-color-green-lite);
+  background-color: var(--primary-color-black-two);
+  color: var(--primary-color-grey);
+  font-family: 'Poppins400';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  &::placeholder {
+    color: var(--primary-color-grey);
+    font-family: 'Poppins400';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 61px;
+  }
+`;
+
+export const RecordInputCalories = styled.input`
+  width: 120px;
+  height: 36px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--primary-color-green-lite);
+  background-color: var(--primary-color-black-two);
+  color: var(--primary-color-grey);
+  font-family: 'Poppins400';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  &::placeholder {
+    color: var(--primary-color-grey);
+    font-family: 'Poppins400';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 78px;
+  }
+`;
+
 export const RecordInputBigFirst = styled.input`
   width: 276px;
   padding: 12px;
@@ -91,24 +188,17 @@ export const RecordInputBigFirst = styled.input`
   @media screen and (min-width: 834px) {
     width: 255px;
   }
-
-  @media screen and (min-width: 1440px) {
-  }
 `;
 
 export const InputBlock = styled.div`
+  width: 660px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 16px;
-  /* justify-content: center;
-  align-items: center; */
   @media screen and (min-width: 834px) {
     flex-direction: row;
     gap: 12px;
-  }
-
-  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -117,6 +207,10 @@ export const SubInputBlock = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+
+  @media screen and (min-width: 834px) {
+    gap: 12px;
+  }
 `;
 
 export const SubInput = styled.input`
@@ -149,10 +243,8 @@ export const ButtonBlock = styled.div`
     bottom: 24px;
     gap: 86px;
   }
-
-  @media screen and (min-width: 1440px) {
-  }
 `;
+
 export const Button = styled.button`
   display: block;
   width: 256px;
@@ -161,7 +253,6 @@ export const Button = styled.button`
   background: var(--primary-color-green-lite);
   color: var(--primary-color-black-two);
   text-align: center;
-  /* Button text/1 */
   font-family: 'Poppins500';
   font-size: 14px;
   font-style: normal;

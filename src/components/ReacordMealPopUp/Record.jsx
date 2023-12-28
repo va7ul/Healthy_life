@@ -12,11 +12,14 @@ import {
   ButtonBlock,
   ContentBlock,
   InputBlock,
-  RecordInputBig,
-  SubInput,
   SubInputBlock,
   Title,
   CancelButton,
+  RecordInputName,
+  RecordInputCarbo,
+  RecordInputProtein,
+  RecordInputFat,
+  RecordInputCalories,
 } from './Reacord.styled';
 import breakfast from '../../assets/images/Breakfast.png';
 import dinner from '../../assets/images/Dinner.png';
@@ -79,24 +82,25 @@ export const Record = ({
         <Title>Record your meal</Title>
         <MealContainer
           style={{
-            // justifyContent: 'baseline',
             marginTop: '24px',
           }}
         >
-          {/* виправити картинки!!!!!! */}
           <MealImage src={img(type)} />
           <MealTitle>{capitalize(type)}</MealTitle>
         </MealContainer>
         <form onSubmit={formHandler}>
           <InputBlock>
-            <RecordInputBig
+            <RecordInputName
               value={name}
+              type={"string"}
               placeholder="The name of the product or dish"
               onChange={(e) => {
                 setName(e.target.value);
               }}
             />
-            <RecordInputBig
+            <RecordInputCarbo
+              min={1}
+              max={100}
               type={'number'}
               onChange={(e) => {
                 setCarbogidrate(e.target.value);
@@ -104,8 +108,9 @@ export const Record = ({
               value={carbogidrate}
               placeholder="Carbonoh"
             />
-            <RecordInputBig
+            <RecordInputProtein
               min={1}
+              max={100}
               type={'number'}
               onChange={(e) => {
                 setProtein(e.target.value);
@@ -114,8 +119,9 @@ export const Record = ({
               placeholder="Protein"
             />
             <SubInputBlock>
-              <SubInput
+              <RecordInputFat
                 min={1}
+                max={100}
                 type={'number'}
                 onChange={(e) => {
                   setFat(e.target.value);
@@ -123,8 +129,9 @@ export const Record = ({
                 value={fat}
                 placeholder="Fat"
               />
-              <SubInput
+              <RecordInputCalories
                 min={1}
+                max={400}
                 type={'number'}
                 onChange={(e) => {
                   setCalories(e.target.value);
@@ -137,7 +144,7 @@ export const Record = ({
                   display: 'inline-block',
                   width: '20px',
                   height: ' 20px',
-                  fill: 'white',
+                  fill: '#E3FFA8',
                 }}
               >
                 <use href={`${sprite}#trash-delete`}></use>
