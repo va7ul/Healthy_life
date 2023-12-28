@@ -25,7 +25,6 @@ import breakfast from '../../assets/images/Breakfast.png';
 import dinner from '../../assets/images/Dinner.png';
 import lunch from '../../assets/images/Lunch.png';
 import snack from '../../assets/images/Snack.png';
-import sprite from '../../assets/images/sprite.svg';
 import { capitalize } from '@mui/material';
 
 export const Record = ({
@@ -47,6 +46,7 @@ export const Record = ({
   const onCloseHandler = () => {
     dispatch(openHandler(false));
   };
+
   const arr = {
     typeFood: type,
     userFood: {
@@ -58,23 +58,22 @@ export const Record = ({
 
   const formHandler = (e) => {
     e.preventDefault();
+    console.log(arr);
     dispatch(updateFood({ id: productId, food: arr }));
     onCloseHandler();
   };
 
-
-  const img = type => {
-    if (type === "breakfast") {
+  const img = (type) => {
+    if (type === 'breakfast') {
       return breakfast;
-    } else if (type === "dinner") {
+    } else if (type === 'dinner') {
       return dinner;
-    } else if (type === "lunch") {
+    } else if (type === 'lunch') {
       return lunch;
-    } else if (type === "snack") {
+    } else if (type === 'snack') {
       return snack;
     }
   };
-
 
   return (
     <BackDrop>
@@ -92,14 +91,14 @@ export const Record = ({
           <InputBlock>
             <RecordInputName
               value={name}
-              type={"string"}
+              type={'string'}
               placeholder="The name of the product or dish"
               onChange={(e) => {
                 setName(e.target.value);
               }}
             />
             <RecordInputCarbo
-              min={1}
+              min={0}
               max={100}
               type={'number'}
               onChange={(e) => {
@@ -109,7 +108,7 @@ export const Record = ({
               placeholder="Carbonoh"
             />
             <RecordInputProtein
-              min={1}
+              min={0}
               max={100}
               type={'number'}
               onChange={(e) => {
@@ -120,7 +119,7 @@ export const Record = ({
             />
             <SubInputBlock>
               <RecordInputFat
-                min={1}
+                min={0}
                 max={100}
                 type={'number'}
                 onChange={(e) => {
@@ -130,7 +129,7 @@ export const Record = ({
                 placeholder="Fat"
               />
               <RecordInputCalories
-                min={1}
+                min={0}
                 max={400}
                 type={'number'}
                 onChange={(e) => {
@@ -139,16 +138,6 @@ export const Record = ({
                 value={calories}
                 placeholder="Calories"
               />
-              <svg
-                style={{
-                  display: 'inline-block',
-                  width: '20px',
-                  height: ' 20px',
-                  fill: '#E3FFA8',
-                }}
-              >
-                <use href={`${sprite}#trash-delete`}></use>
-              </svg>
             </SubInputBlock>
           </InputBlock>
           <ButtonBlock>

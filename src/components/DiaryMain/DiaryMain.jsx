@@ -1,13 +1,10 @@
-// import { useState } from 'react';
 import { useSelector } from 'react-redux';
-
 import {
   selectBreakfast,
   selectDinner,
   selectLunch,
   selectSnack,
 } from '../../redux/dailyFoodStatistics/foodSelectors';
-// import { Record } from '../ReacordMealPopUp/Record';
 import {
   ContainerDiary,
   FoodBlocks,
@@ -38,7 +35,6 @@ const DiaryMain = () => {
   };
 
   const allFood = ['breakfast', 'lunch', 'dinner', 'snack'];
-  // const allCapsFood = ['Breakfast', 'Lunch', 'Dinner', 'Snack'];
 
   let totalFatBreakfast = 0;
   let totalProteinBreakfast = 0;
