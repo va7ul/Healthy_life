@@ -20,10 +20,12 @@ import Breakfast from '../../assets/images/Breakfast.png';
 import Dinner from '../../assets/images/Dinner.png';
 import Lunch from '../../assets/images/Lunch.png';
 import Snack from '../../assets/images/Snack.png';
+import { useLocation } from 'react-router';
 
 const cardImg = [Breakfast, Lunch, Dinner, Snack];
 
 const DiaryMain = () => {
+  const location = useLocation();
   const breakfast = useSelector(selectBreakfast);
   const lunch = useSelector(selectLunch);
   const dinner = useSelector(selectDinner);
@@ -132,7 +134,9 @@ const DiaryMain = () => {
     <ContainerDiary>
       <TitleWrap>
         <Title>Diary</Title>
-        <StyledLink to="/diary">See more</StyledLink>
+        <StyledLink to="/diary" state={{ from: location }}>
+          See more
+        </StyledLink>
       </TitleWrap>
       <FoodBlocks>
         {allFood.map((item, i) => {

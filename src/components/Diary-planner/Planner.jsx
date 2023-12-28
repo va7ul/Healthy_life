@@ -1,11 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router';
 import { getFood } from '../../redux/dailyFoodStatistics/foodOperations';
 import { Record } from '../ReacordMealPopUp/Record';
-import { Container, DesktopContainer, Title } from './Planner.styled';
+import {
+  Container,
+  DesktopContainer,
+  Title,
+  StyledLink,
+  TitleWrap,
+  BackIcon,
+} from './Planner.styled';
 import { PlannerCard } from './PlannerCard/PlannerCard';
 import sprite from '../../assets/images/sprite.svg';
-
 import {
   selectBreakfast,
   selectDinner,
@@ -20,6 +27,8 @@ import Lunch from '../../assets/images/Lunch.png';
 import Snack from '../../assets/images/Snack.png';
 
 export const Planner = () => {
+  const location = useLocation();
+  const backLinkLocationRef = useRef(location.state?.from ?? '/');
   const [foodType, setFoodType] = useState('');
   const breakfast = useSelector(selectBreakfast);
   const lunch = useSelector(selectLunch);
@@ -92,28 +101,15 @@ export const Planner = () => {
   }, [dispatch]);
   return (
     <Container>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '5px',
-          marginBottom: '16px',
-          maxWidth: '1372px',
-        }}
-      >
-        <svg
-          style={{
-            display: 'inline-block',
-            width: '16px',
-            height: ' 16px',
-            fill: 'white',
-            rotate: '180deg',
-          }}
-        >
-          <use href={`${sprite}#icon-arrowright`}></use>
-        </svg>
+      <TitleWrap>
+        <StyledLink to={backLinkLocationRef.current}>
+          <BackIcon>
+            <use href={`${sprite}#icon-arrowright`}></use>
+          </BackIcon>
+        </StyledLink>
         <Title>Diary</Title>
-      </div>
+      </TitleWrap>
+
       {isOpen ? (
         <Record
           type={foodType}

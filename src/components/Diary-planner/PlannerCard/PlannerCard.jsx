@@ -120,7 +120,7 @@ export const PlannerCard = ({
                 </RenderContainer>
                 <EditWrapper data-set={item._id} onClick={onOpenEditHandler}>
                   <EditIcon>
-                    <use href={`${sprite}#edit-2`}></use>
+                    <use href={`${sprite}#icon-edit-3`}></use>
                   </EditIcon>
                   <EditText>Edit</EditText>
                 </EditWrapper>
