@@ -14,6 +14,11 @@ import {
   selectSnack,
 } from '../../redux/dailyFoodStatistics/foodSelectors';
 
+import Breakfast from '../../assets/images/Breakfast.png';
+import Dinner from '../../assets/images/Dinner.png';
+import Lunch from '../../assets/images/Lunch.png';
+import Snack from '../../assets/images/Snack.png';
+
 export const Planner = () => {
   const [foodType, setFoodType] = useState('');
   const breakfast = useSelector(selectBreakfast);
@@ -140,6 +145,7 @@ export const Planner = () => {
           setProtein={setProtein}
           setFat={setFat}
           setProductId={setProductId}
+          src={Breakfast}
         />
         <PlannerCard
           totalCarbs={totalCarbsLunch}
@@ -155,6 +161,7 @@ export const Planner = () => {
           setProtein={setProtein}
           setFat={setFat}
           setProductId={setProductId}
+          src={Lunch}
         />
         <PlannerCard
           totalCarbs={totalCarbsDinner}
@@ -170,6 +177,7 @@ export const Planner = () => {
           setProtein={setProtein}
           setFat={setFat}
           setProductId={setProductId}
+          src={Dinner}
         />
         <PlannerCard
           totalCarbs={totalCarbsSnack}
@@ -185,6 +193,7 @@ export const Planner = () => {
           setProtein={setProtein}
           setFat={setFat}
           setProductId={setProductId}
+          src={Snack}
         />
       </DesktopContainer>
     </Container>
