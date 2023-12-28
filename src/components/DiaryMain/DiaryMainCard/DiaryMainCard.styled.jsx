@@ -17,9 +17,6 @@ export const FoodBlock = styled.div`
     flex-wrap: nowrap;
     gap: 20px;
   }
-
-  @media screen and (min-width: 1440px) {
-  }
 `;
 
 export const MealOptions = styled.p`
@@ -28,7 +25,7 @@ export const MealOptions = styled.p`
   line-height: 1.42;
   align-items: center;
   display: flex;
-  gap: 16px;
+  gap: 4px;
   @media screen and (min-width: 834px) {
     min-width: 160px;
   }
@@ -38,18 +35,7 @@ export const MealOptionsSecond = styled.p`
   line-height: 1.42;
   align-items: center;
   display: flex;
-  gap: 16px;
-  @media screen and (min-width: 834px) {
-    min-width: 88px;
-  }
-`;
-
-export const MealOptionsTrird = styled.p`
-  color: var(--primary-color-white);
-  line-height: 1.42;
-  align-items: center;
-  display: flex;
-  gap: 16px;
+  gap: 4px;
   @media screen and (min-width: 834px) {
     min-width: 88px;
   }
@@ -78,6 +64,7 @@ export const DeleteIcon = styled.svg`
   width: 20px;
   height: 20px;
   fill: var(--primary-color-green-lite);
+  cursor: pointer;
 `;
 
 export const AddIcon = styled.svg`
@@ -91,4 +78,10 @@ export const AddMealWrap = styled.div`
   display: flex;
   flex-direction: row;
   gap: 8px;
+  cursor: pointer;
+`;
+
+export const Amount = styled.span`
+  color: var(--primary-color-grey);
+  font-weight: 500;
 `;
