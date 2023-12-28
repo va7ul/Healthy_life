@@ -8,12 +8,20 @@ import {
   Numeration,
   RecordMealBlock,
   RenderContainer,
+  RenderList,
   RenderContainerItem,
   RenderContainerItemName,
   Wrapper,
   EditWrapper,
   MealSubTextMain,
   MealSubWrapper,
+  EditIcon,
+  EditText,
+  Amount,
+  SubNutrition,
+  AddMoreButton,
+  AddMoreIcon,
+  RenderItemText,
 } from './PlannerCard.styled';
 
 import { AddMore } from '../../ReacordMealPopUp/Reacord.styled';
@@ -37,6 +45,7 @@ export const PlannerCard = ({
   setCarbogidrate,
   setProtein,
   setFat,
+  src,
 }) => {
   const dispatch = useDispatch();
 
@@ -60,18 +69,20 @@ export const PlannerCard = ({
     <RecordMealBlock>
       <Wrapper>
         <MealContainer style={{ alignItems: 'center' }}>
-          <MealImage src={`src/assets/images/${title}.png`} />
+          <MealImage src={src} />
           <MealTitle>{`${title}`}</MealTitle>
         </MealContainer>
         <MealSubscription>
           <MealSubTextMain>
-            Carbonohidrates: {!totalCarbs ? 0 : totalCarbs}
+            Carbonohidrates: <Amount> {!totalCarbs ? 0 : totalCarbs} </Amount>
           </MealSubTextMain>
           <MealSubWrapper>
             <MealSubText>
-              Protein: {!totalProtein ? 0 : totalProtein}
+              Protein: <Amount> {!totalProtein ? 0 : totalProtein} </Amount>
             </MealSubText>
-            <MealSubText>Fat: {!totalFat ? 0 : totalFat}</MealSubText>
+            <MealSubText>
+              Fat: <Amount>{!totalFat ? 0 : totalFat}</Amount>
+            </MealSubText>
           </MealSubWrapper>
         </MealSubscription>
       </Wrapper>
@@ -82,77 +93,58 @@ export const PlannerCard = ({
             return (
               <div key={item._id} style={{ position: 'relative' }}>
                 <RenderContainer>
-                  <Numeration>{index + 1}</Numeration>
-                  <RenderContainerItemName>{item.name}</RenderContainerItemName>
-                  <RenderContainerItem>
-                    Carbs: {item.nutrition.carbogidrate}
-                  </RenderContainerItem>
-                  <RenderContainerItem>
-                    Protein: {item.nutrition.protein}
-                  </RenderContainerItem>
-                  <RenderContainerItem>
-                    Fat: {item.nutrition.fat}
-                  </RenderContainerItem>
+                  <RenderContainerItemName>
+                    <Numeration>{index + 1}</Numeration>
+                    {item.name}
+                  </RenderContainerItemName>
+                  <RenderList>
+                    <RenderContainerItem>
+                      <RenderItemText>
+                        <SubNutrition> Carb. </SubNutrition>
+                        {item.nutrition.carbogidrate}
+                      </RenderItemText>
+                    </RenderContainerItem>
+                    <RenderContainerItem>
+                      <RenderItemText>
+                        <SubNutrition> Prot. </SubNutrition>
+                        {item.nutrition.protein}
+                      </RenderItemText>
+                    </RenderContainerItem>
+                    <RenderContainerItem>
+                      <RenderItemText>
+                        <SubNutrition> Fat. </SubNutrition>
+                        {item.nutrition.fat}
+                      </RenderItemText>
+                    </RenderContainerItem>
+                  </RenderList>
                 </RenderContainer>
                 <EditWrapper data-set={item._id} onClick={onOpenEditHandler}>
-                  <svg style={{ width: '16px', height: '16px' }}>
-                    <use href={`${sprite}#edit-2`}></use>
-                  </svg>
-                  <p>Edit</p>
+                  <EditIcon>
+                    <use href={`${sprite}#edit-3`}></use>
+                  </EditIcon>
+                  <EditText>Edit</EditText>
                 </EditWrapper>
               </div>
             );
           })
         ) : (
-          <button
-            onClick={openModal}
-            style={{
-              width: '170px',
-              flexDirection: 'row-reverse',
-              display: 'flex',
-              gap: '8px',
-              maxHeight: '20px',
-            }}
-          >
+          <AddMoreButton onClick={openModal}>
             <AddMore>Record your meal</AddMore>
-            <svg
-              style={{
-                display: 'inline-block',
-                width: '20px',
-                height: ' 20px',
-                fill: 'white',
-              }}
-            >
+            <AddMoreIcon>
               <use href={`${sprite}#icon-add-converted`}></use>
-            </svg>
-          </button>
+            </AddMoreIcon>
+          </AddMoreButton>
         )}
 
         {meal?.length > 0 ? (
           <div style={{ display: 'flex' }}>
             <Numeration>{meal.length + 1}</Numeration>
-            <button
-              onClick={openModal}
-              style={{
-                width: '170px',
-                flexDirection: 'row-reverse',
-                display: 'flex',
-                gap: '8px',
-                maxHeight: '20px',
-              }}
-            >
+            <AddMoreButton onClick={openModal}>
               <AddMore>Record your meal</AddMore>
-              <svg
-                style={{
-                  display: 'inline-block',
-                  width: '20px',
-                  height: ' 20px',
-                  fill: 'white',
-                }}
-              >
+              <AddMoreIcon>
                 <use href={`${sprite}#icon-add-converted`}></use>
-              </svg>
-            </button>
+              </AddMoreIcon>
+            </AddMoreButton>
           </div>
         ) : null}
         <MealPopUpModal
