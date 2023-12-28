@@ -21,8 +21,11 @@ export const Container = styled.div`
 `;
 
 export const DesktopContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   @media screen and (min-width: 1440px) {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
   }
