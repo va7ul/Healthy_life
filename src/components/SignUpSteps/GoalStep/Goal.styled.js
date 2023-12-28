@@ -76,6 +76,7 @@ export const GoalWrapper = styled.div`
   align-items: center;
   justify-content: center;
   gap: 24px;
+  padding: 0;
 
   @media screen and (min-width: 834px) {
     gap: 60px;
@@ -86,6 +87,7 @@ export const GoalWrapper = styled.div`
     gap: 104px;
     justify-content: center;
     align-items: flex-start;
+    padding-bottom: 72px;
   }
 `;
 
@@ -111,11 +113,9 @@ export const GoalContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  /* gap: 40px; */
 
   @media screen and (min-width: 834px) {
     align-items: center;
-    /* gap: 80px; */
   }
   @media screen and (min-width: 1440px) {
     margin-top: 80px;

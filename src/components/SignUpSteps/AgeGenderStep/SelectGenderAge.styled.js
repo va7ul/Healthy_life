@@ -15,7 +15,6 @@ const colors = {
 export const GenderAgeWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
 
   @media screen and (min-width: 834px) {
@@ -117,15 +116,8 @@ export const StyledForm = styled(Form)`
 `;
 
 export const RadioWrapper = styled.div`
-  /* display: flex;
-  flex-direction: column; */
   margin-bottom: 24px;
-  /* gap: 12px; */
   width: 234px;
-
-  @media screen and (min-width: 834px) {
-    /* align-items: center; */
-  }
 
   @media screen and (min-width: 1440px) {
     align-items: flex-start;
