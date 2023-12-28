@@ -8,6 +8,7 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { Formik, useFormik } from 'formik';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { validationSchema } from '../../../schemas/profileUpdateSchema';
 import { selectUserData } from '../../../redux/auth/authSelectors';
 import { updateUser } from '../../../redux/auth/authOperations';
@@ -31,6 +32,15 @@ import {
   InputStyled,
   DownloadSpan,
 } from './ProfileSettingsCardStyled';
+
+Notify.init({
+  showOnlyTheLastOne: true,
+  cssAnimationStyle: 'from-bottom',
+  clickToClose: true,
+  messageMaxLength: 200,
+  timeout: 5000,
+  width: '300px',
+});
 
 let selectedImage;
 
@@ -72,7 +82,11 @@ export const ProfileSettingsCard = () => {
 
   return (
     <Formik>
-      <FormWrapper onSubmit={formik.handleSubmit} autoComplete="off">
+      <FormWrapper
+        onSubmit={formik.handleSubmit}
+        onReset={formik.handleReset}
+        autoComplete="off"
+      >
         <LabelInput htmlFor="name">
           Your name
           <FieldStyled
@@ -107,13 +121,11 @@ export const ProfileSettingsCard = () => {
                 accept="image/png, .svg, .jpg, .gif, .jpeg, .webp"
                 onChange={(e) => {
                   if (!e.currentTarget.files) {
-                    // toastError('No image selected')
-                    console.log('No image selected');
+                    Notify.failure('Oops! No image selected');
                     return;
                   }
                   selectedImage = e.currentTarget.files[0];
                   formik.setFieldValue('avatar', selectedImage);
-                  console.log(selectedImage);
                 }}
               />
               <IconWrapper>
@@ -264,7 +276,8 @@ export const ProfileSettingsCard = () => {
           </Button>
           <Button
             sx={buttonStyled}
-            onClick={(formik.resetForm, (selectedImage = null))}
+            type="reset"
+            onClick={(selectedImage = null)}
           >
             Cancel
           </Button>
