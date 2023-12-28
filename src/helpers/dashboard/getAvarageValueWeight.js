@@ -1,8 +1,19 @@
-export function getAvarageValueWeight(arr, changedWeight) {
-  if (arr?.length === 0) return changedWeight;
+import { months } from './common';
+import { getDaysInMonth } from './getDaysInMonth';
 
+export function getAvarageValueWeight(month, arr, changedWeight) {
   const date = new Date();
   const currentDay = date.getDate();
+  const currentMonth = date.getMonth();
+  const currentYear = date.getFullYear();
+  const daysInMonth = getDaysInMonth(currentYear, months.indexOf(month)+1);
+
+
+  if (arr?.length === 0 && months.indexOf(month) === currentMonth) {
+     return changedWeight;
+  }
+   
+  if (arr?.length === 0) return 0;
 
   let newArr = [...arr];
   let totalScore = 0;
@@ -13,15 +24,31 @@ export function getAvarageValueWeight(arr, changedWeight) {
 
   const arrDayFromBack = arr?.flatMap((item) => new Date(item.date).getDate());
 
-  for (let i = arrDayFromBack[0]; i <= currentDay; i++) {
-    if (arrDayFromBack.includes(i)) {
-      let item = newArr?.find((item) => new Date(item.date).getDate() === i);
-      values.push(item?.value);
-      prevWeight = item?.value;
-      count += 1;
-    } else {
-      values.push(prevWeight);
-      count += 1;
+  if (months.indexOf(month) === currentMonth) {
+    for (let i = arrDayFromBack[0]; i <= currentDay; i++) {
+      if (arrDayFromBack.includes(i)) {
+        let item = newArr?.find((item) => new Date(item.date).getDate() === i);
+        values.push(item?.value);
+        prevWeight = item?.value;
+        count += 1;
+      } else {
+        values.push(prevWeight);
+        count += 1;
+      }
+    }
+  }
+
+  if (months.indexOf(month) !== currentMonth) {
+    for (let i = arrDayFromBack[0]; i <= daysInMonth; i++) {
+      if (arrDayFromBack.includes(i)) {
+        let item = newArr?.find((item) => new Date(item.date).getDate() === i);
+        values.push(item?.value);
+        prevWeight = item?.value;
+        count += 1;
+      } else {
+        values.push(prevWeight);
+        count += 1;
+      }
     }
   }
 
