@@ -25,9 +25,6 @@ export const RecordInputName = styled(Field)`
   @media screen and (min-width: 834px) {
     width: 255px;
   }
-
-  @media screen and (min-width: 1440px) {
-  }
 `;
 
 export const RecordInputCarbo = styled(Field)`
@@ -53,9 +50,6 @@ export const RecordInputCarbo = styled(Field)`
 
   @media screen and (min-width: 834px) {
     width: 100px;
-  }
-
-  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -83,9 +77,6 @@ export const RecordInputProtein = styled(Field)`
   @media screen and (min-width: 834px) {
     width: 86px;
   }
-
-  @media screen and (min-width: 1440px) {
-  }
 `;
 
 export const RecordInputFat = styled(Field)`
@@ -111,9 +102,6 @@ export const RecordInputFat = styled(Field)`
 
   @media screen and (min-width: 834px) {
     width: 61px;
-  }
-
-  @media screen and (min-width: 1440px) {
   }
 `;
 
@@ -141,9 +129,6 @@ export const RecordInputCalories = styled(Field)`
   @media screen and (min-width: 834px) {
     width: 78px;
   }
-
-  @media screen and (min-width: 1440px) {
-  }
 `;
 
 export const InputBlock = styled.div`
@@ -155,9 +140,6 @@ export const InputBlock = styled.div`
     flex-direction: row;
     gap: 12px;
   }
-
-  @media screen and (min-width: 1440px) {
-  }
 `;
 
 export const Box = styled.div`
@@ -166,9 +148,6 @@ export const Box = styled.div`
   gap: 8px;
   @media screen and (min-width: 834px) {
     gap: 12px;
-  }
-
-  @media screen and (min-width: 1440px) {
   }
 `;
 
