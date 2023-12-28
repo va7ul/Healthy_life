@@ -196,11 +196,17 @@ export const RenderList = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 12px;
+  margin-left: 24px;
 
   @media screen and (min-width: 834px) {
     position: absolute;
-    right: 34px;
+    right: 60px;
     gap: 32px;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 1440px) {
+    right: 34px;
   }
 `;
 
