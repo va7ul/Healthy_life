@@ -1,4 +1,4 @@
-import{s as i}from"./index-68d09694.js";const o=t=>t.dailyStatisticsFood.consumedFood.breakfast,n=t=>t.dailyStatisticsFood.consumedFood.lunch,a=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=i.div`
+import{s as i}from"./index-50d98e44.js";const o=t=>t.dailyStatisticsFood.consumedFood.breakfast,n=t=>t.dailyStatisticsFood.consumedFood.lunch,a=t=>t.dailyStatisticsFood.consumedFood.dinner,r=t=>t.dailyStatisticsFood.consumedFood.snack,p=t=>t.dailyStatisticsFood.isOpen,d=t=>t.dailyStatisticsFood.consumedFood.totalCalories,s=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,l=t=>t.dailyStatisticsFood.consumedFood.totalProtein,c=t=>t.dailyStatisticsFood.consumedFood.totalFat,x=i.div`
   display: flex;
   gap: 12px;
   @media screen and (min-width: 834px) {
