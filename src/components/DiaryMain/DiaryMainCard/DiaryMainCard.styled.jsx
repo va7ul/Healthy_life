@@ -27,7 +27,7 @@ export const MealOptions = styled.p`
   display: flex;
   gap: 4px;
   @media screen and (min-width: 834px) {
-    min-width: 160px;
+    width: auto;
   }
 `;
 export const MealOptionsSecond = styled.p`
@@ -37,7 +37,7 @@ export const MealOptionsSecond = styled.p`
   display: flex;
   gap: 4px;
   @media screen and (min-width: 834px) {
-    min-width: 88px;
+    /* min-width: 88px; */
   }
 `;
 
@@ -71,13 +71,20 @@ export const AddIcon = styled.svg`
   display: inline-block;
   width: 16px;
   height: 16px;
+  margin-right: 6px;
   fill: var(--primary-color-green-lite);
 `;
 
 export const AddMealWrap = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 8px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  max-height: 20px;
+  background-color: transparent;
+  border: none;
+  flex-shrink: 0;
+  padding: 0;
   cursor: pointer;
 `;
 
