@@ -1,6 +1,5 @@
 import Modal from 'react-modal';
 import { useDispatch } from 'react-redux';
-
 import {
   MealContainer,
   MealImage,
@@ -11,7 +10,7 @@ import {
   ButtonBlock,
   ContentBlock,
   Title,
-  CancelButton,
+  CancelButton
 } from './Reacord.styled';
 import { addFood } from '../../redux/dailyFoodStatistics/foodOperations';
 import { AddIcon, ButtonAdd } from './MealPopUpModal.styled';
@@ -21,7 +20,7 @@ import dinner from '../../assets/images/Dinner.png';
 import lunch from '../../assets/images/Lunch.png';
 import snack from '../../assets/images/Snack.png';
 import { Formik, Form, FieldArray } from 'formik';
-import { InputBlock, RecordInputBig } from '../ModalInput/ModalInput.styled';
+import { InputBlock, RecordInputBig } from '../../components/ReacordMealPopUp/MealPopUpModal.styled'
 import { capitalize } from '@mui/material';
 
 const customStyles = {
@@ -49,7 +48,6 @@ Modal.setAppElement('#root');
 
 export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
   const dispatch = useDispatch();
-  const cardImg = [breakfast, dinner, lunch, snack];
 
   const initialCard = {
     name: '',
@@ -77,6 +75,18 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
     closeModal();
   };
 
+  const img = (type) => {
+    if (typefood === "breakfast") {
+      return breakfast;
+    } else if (typefood === "dinner") {
+      return dinner;
+    } else if (typefood === "lunch") {
+      return lunch;
+    } else if (typefood === "snack") {
+      return snack;
+    }
+  };
+
   return (
     <Modal isOpen={stateModal} onRequestClose={closeModal} style={customStyles}>
       <ContentBlock>
@@ -87,8 +97,7 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
             marginTop: '24px',
           }}
         >
-          {/* виправити картинки!!!!!! */}
-          <MealImage src={cardImg[typefood]} alt={typefood} />
+          <MealImage src={img(typefood)} alt={typefood} />
           <MealTitle>{capitalize(typefood)}</MealTitle>
         </MealContainer>
 
