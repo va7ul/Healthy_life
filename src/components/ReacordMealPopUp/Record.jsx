@@ -76,7 +76,7 @@ export const Record = ({
 
   return (
     <BackDrop onClick={onCloseHandler}>
-      <ContentBlock>
+      <ContentBlock onClick={(e) => e.stopPropagation()}>
         <Title>Record your meal</Title>
         <MealContainer
           style={{
