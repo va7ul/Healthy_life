@@ -24,7 +24,7 @@ export const SignIn = () => {
           <Subtitle>You need to login to use the service</Subtitle>
         </SignUpBox>
         <SignInForm />
-        <StyledLink>Forgot your password?</StyledLink>
+        <StyledLink to="/forgot-password">Forgot your password?</StyledLink>
         <QuestionTrumb>
           <Question>{`If you don't have an account yet`}</Question>
           <NavLinkStyled to="/signup">Sign up</NavLinkStyled>

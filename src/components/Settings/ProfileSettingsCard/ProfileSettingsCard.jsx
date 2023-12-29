@@ -76,7 +76,13 @@ export const ProfileSettingsCard = () => {
       formData.append('weight', formik.values.weight);
       formData.append('activityLevel', formik.values.activityLevel);
 
-      dispatch(updateUser(formData));
+      dispatch(updateUser(formData)).then((result) => {
+        if (result.meta.requestStatus === 'fulfilled') {
+          Notify.success(`Your profile was updated`);
+        } else {
+          Notify.failure('Oops! Something went wrong!');
+        }
+      });
     },
   });
 
