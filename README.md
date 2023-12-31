@@ -111,7 +111,7 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Developing a modal Diary for detailed meal tracking and analysis (Diary
     section).
 
-- **[Andrij Csuhran](https://github.com/fairycreator)
+- **[Andrij Csuhran](https://github.com/fairycreator)**
 
   - Developing the Welcome, SignIn, SignUp, and ForgotPassword pages,
     emphasizing user-friendly design and streamlined user experience.
@@ -122,13 +122,13 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Crafting and maintaining Formik and Yup schemas for reliable form
     validation, ensuring data accuracy and user-friendly feedback.
 
-- **[Nataliya Materynska](https://github.com/NatalyaMaterinskaya)
+- **[Nataliya Materynska](https://github.com/NatalyaMaterinskaya)**
 
   - Developing the Dashboard for last month with a focus on statistical graphs.
   - Creating global variables for consistent and efficient component styling.
   - Enhancing user interface with interactive and visually appealing elements.
 
-- **[Rita Oleksenko](https://github.com/1evanter)
+- **[Rita Oleksenko](https://github.com/1evanter)**
 
   - Building the MainPage with features like Daily goal, Water, and Food
     tracking.
@@ -136,20 +136,20 @@ on our code of conduct, and the process for submitting pull requests to us.
     awareness.
   - Focusing on user-friendly interfaces for daily nutritional goal setting.
 
-- **[Petro Kasperskyi](https://github.com/PetroKasperskyi)
+- **[Petro Kasperskyi](https://github.com/PetroKasperskyi)**
 
   - Developing MainPage with a focus on Recommended food suggestions.
   - Enhancing user experience with a dedicated Page for Recommended food.
   - Implementing user-centric design principles for nutritional guidance.
 
-- **[Viktor Hachkajlo](https://github.com/M1seryy)
+- **[Viktor Hachkajlo](https://github.com/M1seryy)**
 
   - Designing the MainPage, integrating a Diary feature with a user-friendly
     interface.
 
 **Backend Team**
 
-- **[Ivan Kimachuk(Team-Lead)](https://github.com/Ivankimachuk)**
+- **[Ivan Kimachuk (Team-Lead)](https://github.com/Ivankimachuk)**
  
   - Deploying and managing the server for development purposes.
   - Connecting necessary modules and setting up CORS for secure data exchange.
