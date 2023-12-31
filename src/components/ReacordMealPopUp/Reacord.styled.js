@@ -303,4 +303,9 @@ export const CancelButton = styled.button`
   background-color: transparent;
   color: var(--primary-color-grey);
   border: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 `;
