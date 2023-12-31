@@ -25,7 +25,7 @@ export const ContentBlock = styled.div`
   background-color: var(--primary-color-black-two);
 
   @media screen and (min-width: 834px) {
-    width: 708px;
+    width: 676px;
     height: 280px;
     padding: 24px;
   }
@@ -41,7 +41,7 @@ export const Title = styled.h2`
 `;
 
 export const RecordInputName = styled.input`
-  width: 276px;
+  min-width: 276px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -52,6 +52,11 @@ export const RecordInputName = styled.input`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -62,12 +67,12 @@ export const RecordInputName = styled.input`
   }
 
   @media screen and (min-width: 834px) {
-    width: 255px;
+    min-width: 255px;
   }
 `;
 
 export const RecordInputCarbo = styled.input`
-  width: 276px;
+  min-width: 276px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -78,6 +83,11 @@ export const RecordInputCarbo = styled.input`
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -88,12 +98,12 @@ export const RecordInputCarbo = styled.input`
   }
 
   @media screen and (min-width: 834px) {
-    width: 100px;
+    min-width: 100px;
   }
 `;
 
 export const RecordInputProtein = styled.input`
-  width: 276px;
+  min-width: 276px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -104,6 +114,11 @@ export const RecordInputProtein = styled.input`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -114,12 +129,12 @@ export const RecordInputProtein = styled.input`
   }
 
   @media screen and (min-width: 834px) {
-    width: 86px;
+    min-width: 86px;
   }
 `;
 
 export const RecordInputFat = styled.input`
-  width: 120px;
+  min-width: 120px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -130,6 +145,11 @@ export const RecordInputFat = styled.input`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -140,12 +160,12 @@ export const RecordInputFat = styled.input`
   }
 
   @media screen and (min-width: 834px) {
-    width: 61px;
+    min-width: 61px;
   }
 `;
 
 export const RecordInputCalories = styled.input`
-  width: 120px;
+  min-width: 120px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -156,6 +176,11 @@ export const RecordInputCalories = styled.input`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -166,12 +191,12 @@ export const RecordInputCalories = styled.input`
   }
 
   @media screen and (min-width: 834px) {
-    width: 78px;
+    min-width: 78px;
   }
 `;
 
 export const RecordInputBigFirst = styled.input`
-  width: 276px;
+  min-width: 276px;
   padding: 12px;
   border-radius: 12px;
   border: 1px solid var(--primary-color-green-lite);
@@ -186,12 +211,12 @@ export const RecordInputBigFirst = styled.input`
   }
 
   @media screen and (min-width: 834px) {
-    width: 255px;
+    min-width: 255px;
   }
 `;
 
 export const InputBlock = styled.div`
-  width: 660px;
+  min-width: 660px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -203,7 +228,7 @@ export const InputBlock = styled.div`
 `;
 
 export const SubInputBlock = styled.div`
-  width: 276px;
+  min-width: 276px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -215,7 +240,7 @@ export const SubInputBlock = styled.div`
 
 export const SubInput = styled.input`
   display: flex;
-  width: 120px;
+  min-width: 120px;
   padding: 10px;
   border-radius: 12px;
   border: 1px solid var(--primary-color-green-lite);
@@ -261,6 +286,10 @@ export const Button = styled.button`
   margin-left: auto;
   margin-right: auto;
   border: none;
+
+  &:hover {
+    background-color: var(--secondary-color-yellow);
+  }
 `;
 
 export const AddMore = styled.p`
