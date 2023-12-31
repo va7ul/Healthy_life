@@ -1,4 +1,4 @@
-import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d as et,F as tt,av as ot,n as ye,aw as nt}from"./index-f6751c38.js";var ke={exports:{}},rt="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED",at=rt,it=at;function Pe(){}function Me(){}Me.resetWarningCache=Pe;var lt=function(){function t(a,i,h,b,r,y){if(y!==it){var f=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw f.name="Invariant Violation",f}}t.isRequired=t;function e(){return t}var n={array:t,bigint:t,bool:t,func:t,number:t,object:t,string:t,symbol:t,any:t,arrayOf:e,element:t,elementType:t,instanceOf:e,node:t,objectOf:e,oneOf:e,oneOfType:e,shape:e,exact:e,checkPropTypes:Me,resetWarningCache:Pe};return n.PropTypes=n,n};ke.exports=lt();var Re=ke.exports;const Wo=t=>t.dailyStatisticsFood.consumedFood.breakfast,Ho=t=>t.dailyStatisticsFood.consumedFood.lunch,jo=t=>t.dailyStatisticsFood.consumedFood.dinner,Bo=t=>t.dailyStatisticsFood.consumedFood.snack,$o=t=>t.dailyStatisticsFood.isOpen,zo=t=>t.dailyStatisticsFood.consumedFood.totalCalories,qo=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,Ko=t=>t.dailyStatisticsFood.consumedFood.totalProtein,Vo=t=>t.dailyStatisticsFood.consumedFood.totalFat,Yo=l.div`
+import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d as et,F as tt,av as ot,n as ye,aw as nt}from"./index-171dae12.js";var ke={exports:{}},rt="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED",at=rt,it=at;function Pe(){}function Me(){}Me.resetWarningCache=Pe;var lt=function(){function t(a,i,h,b,r,y){if(y!==it){var f=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw f.name="Invariant Violation",f}}t.isRequired=t;function e(){return t}var n={array:t,bigint:t,bool:t,func:t,number:t,object:t,string:t,symbol:t,any:t,arrayOf:e,element:t,elementType:t,instanceOf:e,node:t,objectOf:e,oneOf:e,oneOfType:e,shape:e,exact:e,checkPropTypes:Me,resetWarningCache:Pe};return n.PropTypes=n,n};ke.exports=lt();var Re=ke.exports;const Wo=t=>t.dailyStatisticsFood.consumedFood.breakfast,Ho=t=>t.dailyStatisticsFood.consumedFood.lunch,jo=t=>t.dailyStatisticsFood.consumedFood.dinner,Bo=t=>t.dailyStatisticsFood.consumedFood.snack,$o=t=>t.dailyStatisticsFood.isOpen,zo=t=>t.dailyStatisticsFood.consumedFood.totalCalories,qo=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,Ko=t=>t.dailyStatisticsFood.consumedFood.totalProtein,Vo=t=>t.dailyStatisticsFood.consumedFood.totalFat,Yo=l.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -246,7 +246,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   background-color: var(--primary-color-black-two);
 
   @media screen and (min-width: 834px) {
-    width: 708px;
+    width: 676px;
     height: 280px;
     padding: 24px;
   }
@@ -258,7 +258,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   font-weight: 500;
   line-height: 1.25;
 `,yn=l.input`
-  width: 276px;
+  min-width: 276px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -269,6 +269,11 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -279,10 +284,10 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   }
 
   @media screen and (min-width: 834px) {
-    width: 255px;
+    min-width: 255px;
   }
 `,gn=l.input`
-  width: 276px;
+  min-width: 276px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -293,6 +298,11 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -303,10 +313,10 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   }
 
   @media screen and (min-width: 834px) {
-    width: 100px;
+    min-width: 100px;
   }
 `,xn=l.input`
-  width: 276px;
+  min-width: 276px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -317,6 +327,11 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -327,10 +342,10 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   }
 
   @media screen and (min-width: 834px) {
-    width: 86px;
+    min-width: 86px;
   }
 `,bn=l.input`
-  width: 120px;
+  min-width: 120px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -341,6 +356,11 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -351,10 +371,10 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   }
 
   @media screen and (min-width: 834px) {
-    width: 61px;
+    min-width: 61px;
   }
 `,wn=l.input`
-  width: 120px;
+  min-width: 120px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -365,6 +385,11 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -375,10 +400,10 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   }
 
   @media screen and (min-width: 834px) {
-    width: 78px;
+    min-width: 78px;
   }
 `;l.input`
-  width: 276px;
+  min-width: 276px;
   padding: 12px;
   border-radius: 12px;
   border: 1px solid var(--primary-color-green-lite);
@@ -393,10 +418,10 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   }
 
   @media screen and (min-width: 834px) {
-    width: 255px;
+    min-width: 255px;
   }
 `;const On=l.div`
-  width: 660px;
+  min-width: 660px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -406,7 +431,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
     gap: 12px;
   }
 `,Cn=l.div`
-  width: 276px;
+  min-width: 276px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -416,7 +441,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   }
 `;l.input`
   display: flex;
-  width: 120px;
+  min-width: 120px;
   padding: 10px;
   border-radius: 12px;
   border: 1px solid var(--primary-color-green-lite);
@@ -458,6 +483,10 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   margin-left: auto;
   margin-right: auto;
   border: none;
+
+  &:hover {
+    background-color: var(--secondary-color-yellow);
+  }
 `,_n=l.p`
   color: var(--primary-color-green-lite);
   font-weight: 500;
@@ -467,6 +496,11 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   background-color: transparent;
   color: var(--primary-color-grey);
   border: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 `;var ce={exports:{}},U={},pe={exports:{}},R={},de={exports:{}};(function(t,e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=x;/*!
  * Adapted from jQuery UI core
  *
