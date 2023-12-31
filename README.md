@@ -1,6 +1,6 @@
 # Helthy_Life
 
-This project was created using ![Create Vite](https://vitejs.dev/). To
+This project was created using ![Create Vite](https://vitejs.dev). To
 familiarize yourself with and configure additional features, refer to the
 documentation.
 
@@ -88,9 +88,8 @@ on our code of conduct, and the process for submitting pull requests to us.
 
 **Frontend Team**
 
-- **Vasyl Podvirnyi** - [VasylGitHubProfile](LINK_TO_VASYL_GITHUB_PROFILE)
+- **[Vasyl Podvirnyi (Team lead)](https://github.com/va7ul)**
 
-  - **Team lead**
   - Responsible for deploying the project and setting up the initial project
     skeleton.
   - Focusing on the architectural design and foundational aspects of the
@@ -101,8 +100,8 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Developing a modal Diary for detailed meal tracking and analysis (Diary
     section).
 
-  - **Yuliya Vorontsova** - [YuliyaGitHubProfile](LINK_TO_YULIYA_GITHUB_PROFILE)
-  - **Scrum master**
+- **[Yuliya Vorontsova (Scrum master)](https://github.com/VorontsovaYulia)**
+
   - Crafting the Header with intuitive navigation and sleek design.
   - Implementing Target selection feature for personalized user goals.
   - Creating a module for users to enter and track their current weight.
@@ -112,7 +111,7 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Developing a modal Diary for detailed meal tracking and analysis (Diary
     section).
 
-- **Andrij Csuhran** - [AndrijGitHubProfile](https://github.com/fairycreator)
+- **[Andrij Csuhran](https://github.com/fairycreator)
 
   - Developing the Welcome, SignIn, SignUp, and ForgotPassword pages,
     emphasizing user-friendly design and streamlined user experience.
@@ -123,14 +122,13 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Crafting and maintaining Formik and Yup schemas for reliable form
     validation, ensuring data accuracy and user-friendly feedback.
 
-- **Nataliya Materynska** -
-  [NataliyaGitHubProfile](LINK_TO_NATALIYA_GITHUB_PROFILE)
+- **[Nataliya Materynska](https://github.com/NatalyaMaterinskaya)
 
   - Developing the Dashboard for last month with a focus on statistical graphs.
   - Creating global variables for consistent and efficient component styling.
   - Enhancing user interface with interactive and visually appealing elements.
 
-- **Rita Oleksenko** - [RitaGitHubProfile](LINK_TO_RITA_GITHUB_PROFILE)
+- **[Rita Oleksenko](https://github.com/1evanter)
 
   - Building the MainPage with features like Daily goal, Water, and Food
     tracking.
@@ -138,39 +136,36 @@ on our code of conduct, and the process for submitting pull requests to us.
     awareness.
   - Focusing on user-friendly interfaces for daily nutritional goal setting.
 
-- **Petro Kasperskyi** - [PetroGitHubProfile](LINK_TO_PETRO_GITHUB_PROFILE)
+- **[Petro Kasperskyi](https://github.com/PetroKasperskyi)
 
   - Developing MainPage with a focus on Recommended food suggestions.
   - Enhancing user experience with a dedicated Page for Recommended food.
   - Implementing user-centric design principles for nutritional guidance.
 
-- **Viktor Hachkajlo** - [ViktorGitHubProfile](LINK_TO_VIKTOR_GITHUB_PROFILE)
+- **[Viktor Hachkajlo](https://github.com/M1seryy)
 
   - Designing the MainPage, integrating a Diary feature with a user-friendly
     interface.
 
 **Backend Team**
 
-- **Ivan Kimachuk (Backend, Team-Lead)** -
-  [IvanGitHubProfile](LINK_TO_IVAN_GITHUB_PROFILE)
-
+- **[Ivan Kimachuk(Team-Lead)](https://github.com/Ivankimachuk)**
+ 
   - Deploying and managing the server for development purposes.
   - Connecting necessary modules and setting up CORS for secure data exchange.
   - Overseeing the Authentication Block for robust security and user
     verification.
 
-- **Victoria Don (Backend)** -
-  [VictoriaGitHubProfile](LINK_TO_VICTORIA_GITHUB_PROFILE)
+- **[Victoria Don](https://github.com/victoria2588)**
 
-  - Implementing GET request for recommended products, focusing on user dietary
+  - Implementing GET requests for recommended products, focusing on user dietary
     needs.
   - Developing the Statistics Block for insightful data analysis and user
     tracking.
   - Ensuring user-friendly interaction with statistical data and product
     recommendations.
 
-- **Iryna Tolkachova (Backend)** -
-  [IrynaGitHubProfile](LINK_TO_IRYNA_GITHUB_PROFILE)
+- **[Iryna Tolkachova](https://github.com/Irulik)**
 
   - Leading the creation and management of the Database.
   - Deploying the project on Render and configuring Cloudinary settings.
@@ -179,7 +174,8 @@ on our code of conduct, and the process for submitting pull requests to us.
   - Implementing swagger for API documentation and PUT request for user data
     updates.
 
-- **Mira Dzyapko (Backend)** - [MiraGitHubProfile] (LINK_TO_MIRA_GITHUB_PROFILE)
+- **[Mira Dzyapko](https://github.com/Miradzyapko)**
+
   - Crafting the Consumed Food Block for detailed tracking and analysis of
     dietary intake.
   - Focusing on user interaction and data visualization for better dietary
