@@ -13,15 +13,15 @@ import {
   RenderContainerItemName,
   Wrapper,
   EditWrapper,
+  EditIcon,
   MealSubTextMain,
   MealSubWrapper,
-  EditIcon,
-  EditText,
   Amount,
   SubNutrition,
   AddMoreButton,
   AddMoreIcon,
   RenderItemText,
+  DeleteIcon,
 } from './PlannerCard.styled';
 
 import { AddMore } from '../../ReacordMealPopUp/Reacord.styled';
@@ -118,12 +118,18 @@ export const PlannerCard = ({
                     </RenderContainerItem>
                   </RenderList>
                 </RenderContainer>
+              
                 <EditWrapper data-set={item._id} onClick={onOpenEditHandler}>
                   <EditIcon>
                     <use href={`${sprite}#icon-edit-3`}></use>
                   </EditIcon>
-                  <EditText>Edit</EditText>
+          
+                  <DeleteIcon>
+                    <use href={`${sprite}#trash-delete`}></use>
+                  </DeleteIcon>
+
                 </EditWrapper>
+                
               </div>
             );
           })

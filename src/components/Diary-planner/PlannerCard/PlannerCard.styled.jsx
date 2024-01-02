@@ -239,16 +239,14 @@ export const EditWrapper = styled.button`
 export const EditIcon = styled.svg`
   width: 16px;
   height: 16px;
-  stroke: var(--primary-color-grey);
+   &:hover {
+    stroke: var(--primary-color-green-lite);
+  }
 `;
 
-export const EditText = styled.p`
-  color: var(--primary-color-grey);
-  line-height: 1.42;
-
-  &:hover {
-    color: var(--primary-color-green-lite);
-  }
+export const DeleteIcon = styled.svg`
+  width: 16px;
+  height: 16px;
 `;
 
 export const AddMoreButton = styled.button`
@@ -270,3 +268,12 @@ export const AddMoreIcon = styled.svg`
   margin-right: 6px;
   fill: var(--primary-color-green-lite);
 `;
+
+// export const IconBox = styled.div`
+//   display: flex;
+//   gap: 12px;
+
+//   @media screen and (min-width: 834px) {
+   
+//   }
+// `;
