@@ -1,4 +1,4 @@
-import{s as t,i as x,k as E,m as G,j as e,n as f,t as m,o as q,p as V,q as Z,r as b,u as k,v as J,w as K,L as U,x as Q,y as X,z as Y,A as ee,B as te,C as re}from"./index-171dae12.js";import{C as _,A as ie,p as H,a as N,D as ne,b as oe,L as ae,B as se,c as le,d as ce}from"./index-d0b1d328.js";import{s as de,a as pe,b as xe,c as he,M as ge,d as me,A as ue,e as fe,f as we,g as ye,h as be,B as ve,L as je,D as ke,S as Ce}from"./MealPopUpModal-81e63dfe.js";import{R as $e}from"./RecommendedList-cc7d6b12.js";const We=t.div`
+import{s as t,i as x,k as E,m as G,j as e,n as f,t as m,o as q,p as V,q as Z,r as b,u as k,v as J,w as K,L as U,x as Q,y as X,z as Y,A as ee,B as te,C as re}from"./index-1cdd675b.js";import{C as _,A as ie,p as H,a as N,D as ne,b as oe,L as ae,B as se,c as le,d as ce}from"./index-b28f7fd9.js";import{s as de,a as pe,b as xe,c as he,M as ge,d as me,A as ue,e as fe,f as we,g as ye,h as be,B as ve,L as je,D as ke,S as Ce}from"./MealPopUpModal-806bed59.js";import{R as $e}from"./RecommendedList-95f4b8eb.js";const We=t.div`
   width: 300px;
 
   @media screen and (min-width: 834px) {
@@ -418,7 +418,6 @@ import{s as t,i as x,k as E,m as G,j as e,n as f,t as m,o as q,p as V,q as Z,r a
     fill: var(--primary-color-green-lite);
   }
 `,Wt=()=>e.jsxs(bt,{children:[e.jsxs(vt,{children:[e.jsx(kt,{children:"Today"}),e.jsxs(Ct,{to:"/dashboard",children:["On the way to the goal",e.jsx($t,{children:e.jsx("use",{href:`${f}#icon-arrowright`})})]})]}),e.jsxs(jt,{children:[e.jsx(Se,{}),e.jsx(yt,{}),e.jsx(Ze,{})]})]}),zt=t.div`
-  padding-top: 20px;
   width: 300px;
   @media screen and (min-width: 834px) {
     width: 558px;
