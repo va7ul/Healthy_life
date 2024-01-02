@@ -13,6 +13,11 @@ export const RecordInputName = styled(Field)`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -39,6 +44,11 @@ export const RecordInputCarbo = styled(Field)`
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -65,6 +75,11 @@ export const RecordInputProtein = styled(Field)`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -91,6 +106,11 @@ export const RecordInputFat = styled(Field)`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -117,6 +137,11 @@ export const RecordInputCalories = styled(Field)`
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  outline-style: none;
+
+  &:focus {
+    border-color: var(--primary-color-violet);
+  }
 
   &::placeholder {
     color: var(--primary-color-grey);
@@ -187,6 +212,11 @@ export const CancelButton = styled.button`
   background-color: transparent;
   color: var(--primary-color-grey);
   border: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 `;
 
 export const ContentBlock = styled.div`
