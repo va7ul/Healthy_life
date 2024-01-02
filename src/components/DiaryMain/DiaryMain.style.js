@@ -2,7 +2,6 @@ import { styled } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const ContainerDiary = styled.div`
-  padding-top: 20px;
   width: 300px;
   @media screen and (min-width: 834px) {
     width: 558px;
