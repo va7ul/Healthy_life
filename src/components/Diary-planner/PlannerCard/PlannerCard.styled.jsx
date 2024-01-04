@@ -2,18 +2,24 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
   gap: 12px;
+  flex-direction: column;
   justify-content: space-between;
 
   @media screen and (min-width: 834px) {
     flex-direction: row;
+    gap: 196px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    gap: 126px;
   }
 `;
 
 export const MealContainer = styled.div`
   display: flex;
   gap: 12px;
+  min-width: 148px;
 `;
 
 export const MealTitle = styled.h3`
@@ -39,41 +45,71 @@ export const MealSubscription = styled.div`
   gap: 12px;
 
   @media screen and (min-width: 834px) {
-    width: 100%;
+    /* width: 100%; */
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    margin-right: 74px;
-    gap: 30px;
+    gap: 20px;
   }
 
   @media screen and (min-width: 1440px) {
-    display: flex;
-    align-items: center;
-    margin-right: 40px;
+    /* display: flex; */
+    /* align-items: center; */
+  
   }
 `;
 
-export const MealSubTextMain = styled.p`
-  width: 100%;
+export const MealSubTextMain = styled.div`
+display: flex;
+gap: 4px;
   @media screen and (min-width: 834px) {
-    margin-top: 0px;
-    width: 154px;
+    /* margin-top: 0px;
+    width: 154px; */
   }
 `;
 
-export const MealSubText = styled.p`
+export const Carbo = styled.p`
+/* width: 100%; */
   @media screen and (min-width: 834px) {
-    width: 92px;
-    margin-top: 0px;
+/* width: 126px; */
+  }
+`;
+
+export const MealSubText = styled.div`
+display: flex;
+gap: 4px;
+  @media screen and (min-width: 834px) {
+  
+    /* margin-top: 0px; */
+  }
+`;
+
+export const Protein = styled.p`
+/* width: 100%; */
+  @media screen and (min-width: 834px) {
+/* width: 54px; */
+  }
+`;
+
+export const MealSubTextFat = styled.div`
+display: flex;
+gap: 4px;
+  @media screen and (min-width: 834px) {
+    /* margin-top: 0px; */
+  }
+`;
+
+export const Fat = styled.p`
+/* width: 100%; */
+  @media screen and (min-width: 834px) {
+/* width: 26px; */
   }
 `;
 
 export const Amount = styled.span`
   color: var(--primary-color-grey);
+  width: 36px;
   font-weight: 500;
   line-height: 1.42;
-  margin-left: 4px;
 `;
 
 export const MealDashbord = styled.div`
@@ -151,7 +187,7 @@ export const Numeration = styled.span`
 `;
 
 export const RecordMealBlock = styled.div`
-  max-width: 780px;
+  /* max-width: 780px; */
 
   @media screen and (min-width: 834px) {
   }
