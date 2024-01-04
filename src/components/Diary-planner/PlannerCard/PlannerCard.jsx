@@ -22,6 +22,10 @@ import {
   AddMoreIcon,
   RenderItemText,
   DeleteIcon,
+  MealSubTextFat,
+  Carbo,
+  Protein,
+  Fat,
 } from './PlannerCard.styled';
 
 import { AddMore } from '../../ReacordMealPopUp/Reacord.styled';
@@ -68,21 +72,21 @@ export const PlannerCard = ({
   return (
     <RecordMealBlock>
       <Wrapper>
-        <MealContainer style={{ alignItems: 'center' }}>
+        <MealContainer>
           <MealImage src={src} />
           <MealTitle>{`${title}`}</MealTitle>
         </MealContainer>
         <MealSubscription>
           <MealSubTextMain>
-            Carbonohidrates: <Amount> {!totalCarbs ? 0 : totalCarbs} </Amount>
+            <Carbo>Carbonohidrates: </Carbo><Amount> {!totalCarbs ? 0 : totalCarbs} </Amount>
           </MealSubTextMain>
           <MealSubWrapper>
             <MealSubText>
-              Protein: <Amount> {!totalProtein ? 0 : totalProtein} </Amount>
+              <Protein>Protein: </Protein><Amount> {!totalProtein ? 0 : totalProtein} </Amount>
             </MealSubText>
-            <MealSubText>
-              Fat: <Amount>{!totalFat ? 0 : totalFat}</Amount>
-            </MealSubText>
+            <MealSubTextFat>
+              <Fat>Fat: </Fat><Amount>{!totalFat ? 0 : totalFat}</Amount>
+            </MealSubTextFat>
           </MealSubWrapper>
         </MealSubscription>
       </Wrapper>
