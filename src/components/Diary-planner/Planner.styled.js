@@ -27,7 +27,12 @@ export const TitleWrap = styled.div`
   margin-bottom: 16px;
 
   @media screen and (min-width: 834px) {
+    width: 780px;
     gap: 12px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 1372px;
   }
 `;
 
