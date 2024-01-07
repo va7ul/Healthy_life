@@ -1,15 +1,21 @@
-import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d as et,F as tt,av as ot,n as ye,aw as nt}from"./index-1cdd675b.js";var ke={exports:{}},rt="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED",at=rt,it=at;function Pe(){}function Me(){}Me.resetWarningCache=Pe;var lt=function(){function t(a,i,h,b,r,y){if(y!==it){var f=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw f.name="Invariant Violation",f}}t.isRequired=t;function e(){return t}var n={array:t,bigint:t,bool:t,func:t,number:t,object:t,string:t,symbol:t,any:t,arrayOf:e,element:t,elementType:t,instanceOf:e,node:t,objectOf:e,oneOf:e,oneOfType:e,shape:e,exact:e,checkPropTypes:Me,resetWarningCache:Pe};return n.PropTypes=n,n};ke.exports=lt();var Re=ke.exports;const Wo=t=>t.dailyStatisticsFood.consumedFood.breakfast,Ho=t=>t.dailyStatisticsFood.consumedFood.lunch,jo=t=>t.dailyStatisticsFood.consumedFood.dinner,Bo=t=>t.dailyStatisticsFood.consumedFood.snack,$o=t=>t.dailyStatisticsFood.isOpen,zo=t=>t.dailyStatisticsFood.consumedFood.totalCalories,qo=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,Ko=t=>t.dailyStatisticsFood.consumedFood.totalProtein,Vo=t=>t.dailyStatisticsFood.consumedFood.totalFat,Yo=l.div`
+import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d as et,F as tt,av as ot,n as ye,aw as nt}from"./index-97ee57b5.js";var ke={exports:{}},rt="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED",at=rt,it=at;function Pe(){}function Me(){}Me.resetWarningCache=Pe;var lt=function(){function t(a,i,h,b,r,y){if(y!==it){var f=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw f.name="Invariant Violation",f}}t.isRequired=t;function e(){return t}var n={array:t,bigint:t,bool:t,func:t,number:t,object:t,string:t,symbol:t,any:t,arrayOf:e,element:t,elementType:t,instanceOf:e,node:t,objectOf:e,oneOf:e,oneOfType:e,shape:e,exact:e,checkPropTypes:Me,resetWarningCache:Pe};return n.PropTypes=n,n};ke.exports=lt();var Re=ke.exports;const Wo=t=>t.dailyStatisticsFood.consumedFood.breakfast,Ho=t=>t.dailyStatisticsFood.consumedFood.lunch,jo=t=>t.dailyStatisticsFood.consumedFood.dinner,$o=t=>t.dailyStatisticsFood.consumedFood.snack,Bo=t=>t.dailyStatisticsFood.isOpen,zo=t=>t.dailyStatisticsFood.consumedFood.totalCalories,qo=t=>t.dailyStatisticsFood.consumedFood.totalCarbs,Ko=t=>t.dailyStatisticsFood.consumedFood.totalProtein,Vo=t=>t.dailyStatisticsFood.consumedFood.totalFat,Yo=l.div`
   display: flex;
-  flex-direction: column;
   gap: 12px;
+  flex-direction: column;
   justify-content: space-between;
 
   @media screen and (min-width: 834px) {
     flex-direction: row;
+    gap: 196px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    gap: 126px;
   }
 `,st=l.div`
   display: flex;
   gap: 12px;
+  min-width: 148px;
 `,ct=l.h3`
   font-size: 18px;
   font-weight: 400;
@@ -29,36 +35,58 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   gap: 12px;
 
   @media screen and (min-width: 834px) {
-    width: 100%;
+    /* width: 100%; */
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    margin-right: 74px;
-    gap: 30px;
+    gap: 20px;
   }
 
   @media screen and (min-width: 1440px) {
-    display: flex;
-    align-items: center;
-    margin-right: 40px;
+    /* display: flex; */
+    /* align-items: center; */
+  
   }
-`,Jo=l.p`
-  width: 100%;
+`,Jo=l.div`
+display: flex;
+gap: 4px;
   @media screen and (min-width: 834px) {
-    margin-top: 0px;
-    width: 154px;
+    /* margin-top: 0px;
+    width: 154px; */
   }
 `,Qo=l.p`
+/* width: 100%; */
   @media screen and (min-width: 834px) {
-    width: 92px;
-    margin-top: 0px;
+/* width: 126px; */
   }
-`,Xo=l.span`
+`,Xo=l.div`
+display: flex;
+gap: 4px;
+  @media screen and (min-width: 834px) {
+  
+    /* margin-top: 0px; */
+  }
+`,Zo=l.p`
+/* width: 100%; */
+  @media screen and (min-width: 834px) {
+/* width: 54px; */
+  }
+`,en=l.div`
+display: flex;
+gap: 4px;
+  @media screen and (min-width: 834px) {
+    /* margin-top: 0px; */
+  }
+`,tn=l.p`
+/* width: 100%; */
+  @media screen and (min-width: 834px) {
+/* width: 26px; */
+  }
+`,on=l.span`
   color: var(--primary-color-grey);
+  width: 36px;
   font-weight: 500;
   line-height: 1.42;
-  margin-left: 4px;
-`,Zo=l.div`
+`,nn=l.div`
   margin-top: 12px;
   overflow-y: scroll;
 
@@ -106,7 +134,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   &::-webkit-scrollbar-thumb:active {
     background: var(--secondary-color-grey-one);
   }
-`,en=l.span`
+`,rn=l.span`
   color: var(--primary-color-grey);
   font-weight: 400;
   line-height: 1.42;
@@ -115,24 +143,24 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   @media screen and (min-width: 834px) {
     display: none;
   }
-`,tn=l.div`
+`,an=l.div`
   display: flex;
   gap: 20px;
-`,on=l.span`
+`,ln=l.span`
   color: var(--primary-color-white);
   text-align: center;
   font-weight: 600;
   line-height: 1.42;
   margin-right: 16px;
-`,nn=l.div`
-  max-width: 780px;
+`,sn=l.div`
+  /* max-width: 780px; */
 
   @media screen and (min-width: 834px) {
   }
   @media screen and (min-width: 1440px) {
     max-width: 676px;
   }
-`,rn=l.div`
+`,cn=l.div`
   position: relative;
   width: 100%;
   display: flex;
@@ -143,13 +171,13 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   @media screen and (min-width: 834px) {
     flex-direction: row;
   }
-`,an=l.p`
+`,pn=l.p`
   color: var(--primary-color-white);
   line-height: 1.42;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-`,ln=l.p`
+`,dn=l.p`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -158,7 +186,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   @media screen and (min-width: 834px) {
     font-size: 14px;
   }
-`,sn=l.ul`
+`,un=l.ul`
   display: flex;
   flex-direction: row;
   gap: 12px;
@@ -174,7 +202,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   @media screen and (min-width: 1440px) {
     right: 34px;
   }
-`,cn=l.li`
+`,fn=l.li`
   color: var(--primary-color-white);
   line-height: 1.42;
   max-height: 25px;
@@ -186,7 +214,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
     width: 80px;
     position: relative;
   }
-`,pn=l.button`
+`,hn=l.button`
   display: flex;
   gap: 6px;
   height: 20px;
@@ -196,16 +224,16 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   background-color: transparent;
   border: none;
   padding: 0;
-`,dn=l.svg`
+`,mn=l.svg`
   width: 16px;
   height: 16px;
    &:hover {
     stroke: var(--primary-color-green-lite);
   }
-`,un=l.svg`
+`,vn=l.svg`
   width: 16px;
   height: 16px;
-`,fn=l.button`
+`,yn=l.button`
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -215,13 +243,13 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   border: none;
   flex-shrink: 0;
   padding: 0;
-`,hn=l.svg`
+`,gn=l.svg`
   display: inline-block;
   width: 16px;
   height: 16px;
   margin-right: 6px;
   fill: var(--primary-color-green-lite);
-`,mn=l.div`
+`,xn=l.div`
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -235,7 +263,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   justify-content: center;
   align-items: center;
   z-index: 1000;
-`,vn=l.div`
+`,bn=l.div`
   position: relative;
   padding: 10px;
   width: 300px;
@@ -255,7 +283,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   font-style: normal;
   font-weight: 500;
   line-height: 1.25;
-`,yn=l.input`
+`,wn=l.input`
   min-width: 276px;
   height: 36px;
   padding: 8px 10px;
@@ -284,7 +312,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   @media screen and (min-width: 834px) {
     min-width: 255px;
   }
-`,gn=l.input`
+`,On=l.input`
   min-width: 276px;
   height: 36px;
   padding: 8px 10px;
@@ -313,7 +341,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   @media screen and (min-width: 834px) {
     min-width: 100px;
   }
-`,xn=l.input`
+`,Cn=l.input`
   min-width: 276px;
   height: 36px;
   padding: 8px 10px;
@@ -342,7 +370,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   @media screen and (min-width: 834px) {
     min-width: 86px;
   }
-`,bn=l.input`
+`,_n=l.input`
   min-width: 120px;
   height: 36px;
   padding: 8px 10px;
@@ -371,7 +399,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   @media screen and (min-width: 834px) {
     min-width: 61px;
   }
-`,wn=l.input`
+`,Sn=l.input`
   min-width: 120px;
   height: 36px;
   padding: 8px 10px;
@@ -418,7 +446,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   @media screen and (min-width: 834px) {
     min-width: 255px;
   }
-`;const On=l.div`
+`;const En=l.div`
   min-width: 660px;
   display: flex;
   flex-direction: column;
@@ -428,7 +456,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
     flex-direction: row;
     gap: 12px;
   }
-`,Cn=l.div`
+`,kn=l.div`
   min-width: 276px;
   display: flex;
   align-items: center;
@@ -485,11 +513,11 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   &:hover {
     background-color: var(--secondary-color-yellow);
   }
-`,_n=l.p`
+`,Pn=l.p`
   color: var(--primary-color-green-lite);
   font-weight: 500;
   line-height: 1.42;
-`,Sn=l.button`
+`,Mn=l.button`
   text-align: center;
   background-color: transparent;
   color: var(--primary-color-grey);
@@ -513,7 +541,7 @@ import{s as l,r as Ee,at as Ge,R as Je,au as Qe,b as G,u as Xe,j as v,x as Ze,d 
   Copyright (c) 2015 Jed Watson.
   Based on code that is Copyright 2013-2015, Facebook, Inc.
   All rights reserved.
-*/(function(t){(function(){var e=!!(typeof window<"u"&&window.document&&window.document.createElement),n={canUseDOM:e,canUseWorkers:typeof Worker<"u",canUseEventListeners:e&&!!(window.addEventListener||window.attachEvent),canUseViewport:e&&!!window.screen};t.exports?t.exports=n:window.ExecutionEnvironment=n})()})(Fe);var kt=Fe.exports;Object.defineProperty(M,"__esModule",{value:!0});M.canUseDOM=M.SafeNodeList=M.SafeHTMLCollection=void 0;var Pt=kt,Mt=Rt(Pt);function Rt(t){return t&&t.__esModule?t:{default:t}}var ae=Mt.default,Tt=ae.canUseDOM?window.HTMLElement:{};M.SafeHTMLCollection=ae.canUseDOM?window.HTMLCollection:{};M.SafeNodeList=ae.canUseDOM?window.NodeList:{};M.canUseDOM=ae.canUseDOM;M.default=Tt;Object.defineProperty(T,"__esModule",{value:!0});T.resetState=Lt;T.log=It;T.assertNodeList=Ne;T.setElement=Ut;T.validateElement=he;T.hide=Wt;T.show=Ht;T.documentNotReadyOrSSRTesting=jt;var Ft=Et,Nt=Dt(Ft),At=M;function Dt(t){return t&&t.__esModule?t:{default:t}}var k=null;function Lt(){k&&(k.removeAttribute?k.removeAttribute("aria-hidden"):k.length!=null?k.forEach(function(t){return t.removeAttribute("aria-hidden")}):document.querySelectorAll(k).forEach(function(t){return t.removeAttribute("aria-hidden")})),k=null}function It(){}function Ne(t,e){if(!t||!t.length)throw new Error("react-modal: No elements were found for selector "+e+".")}function Ut(t){var e=t;if(typeof e=="string"&&At.canUseDOM){var n=document.querySelectorAll(e);Ne(n,e),e=n}return k=e||k,k}function he(t){var e=t||k;return e?Array.isArray(e)||e instanceof HTMLCollection||e instanceof NodeList?e:[e]:((0,Nt.default)(!1,["react-modal: App element is not defined.","Please use `Modal.setAppElement(el)` or set `appElement={el}`.","This is needed so screen readers don't see main content","when modal is opened. It is not recommended, but you can opt-out","by setting `ariaHideApp={false}`."].join(" ")),[])}function Wt(t){var e=!0,n=!1,a=void 0;try{for(var i=he(t)[Symbol.iterator](),h;!(e=(h=i.next()).done);e=!0){var b=h.value;b.setAttribute("aria-hidden","true")}}catch(r){n=!0,a=r}finally{try{!e&&i.return&&i.return()}finally{if(n)throw a}}}function Ht(t){var e=!0,n=!1,a=void 0;try{for(var i=he(t)[Symbol.iterator](),h;!(e=(h=i.next()).done);e=!0){var b=h.value;b.removeAttribute("aria-hidden")}}catch(r){n=!0,a=r}finally{try{!e&&i.return&&i.return()}finally{if(n)throw a}}}function jt(){k=null}var B={};Object.defineProperty(B,"__esModule",{value:!0});B.resetState=Bt;B.log=$t;var q={},K={};function ge(t,e){t.classList.remove(e)}function Bt(){var t=document.getElementsByTagName("html")[0];for(var e in q)ge(t,q[e]);var n=document.body;for(var a in K)ge(n,K[a]);q={},K={}}function $t(){}var zt=function(e,n){return e[n]||(e[n]=0),e[n]+=1,n},qt=function(e,n){return e[n]&&(e[n]-=1),n},Kt=function(e,n,a){a.forEach(function(i){zt(n,i),e.add(i)})},Vt=function(e,n,a){a.forEach(function(i){qt(n,i),n[i]===0&&e.remove(i)})};B.add=function(e,n){return Kt(e.classList,e.nodeName.toLowerCase()=="html"?q:K,n.split(" "))};B.remove=function(e,n){return Vt(e.classList,e.nodeName.toLowerCase()=="html"?q:K,n.split(" "))};var $={};Object.defineProperty($,"__esModule",{value:!0});$.log=Gt;$.resetState=Jt;function Yt(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}var Ae=function t(){var e=this;Yt(this,t),this.register=function(n){e.openInstances.indexOf(n)===-1&&(e.openInstances.push(n),e.emit("register"))},this.deregister=function(n){var a=e.openInstances.indexOf(n);a!==-1&&(e.openInstances.splice(a,1),e.emit("deregister"))},this.subscribe=function(n){e.subscribers.push(n)},this.emit=function(n){e.subscribers.forEach(function(a){return a(n,e.openInstances.slice())})},this.openInstances=[],this.subscribers=[]},oe=new Ae;function Gt(){console.log("portalOpenInstances ----------"),console.log(oe.openInstances.length),oe.openInstances.forEach(function(t){return console.log(t)}),console.log("end portalOpenInstances ----------")}function Jt(){oe=new Ae}$.default=oe;var me={};Object.defineProperty(me,"__esModule",{value:!0});me.resetState=eo;me.log=to;var Qt=$,Xt=Zt(Qt);function Zt(t){return t&&t.__esModule?t:{default:t}}var _=void 0,P=void 0,I=[];function eo(){for(var t=[_,P],e=0;e<t.length;e++){var n=t[e];n&&n.parentNode&&n.parentNode.removeChild(n)}_=P=null,I=[]}function to(){console.log("bodyTrap ----------"),console.log(I.length);for(var t=[_,P],e=0;e<t.length;e++){var n=t[e],a=n||{};console.log(a.nodeName,a.className,a.id)}console.log("edn bodyTrap ----------")}function xe(){I.length!==0&&I[I.length-1].focusContent()}function oo(t,e){!_&&!P&&(_=document.createElement("div"),_.setAttribute("data-react-modal-body-trap",""),_.style.position="absolute",_.style.opacity="0",_.setAttribute("tabindex","0"),_.addEventListener("focus",xe),P=_.cloneNode(),P.addEventListener("focus",xe)),I=e,I.length>0?(document.body.firstChild!==_&&document.body.insertBefore(_,document.body.firstChild),document.body.lastChild!==P&&document.body.appendChild(P)):(_.parentElement&&_.parentElement.removeChild(_),P.parentElement&&P.parentElement.removeChild(P))}Xt.default.subscribe(oo);(function(t,e){Object.defineProperty(e,"__esModule",{value:!0});var n=Object.assign||function(u){for(var d=1;d<arguments.length;d++){var w=arguments[d];for(var o in w)Object.prototype.hasOwnProperty.call(w,o)&&(u[o]=w[o])}return u},a=typeof Symbol=="function"&&typeof Symbol.iterator=="symbol"?function(u){return typeof u}:function(u){return u&&typeof Symbol=="function"&&u.constructor===Symbol&&u!==Symbol.prototype?"symbol":typeof u},i=function(){function u(d,w){for(var o=0;o<w.length;o++){var c=w[o];c.enumerable=c.enumerable||!1,c.configurable=!0,"value"in c&&(c.writable=!0),Object.defineProperty(d,c.key,c)}}return function(d,w,o){return w&&u(d.prototype,w),o&&u(d,o),d}}(),h=Ee,b=Re,r=X(b),y=R,f=ie(y),x=_t,s=X(x),m=T,g=ie(m),S=B,F=ie(S),z=M,W=X(z),He=$,ve=X(He);function ie(u){if(u&&u.__esModule)return u;var d={};if(u!=null)for(var w in u)Object.prototype.hasOwnProperty.call(u,w)&&(d[w]=u[w]);return d.default=u,d}function X(u){return u&&u.__esModule?u:{default:u}}function je(u,d){if(!(u instanceof d))throw new TypeError("Cannot call a class as a function")}function Be(u,d){if(!u)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return d&&(typeof d=="object"||typeof d=="function")?d:u}function $e(u,d){if(typeof d!="function"&&d!==null)throw new TypeError("Super expression must either be null or a function, not "+typeof d);u.prototype=Object.create(d&&d.prototype,{constructor:{value:u,enumerable:!1,writable:!0,configurable:!0}}),d&&(Object.setPrototypeOf?Object.setPrototypeOf(u,d):u.__proto__=d)}var le={overlay:"ReactModal__Overlay",content:"ReactModal__Content"},ze=function(d){return d.code==="Tab"||d.keyCode===9},qe=function(d){return d.code==="Escape"||d.keyCode===27},Z=0,se=function(u){$e(d,u);function d(w){je(this,d);var o=Be(this,(d.__proto__||Object.getPrototypeOf(d)).call(this,w));return o.setOverlayRef=function(c){o.overlay=c,o.props.overlayRef&&o.props.overlayRef(c)},o.setContentRef=function(c){o.content=c,o.props.contentRef&&o.props.contentRef(c)},o.afterClose=function(){var c=o.props,C=c.appElement,E=c.ariaHideApp,O=c.htmlOpenClassName,A=c.bodyOpenClassName,D=c.parentSelector,ee=D&&D().ownerDocument||document;A&&F.remove(ee.body,A),O&&F.remove(ee.getElementsByTagName("html")[0],O),E&&Z>0&&(Z-=1,Z===0&&g.show(C)),o.props.shouldFocusAfterRender&&(o.props.shouldReturnFocusAfterClose?(f.returnFocus(o.props.preventScroll),f.teardownScopedFocus()):f.popWithoutFocus()),o.props.onAfterClose&&o.props.onAfterClose(),ve.default.deregister(o)},o.open=function(){o.beforeOpen(),o.state.afterOpen&&o.state.beforeClose?(clearTimeout(o.closeTimer),o.setState({beforeClose:!1})):(o.props.shouldFocusAfterRender&&(f.setupScopedFocus(o.node),f.markForFocusLater()),o.setState({isOpen:!0},function(){o.openAnimationFrame=requestAnimationFrame(function(){o.setState({afterOpen:!0}),o.props.isOpen&&o.props.onAfterOpen&&o.props.onAfterOpen({overlayEl:o.overlay,contentEl:o.content})})}))},o.close=function(){o.props.closeTimeoutMS>0?o.closeWithTimeout():o.closeWithoutTimeout()},o.focusContent=function(){return o.content&&!o.contentHasFocus()&&o.content.focus({preventScroll:!0})},o.closeWithTimeout=function(){var c=Date.now()+o.props.closeTimeoutMS;o.setState({beforeClose:!0,closesAt:c},function(){o.closeTimer=setTimeout(o.closeWithoutTimeout,o.state.closesAt-Date.now())})},o.closeWithoutTimeout=function(){o.setState({beforeClose:!1,isOpen:!1,afterOpen:!1,closesAt:null},o.afterClose)},o.handleKeyDown=function(c){ze(c)&&(0,s.default)(o.content,c),o.props.shouldCloseOnEsc&&qe(c)&&(c.stopPropagation(),o.requestClose(c))},o.handleOverlayOnClick=function(c){o.shouldClose===null&&(o.shouldClose=!0),o.shouldClose&&o.props.shouldCloseOnOverlayClick&&(o.ownerHandlesClose()?o.requestClose(c):o.focusContent()),o.shouldClose=null},o.handleContentOnMouseUp=function(){o.shouldClose=!1},o.handleOverlayOnMouseDown=function(c){!o.props.shouldCloseOnOverlayClick&&c.target==o.overlay&&c.preventDefault()},o.handleContentOnClick=function(){o.shouldClose=!1},o.handleContentOnMouseDown=function(){o.shouldClose=!1},o.requestClose=function(c){return o.ownerHandlesClose()&&o.props.onRequestClose(c)},o.ownerHandlesClose=function(){return o.props.onRequestClose},o.shouldBeClosed=function(){return!o.state.isOpen&&!o.state.beforeClose},o.contentHasFocus=function(){return document.activeElement===o.content||o.content.contains(document.activeElement)},o.buildClassName=function(c,C){var E=(typeof C>"u"?"undefined":a(C))==="object"?C:{base:le[c],afterOpen:le[c]+"--after-open",beforeClose:le[c]+"--before-close"},O=E.base;return o.state.afterOpen&&(O=O+" "+E.afterOpen),o.state.beforeClose&&(O=O+" "+E.beforeClose),typeof C=="string"&&C?O+" "+C:O},o.attributesFromObject=function(c,C){return Object.keys(C).reduce(function(E,O){return E[c+"-"+O]=C[O],E},{})},o.state={afterOpen:!1,beforeClose:!1},o.shouldClose=null,o.moveFromContentToOverlay=null,o}return i(d,[{key:"componentDidMount",value:function(){this.props.isOpen&&this.open()}},{key:"componentDidUpdate",value:function(o,c){this.props.isOpen&&!o.isOpen?this.open():!this.props.isOpen&&o.isOpen&&this.close(),this.props.shouldFocusAfterRender&&this.state.isOpen&&!c.isOpen&&this.focusContent()}},{key:"componentWillUnmount",value:function(){this.state.isOpen&&this.afterClose(),clearTimeout(this.closeTimer),cancelAnimationFrame(this.openAnimationFrame)}},{key:"beforeOpen",value:function(){var o=this.props,c=o.appElement,C=o.ariaHideApp,E=o.htmlOpenClassName,O=o.bodyOpenClassName,A=o.parentSelector,D=A&&A().ownerDocument||document;O&&F.add(D.body,O),E&&F.add(D.getElementsByTagName("html")[0],E),C&&(Z+=1,g.hide(c)),ve.default.register(this)}},{key:"render",value:function(){var o=this.props,c=o.id,C=o.className,E=o.overlayClassName,O=o.defaultStyles,A=o.children,D=C?{}:O.content,ee=E?{}:O.overlay;if(this.shouldBeClosed())return null;var Ke={ref:this.setOverlayRef,className:this.buildClassName("overlay",E),style:n({},ee,this.props.style.overlay),onClick:this.handleOverlayOnClick,onMouseDown:this.handleOverlayOnMouseDown},Ve=n({id:c,ref:this.setContentRef,style:n({},D,this.props.style.content),className:this.buildClassName("content",C),tabIndex:"-1",onKeyDown:this.handleKeyDown,onMouseDown:this.handleContentOnMouseDown,onMouseUp:this.handleContentOnMouseUp,onClick:this.handleContentOnClick,role:this.props.role,"aria-label":this.props.contentLabel},this.attributesFromObject("aria",n({modal:!0},this.props.aria)),this.attributesFromObject("data",this.props.data||{}),{"data-testid":this.props.testId}),Ye=this.props.contentElement(Ve,A);return this.props.overlayElement(Ke,Ye)}}]),d}(h.Component);se.defaultProps={style:{overlay:{},content:{}},defaultStyles:{}},se.propTypes={isOpen:r.default.bool.isRequired,defaultStyles:r.default.shape({content:r.default.object,overlay:r.default.object}),style:r.default.shape({content:r.default.object,overlay:r.default.object}),className:r.default.oneOfType([r.default.string,r.default.object]),overlayClassName:r.default.oneOfType([r.default.string,r.default.object]),parentSelector:r.default.func,bodyOpenClassName:r.default.string,htmlOpenClassName:r.default.string,ariaHideApp:r.default.bool,appElement:r.default.oneOfType([r.default.instanceOf(W.default),r.default.instanceOf(z.SafeHTMLCollection),r.default.instanceOf(z.SafeNodeList),r.default.arrayOf(r.default.instanceOf(W.default))]),onAfterOpen:r.default.func,onAfterClose:r.default.func,onRequestClose:r.default.func,closeTimeoutMS:r.default.number,shouldFocusAfterRender:r.default.bool,shouldCloseOnOverlayClick:r.default.bool,shouldReturnFocusAfterClose:r.default.bool,preventScroll:r.default.bool,role:r.default.string,contentLabel:r.default.string,aria:r.default.object,data:r.default.object,children:r.default.node,shouldCloseOnEsc:r.default.bool,overlayRef:r.default.func,contentRef:r.default.func,id:r.default.string,overlayElement:r.default.func,contentElement:r.default.func,testId:r.default.string},e.default=se,t.exports=e.default})(pe,pe.exports);var no=pe.exports;function De(){var t=this.constructor.getDerivedStateFromProps(this.props,this.state);t!=null&&this.setState(t)}function Le(t){function e(n){var a=this.constructor.getDerivedStateFromProps(t,n);return a??null}this.setState(e.bind(this))}function Ie(t,e){try{var n=this.props,a=this.state;this.props=t,this.state=e,this.__reactInternalSnapshotFlag=!0,this.__reactInternalSnapshot=this.getSnapshotBeforeUpdate(n,a)}finally{this.props=n,this.state=a}}De.__suppressDeprecationWarning=!0;Le.__suppressDeprecationWarning=!0;Ie.__suppressDeprecationWarning=!0;function ro(t){var e=t.prototype;if(!e||!e.isReactComponent)throw new Error("Can only polyfill class components");if(typeof t.getDerivedStateFromProps!="function"&&typeof e.getSnapshotBeforeUpdate!="function")return t;var n=null,a=null,i=null;if(typeof e.componentWillMount=="function"?n="componentWillMount":typeof e.UNSAFE_componentWillMount=="function"&&(n="UNSAFE_componentWillMount"),typeof e.componentWillReceiveProps=="function"?a="componentWillReceiveProps":typeof e.UNSAFE_componentWillReceiveProps=="function"&&(a="UNSAFE_componentWillReceiveProps"),typeof e.componentWillUpdate=="function"?i="componentWillUpdate":typeof e.UNSAFE_componentWillUpdate=="function"&&(i="UNSAFE_componentWillUpdate"),n!==null||a!==null||i!==null){var h=t.displayName||t.name,b=typeof t.getDerivedStateFromProps=="function"?"getDerivedStateFromProps()":"getSnapshotBeforeUpdate()";throw Error(`Unsafe legacy lifecycles will not be called for components using new component APIs.
+*/(function(t){(function(){var e=!!(typeof window<"u"&&window.document&&window.document.createElement),n={canUseDOM:e,canUseWorkers:typeof Worker<"u",canUseEventListeners:e&&!!(window.addEventListener||window.attachEvent),canUseViewport:e&&!!window.screen};t.exports?t.exports=n:window.ExecutionEnvironment=n})()})(Fe);var kt=Fe.exports;Object.defineProperty(M,"__esModule",{value:!0});M.canUseDOM=M.SafeNodeList=M.SafeHTMLCollection=void 0;var Pt=kt,Mt=Rt(Pt);function Rt(t){return t&&t.__esModule?t:{default:t}}var ae=Mt.default,Tt=ae.canUseDOM?window.HTMLElement:{};M.SafeHTMLCollection=ae.canUseDOM?window.HTMLCollection:{};M.SafeNodeList=ae.canUseDOM?window.NodeList:{};M.canUseDOM=ae.canUseDOM;M.default=Tt;Object.defineProperty(T,"__esModule",{value:!0});T.resetState=Lt;T.log=It;T.assertNodeList=Ne;T.setElement=Ut;T.validateElement=he;T.hide=Wt;T.show=Ht;T.documentNotReadyOrSSRTesting=jt;var Ft=Et,Nt=Dt(Ft),At=M;function Dt(t){return t&&t.__esModule?t:{default:t}}var k=null;function Lt(){k&&(k.removeAttribute?k.removeAttribute("aria-hidden"):k.length!=null?k.forEach(function(t){return t.removeAttribute("aria-hidden")}):document.querySelectorAll(k).forEach(function(t){return t.removeAttribute("aria-hidden")})),k=null}function It(){}function Ne(t,e){if(!t||!t.length)throw new Error("react-modal: No elements were found for selector "+e+".")}function Ut(t){var e=t;if(typeof e=="string"&&At.canUseDOM){var n=document.querySelectorAll(e);Ne(n,e),e=n}return k=e||k,k}function he(t){var e=t||k;return e?Array.isArray(e)||e instanceof HTMLCollection||e instanceof NodeList?e:[e]:((0,Nt.default)(!1,["react-modal: App element is not defined.","Please use `Modal.setAppElement(el)` or set `appElement={el}`.","This is needed so screen readers don't see main content","when modal is opened. It is not recommended, but you can opt-out","by setting `ariaHideApp={false}`."].join(" ")),[])}function Wt(t){var e=!0,n=!1,a=void 0;try{for(var i=he(t)[Symbol.iterator](),h;!(e=(h=i.next()).done);e=!0){var b=h.value;b.setAttribute("aria-hidden","true")}}catch(r){n=!0,a=r}finally{try{!e&&i.return&&i.return()}finally{if(n)throw a}}}function Ht(t){var e=!0,n=!1,a=void 0;try{for(var i=he(t)[Symbol.iterator](),h;!(e=(h=i.next()).done);e=!0){var b=h.value;b.removeAttribute("aria-hidden")}}catch(r){n=!0,a=r}finally{try{!e&&i.return&&i.return()}finally{if(n)throw a}}}function jt(){k=null}var $={};Object.defineProperty($,"__esModule",{value:!0});$.resetState=$t;$.log=Bt;var q={},K={};function ge(t,e){t.classList.remove(e)}function $t(){var t=document.getElementsByTagName("html")[0];for(var e in q)ge(t,q[e]);var n=document.body;for(var a in K)ge(n,K[a]);q={},K={}}function Bt(){}var zt=function(e,n){return e[n]||(e[n]=0),e[n]+=1,n},qt=function(e,n){return e[n]&&(e[n]-=1),n},Kt=function(e,n,a){a.forEach(function(i){zt(n,i),e.add(i)})},Vt=function(e,n,a){a.forEach(function(i){qt(n,i),n[i]===0&&e.remove(i)})};$.add=function(e,n){return Kt(e.classList,e.nodeName.toLowerCase()=="html"?q:K,n.split(" "))};$.remove=function(e,n){return Vt(e.classList,e.nodeName.toLowerCase()=="html"?q:K,n.split(" "))};var B={};Object.defineProperty(B,"__esModule",{value:!0});B.log=Gt;B.resetState=Jt;function Yt(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}var Ae=function t(){var e=this;Yt(this,t),this.register=function(n){e.openInstances.indexOf(n)===-1&&(e.openInstances.push(n),e.emit("register"))},this.deregister=function(n){var a=e.openInstances.indexOf(n);a!==-1&&(e.openInstances.splice(a,1),e.emit("deregister"))},this.subscribe=function(n){e.subscribers.push(n)},this.emit=function(n){e.subscribers.forEach(function(a){return a(n,e.openInstances.slice())})},this.openInstances=[],this.subscribers=[]},oe=new Ae;function Gt(){console.log("portalOpenInstances ----------"),console.log(oe.openInstances.length),oe.openInstances.forEach(function(t){return console.log(t)}),console.log("end portalOpenInstances ----------")}function Jt(){oe=new Ae}B.default=oe;var me={};Object.defineProperty(me,"__esModule",{value:!0});me.resetState=eo;me.log=to;var Qt=B,Xt=Zt(Qt);function Zt(t){return t&&t.__esModule?t:{default:t}}var _=void 0,P=void 0,I=[];function eo(){for(var t=[_,P],e=0;e<t.length;e++){var n=t[e];n&&n.parentNode&&n.parentNode.removeChild(n)}_=P=null,I=[]}function to(){console.log("bodyTrap ----------"),console.log(I.length);for(var t=[_,P],e=0;e<t.length;e++){var n=t[e],a=n||{};console.log(a.nodeName,a.className,a.id)}console.log("edn bodyTrap ----------")}function xe(){I.length!==0&&I[I.length-1].focusContent()}function oo(t,e){!_&&!P&&(_=document.createElement("div"),_.setAttribute("data-react-modal-body-trap",""),_.style.position="absolute",_.style.opacity="0",_.setAttribute("tabindex","0"),_.addEventListener("focus",xe),P=_.cloneNode(),P.addEventListener("focus",xe)),I=e,I.length>0?(document.body.firstChild!==_&&document.body.insertBefore(_,document.body.firstChild),document.body.lastChild!==P&&document.body.appendChild(P)):(_.parentElement&&_.parentElement.removeChild(_),P.parentElement&&P.parentElement.removeChild(P))}Xt.default.subscribe(oo);(function(t,e){Object.defineProperty(e,"__esModule",{value:!0});var n=Object.assign||function(u){for(var d=1;d<arguments.length;d++){var w=arguments[d];for(var o in w)Object.prototype.hasOwnProperty.call(w,o)&&(u[o]=w[o])}return u},a=typeof Symbol=="function"&&typeof Symbol.iterator=="symbol"?function(u){return typeof u}:function(u){return u&&typeof Symbol=="function"&&u.constructor===Symbol&&u!==Symbol.prototype?"symbol":typeof u},i=function(){function u(d,w){for(var o=0;o<w.length;o++){var c=w[o];c.enumerable=c.enumerable||!1,c.configurable=!0,"value"in c&&(c.writable=!0),Object.defineProperty(d,c.key,c)}}return function(d,w,o){return w&&u(d.prototype,w),o&&u(d,o),d}}(),h=Ee,b=Re,r=X(b),y=R,f=ie(y),x=_t,s=X(x),m=T,g=ie(m),S=$,F=ie(S),z=M,W=X(z),He=B,ve=X(He);function ie(u){if(u&&u.__esModule)return u;var d={};if(u!=null)for(var w in u)Object.prototype.hasOwnProperty.call(u,w)&&(d[w]=u[w]);return d.default=u,d}function X(u){return u&&u.__esModule?u:{default:u}}function je(u,d){if(!(u instanceof d))throw new TypeError("Cannot call a class as a function")}function $e(u,d){if(!u)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return d&&(typeof d=="object"||typeof d=="function")?d:u}function Be(u,d){if(typeof d!="function"&&d!==null)throw new TypeError("Super expression must either be null or a function, not "+typeof d);u.prototype=Object.create(d&&d.prototype,{constructor:{value:u,enumerable:!1,writable:!0,configurable:!0}}),d&&(Object.setPrototypeOf?Object.setPrototypeOf(u,d):u.__proto__=d)}var le={overlay:"ReactModal__Overlay",content:"ReactModal__Content"},ze=function(d){return d.code==="Tab"||d.keyCode===9},qe=function(d){return d.code==="Escape"||d.keyCode===27},Z=0,se=function(u){Be(d,u);function d(w){je(this,d);var o=$e(this,(d.__proto__||Object.getPrototypeOf(d)).call(this,w));return o.setOverlayRef=function(c){o.overlay=c,o.props.overlayRef&&o.props.overlayRef(c)},o.setContentRef=function(c){o.content=c,o.props.contentRef&&o.props.contentRef(c)},o.afterClose=function(){var c=o.props,C=c.appElement,E=c.ariaHideApp,O=c.htmlOpenClassName,A=c.bodyOpenClassName,D=c.parentSelector,ee=D&&D().ownerDocument||document;A&&F.remove(ee.body,A),O&&F.remove(ee.getElementsByTagName("html")[0],O),E&&Z>0&&(Z-=1,Z===0&&g.show(C)),o.props.shouldFocusAfterRender&&(o.props.shouldReturnFocusAfterClose?(f.returnFocus(o.props.preventScroll),f.teardownScopedFocus()):f.popWithoutFocus()),o.props.onAfterClose&&o.props.onAfterClose(),ve.default.deregister(o)},o.open=function(){o.beforeOpen(),o.state.afterOpen&&o.state.beforeClose?(clearTimeout(o.closeTimer),o.setState({beforeClose:!1})):(o.props.shouldFocusAfterRender&&(f.setupScopedFocus(o.node),f.markForFocusLater()),o.setState({isOpen:!0},function(){o.openAnimationFrame=requestAnimationFrame(function(){o.setState({afterOpen:!0}),o.props.isOpen&&o.props.onAfterOpen&&o.props.onAfterOpen({overlayEl:o.overlay,contentEl:o.content})})}))},o.close=function(){o.props.closeTimeoutMS>0?o.closeWithTimeout():o.closeWithoutTimeout()},o.focusContent=function(){return o.content&&!o.contentHasFocus()&&o.content.focus({preventScroll:!0})},o.closeWithTimeout=function(){var c=Date.now()+o.props.closeTimeoutMS;o.setState({beforeClose:!0,closesAt:c},function(){o.closeTimer=setTimeout(o.closeWithoutTimeout,o.state.closesAt-Date.now())})},o.closeWithoutTimeout=function(){o.setState({beforeClose:!1,isOpen:!1,afterOpen:!1,closesAt:null},o.afterClose)},o.handleKeyDown=function(c){ze(c)&&(0,s.default)(o.content,c),o.props.shouldCloseOnEsc&&qe(c)&&(c.stopPropagation(),o.requestClose(c))},o.handleOverlayOnClick=function(c){o.shouldClose===null&&(o.shouldClose=!0),o.shouldClose&&o.props.shouldCloseOnOverlayClick&&(o.ownerHandlesClose()?o.requestClose(c):o.focusContent()),o.shouldClose=null},o.handleContentOnMouseUp=function(){o.shouldClose=!1},o.handleOverlayOnMouseDown=function(c){!o.props.shouldCloseOnOverlayClick&&c.target==o.overlay&&c.preventDefault()},o.handleContentOnClick=function(){o.shouldClose=!1},o.handleContentOnMouseDown=function(){o.shouldClose=!1},o.requestClose=function(c){return o.ownerHandlesClose()&&o.props.onRequestClose(c)},o.ownerHandlesClose=function(){return o.props.onRequestClose},o.shouldBeClosed=function(){return!o.state.isOpen&&!o.state.beforeClose},o.contentHasFocus=function(){return document.activeElement===o.content||o.content.contains(document.activeElement)},o.buildClassName=function(c,C){var E=(typeof C>"u"?"undefined":a(C))==="object"?C:{base:le[c],afterOpen:le[c]+"--after-open",beforeClose:le[c]+"--before-close"},O=E.base;return o.state.afterOpen&&(O=O+" "+E.afterOpen),o.state.beforeClose&&(O=O+" "+E.beforeClose),typeof C=="string"&&C?O+" "+C:O},o.attributesFromObject=function(c,C){return Object.keys(C).reduce(function(E,O){return E[c+"-"+O]=C[O],E},{})},o.state={afterOpen:!1,beforeClose:!1},o.shouldClose=null,o.moveFromContentToOverlay=null,o}return i(d,[{key:"componentDidMount",value:function(){this.props.isOpen&&this.open()}},{key:"componentDidUpdate",value:function(o,c){this.props.isOpen&&!o.isOpen?this.open():!this.props.isOpen&&o.isOpen&&this.close(),this.props.shouldFocusAfterRender&&this.state.isOpen&&!c.isOpen&&this.focusContent()}},{key:"componentWillUnmount",value:function(){this.state.isOpen&&this.afterClose(),clearTimeout(this.closeTimer),cancelAnimationFrame(this.openAnimationFrame)}},{key:"beforeOpen",value:function(){var o=this.props,c=o.appElement,C=o.ariaHideApp,E=o.htmlOpenClassName,O=o.bodyOpenClassName,A=o.parentSelector,D=A&&A().ownerDocument||document;O&&F.add(D.body,O),E&&F.add(D.getElementsByTagName("html")[0],E),C&&(Z+=1,g.hide(c)),ve.default.register(this)}},{key:"render",value:function(){var o=this.props,c=o.id,C=o.className,E=o.overlayClassName,O=o.defaultStyles,A=o.children,D=C?{}:O.content,ee=E?{}:O.overlay;if(this.shouldBeClosed())return null;var Ke={ref:this.setOverlayRef,className:this.buildClassName("overlay",E),style:n({},ee,this.props.style.overlay),onClick:this.handleOverlayOnClick,onMouseDown:this.handleOverlayOnMouseDown},Ve=n({id:c,ref:this.setContentRef,style:n({},D,this.props.style.content),className:this.buildClassName("content",C),tabIndex:"-1",onKeyDown:this.handleKeyDown,onMouseDown:this.handleContentOnMouseDown,onMouseUp:this.handleContentOnMouseUp,onClick:this.handleContentOnClick,role:this.props.role,"aria-label":this.props.contentLabel},this.attributesFromObject("aria",n({modal:!0},this.props.aria)),this.attributesFromObject("data",this.props.data||{}),{"data-testid":this.props.testId}),Ye=this.props.contentElement(Ve,A);return this.props.overlayElement(Ke,Ye)}}]),d}(h.Component);se.defaultProps={style:{overlay:{},content:{}},defaultStyles:{}},se.propTypes={isOpen:r.default.bool.isRequired,defaultStyles:r.default.shape({content:r.default.object,overlay:r.default.object}),style:r.default.shape({content:r.default.object,overlay:r.default.object}),className:r.default.oneOfType([r.default.string,r.default.object]),overlayClassName:r.default.oneOfType([r.default.string,r.default.object]),parentSelector:r.default.func,bodyOpenClassName:r.default.string,htmlOpenClassName:r.default.string,ariaHideApp:r.default.bool,appElement:r.default.oneOfType([r.default.instanceOf(W.default),r.default.instanceOf(z.SafeHTMLCollection),r.default.instanceOf(z.SafeNodeList),r.default.arrayOf(r.default.instanceOf(W.default))]),onAfterOpen:r.default.func,onAfterClose:r.default.func,onRequestClose:r.default.func,closeTimeoutMS:r.default.number,shouldFocusAfterRender:r.default.bool,shouldCloseOnOverlayClick:r.default.bool,shouldReturnFocusAfterClose:r.default.bool,preventScroll:r.default.bool,role:r.default.string,contentLabel:r.default.string,aria:r.default.object,data:r.default.object,children:r.default.node,shouldCloseOnEsc:r.default.bool,overlayRef:r.default.func,contentRef:r.default.func,id:r.default.string,overlayElement:r.default.func,contentElement:r.default.func,testId:r.default.string},e.default=se,t.exports=e.default})(pe,pe.exports);var no=pe.exports;function De(){var t=this.constructor.getDerivedStateFromProps(this.props,this.state);t!=null&&this.setState(t)}function Le(t){function e(n){var a=this.constructor.getDerivedStateFromProps(t,n);return a??null}this.setState(e.bind(this))}function Ie(t,e){try{var n=this.props,a=this.state;this.props=t,this.state=e,this.__reactInternalSnapshotFlag=!0,this.__reactInternalSnapshot=this.getSnapshotBeforeUpdate(n,a)}finally{this.props=n,this.state=a}}De.__suppressDeprecationWarning=!0;Le.__suppressDeprecationWarning=!0;Ie.__suppressDeprecationWarning=!0;function ro(t){var e=t.prototype;if(!e||!e.isReactComponent)throw new Error("Can only polyfill class components");if(typeof t.getDerivedStateFromProps!="function"&&typeof e.getSnapshotBeforeUpdate!="function")return t;var n=null,a=null,i=null;if(typeof e.componentWillMount=="function"?n="componentWillMount":typeof e.UNSAFE_componentWillMount=="function"&&(n="UNSAFE_componentWillMount"),typeof e.componentWillReceiveProps=="function"?a="componentWillReceiveProps":typeof e.UNSAFE_componentWillReceiveProps=="function"&&(a="UNSAFE_componentWillReceiveProps"),typeof e.componentWillUpdate=="function"?i="componentWillUpdate":typeof e.UNSAFE_componentWillUpdate=="function"&&(i="UNSAFE_componentWillUpdate"),n!==null||a!==null||i!==null){var h=t.displayName||t.name,b=typeof t.getDerivedStateFromProps=="function"?"getDerivedStateFromProps()":"getSnapshotBeforeUpdate()";throw Error(`Unsafe legacy lifecycles will not be called for components using new component APIs.
 
 `+h+" uses "+b+" but also contains the following legacy lifecycles:"+(n!==null?`
   `+n:"")+(a!==null?`
@@ -732,4 +760,4 @@ https://fb.me/react-async-component-lifecycle-hooks`)}if(typeof t.getDerivedStat
 
   @media screen and (min-width: 1440px) {
   }
-`,No="/Healthy_life/assets/Breakfast-ebbae9d6.png",Ao="/Healthy_life/assets/Dinner-3e075f11.png",Do="/Healthy_life/assets/Lunch-b9834f5c.png",Lo="/Healthy_life/assets/Snack-986b08ce.png",Io={content:{maxWidth:"calc(100vw - 48px)",maxHeight:"calc(100vh - 24px)",top:"50%",left:"50%",right:"auto",bottom:"auto",marginRight:"-50%",transform:"translate(-50%, -50%)",border:"none",background:"#0F0F0F"},overlay:{backgroundColor:"rgba(0, 0, 0, 0.8)",zIndex:"1200",width:"100vw",height:"100vh"}};We.setAppElement("#root");const En=({stateModal:t,closeModal:e,typefood:n})=>{const a=Xe(),i={name:"",carbogidrate:"",protein:"",fat:"",calories:""},h=r=>{let y={typeFood:n,userFood:r.products.map(f=>({name:f.name,calories:f.calories,nutrition:{carbogidrate:f.carbogidrate,protein:f.protein,fat:f.fat}}))};a(nt(y)),e()},b=r=>{if(n==="breakfast")return No;if(n==="dinner")return Ao;if(n==="lunch")return Do;if(n==="snack")return Lo};return v.jsx(We,{isOpen:t,onRequestClose:e,style:Io,children:v.jsxs(Fo,{children:[v.jsx(dt,{children:"Record your meal"}),v.jsxs(st,{style:{marginTop:"24px"},children:[v.jsx(pt,{src:b(),alt:n}),v.jsx(ct,{children:Ze(n)})]}),v.jsx(et,{initialValues:{products:[i]},onSubmit:r=>h(r),children:({values:r})=>v.jsxs(tt,{children:[v.jsx(ot,{name:"products",children:({remove:y,push:f})=>v.jsxs("div",{children:[r.products.map((x,s)=>v.jsxs(Eo,{children:[v.jsx(wo,{name:`products.${s}.name`,placeholder:"The name of the product or dish",value:r.products[s].name}),v.jsx(Oo,{name:`products.${s}.carbogidrate`,placeholder:"Carbonoh.",value:r.products[s].carbogidrate,type:"number",min:1}),v.jsx(Co,{name:`products.${s}.protein`,placeholder:"Protein",value:r.products[s].protein,min:1,type:"number"}),v.jsxs(ko,{children:[v.jsx(_o,{name:`products.${s}.fat`,placeholder:"Fat",value:r.products[s].fat,min:1,type:"number"}),v.jsx(So,{name:`products.${s}.calories`,placeholder:"Calories",value:r.products[s].calories,min:1,type:"number"}),v.jsx(Ro,{"data-set":s,type:"button",onClick:m=>{const g=m.currentTarget.dataset.set;r.products.length===1&&e(),y(g)},children:v.jsx("svg",{style:{display:"inline-block",width:"20px",height:" 20px",fill:"#E3FFA8"},children:v.jsx("use",{href:`${ye}#trash-delete`})})})]})]},s)),v.jsxs(Mo,{type:"button",onClick:()=>f(i),children:[v.jsx(Po,{children:v.jsx("use",{href:`${ye}#icon-add-converted`})}),"Add more"]})]})}),v.jsxs(ut,{children:[v.jsx(ft,{type:"submit",children:"Confirm"}),v.jsx(To,{onClick:e,type:"button",children:"Cancel"})]})]})})]})})};export{_n as A,No as B,vn as C,Ao as D,Zo as E,rn as F,an as G,sn as H,On as I,cn as J,ln as K,Do as L,En as M,on as N,en as O,pn as P,dn as Q,yn as R,Lo as S,dt as T,un as U,fn as V,Yo as W,hn as X,$o as Y,qo as a,Ko as b,Vo as c,pt as d,Wo as e,Ho as f,jo as g,Bo as h,mn as i,st as j,ct as k,gn as l,xn as m,Cn as n,bn as o,wn as p,ut as q,ft as r,zo as s,Sn as t,nn as u,Go as v,Jo as w,Xo as x,tn as y,Qo as z};
+`,No="/Healthy_life/assets/Breakfast-ebbae9d6.png",Ao="/Healthy_life/assets/Dinner-3e075f11.png",Do="/Healthy_life/assets/Lunch-b9834f5c.png",Lo="/Healthy_life/assets/Snack-986b08ce.png",Io={content:{maxWidth:"calc(100vw - 48px)",maxHeight:"calc(100vh - 24px)",top:"50%",left:"50%",right:"auto",bottom:"auto",marginRight:"-50%",transform:"translate(-50%, -50%)",border:"none",background:"#0F0F0F"},overlay:{backgroundColor:"rgba(0, 0, 0, 0.8)",zIndex:"1200",width:"100vw",height:"100vh"}};We.setAppElement("#root");const Rn=({stateModal:t,closeModal:e,typefood:n})=>{const a=Xe(),i={name:"",carbogidrate:"",protein:"",fat:"",calories:""},h=r=>{let y={typeFood:n,userFood:r.products.map(f=>({name:f.name,calories:f.calories,nutrition:{carbogidrate:f.carbogidrate,protein:f.protein,fat:f.fat}}))};a(nt(y)),e()},b=r=>{if(n==="breakfast")return No;if(n==="dinner")return Ao;if(n==="lunch")return Do;if(n==="snack")return Lo};return v.jsx(We,{isOpen:t,onRequestClose:e,style:Io,children:v.jsxs(Fo,{children:[v.jsx(dt,{children:"Record your meal"}),v.jsxs(st,{style:{marginTop:"24px"},children:[v.jsx(pt,{src:b(),alt:n}),v.jsx(ct,{children:Ze(n)})]}),v.jsx(et,{initialValues:{products:[i]},onSubmit:r=>h(r),children:({values:r})=>v.jsxs(tt,{children:[v.jsx(ot,{name:"products",children:({remove:y,push:f})=>v.jsxs("div",{children:[r.products.map((x,s)=>v.jsxs(Eo,{children:[v.jsx(wo,{name:`products.${s}.name`,placeholder:"The name of the product or dish",value:r.products[s].name}),v.jsx(Oo,{name:`products.${s}.carbogidrate`,placeholder:"Carbonoh.",value:r.products[s].carbogidrate,type:"number",min:1}),v.jsx(Co,{name:`products.${s}.protein`,placeholder:"Protein",value:r.products[s].protein,min:1,type:"number"}),v.jsxs(ko,{children:[v.jsx(_o,{name:`products.${s}.fat`,placeholder:"Fat",value:r.products[s].fat,min:1,type:"number"}),v.jsx(So,{name:`products.${s}.calories`,placeholder:"Calories",value:r.products[s].calories,min:1,type:"number"}),v.jsx(Ro,{"data-set":s,type:"button",onClick:m=>{const g=m.currentTarget.dataset.set;r.products.length===1&&e(),y(g)},children:v.jsx("svg",{style:{display:"inline-block",width:"20px",height:" 20px",fill:"#E3FFA8"},children:v.jsx("use",{href:`${ye}#trash-delete`})})})]})]},s)),v.jsxs(Mo,{type:"button",onClick:()=>f(i),children:[v.jsx(Po,{children:v.jsx("use",{href:`${ye}#icon-add-converted`})}),"Add more"]})]})}),v.jsxs(ut,{children:[v.jsx(ft,{type:"submit",children:"Confirm"}),v.jsx(To,{onClick:e,type:"button",children:"Cancel"})]})]})})]})})};export{gn as $,Pn as A,No as B,bn as C,Ao as D,Xo as E,en as F,tn as G,nn as H,En as I,cn as J,pn as K,Do as L,Rn as M,ln as N,un as O,Zo as P,fn as Q,wn as R,Lo as S,dt as T,dn as U,rn as V,Yo as W,hn as X,mn as Y,vn as Z,yn as _,qo as a,Bo as a0,Ko as b,Vo as c,pt as d,Wo as e,Ho as f,jo as g,$o as h,xn as i,st as j,ct as k,On as l,Cn as m,kn as n,_n as o,Sn as p,ut as q,ft as r,zo as s,Mn as t,sn as u,Go as v,Jo as w,Qo as x,on as y,an as z};
