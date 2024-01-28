@@ -116,8 +116,10 @@ export const RecommendedPageList = () => {
       </RecList>
       {isNotDesktop && (
         <BtnWrapper>
-          {page !== count && (
+          {page !== count ? (
             <SeeMoreBtn onClick={handleSeeMoreClick}>Load more</SeeMoreBtn>
+          ) : (
+            <p>You have reached the end</p>
           )}
         </BtnWrapper>
       )}
