@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const RecPageContentWrapper = styled.div`
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
+  /* justify-content: flex-end; */
 `;
 
 export const TitleWrap = styled.div`
@@ -36,6 +36,7 @@ export const RecPageWrapper = styled.div`
     flex-direction: row;
     gap: 44px;
     align-items: flex-start;
+    justify-content: flex-end;
   }
 `;
 export const Title = styled.h2`
@@ -63,32 +64,6 @@ export const RecImage = styled.img`
     width: 536px;
     height: 560px;
   }
-`;
-
-export const SeeMoreBtn = styled.button`
-  background-color: var(--primary-color-green-lite);
-  color: var(--primary-color-black-two);
-  padding: 8px 10px;
-  border-radius: 12px;
-  border: none;
-  width: 122px;
-  height: 36px;
-  text-align: center;
-  font-weight: 500;
-  transition: background-color, var(--transition-dur-and-func);
-
-  &:hover {
-    background-color: var(--secondary-color-yellow);
-  }
-
-  @media screen and (min-width: 834px) {
-    width: 212px;
-  }
-`;
-
-export const Btnwrapp = styled.div`
-  margin: 0 auto;
-  padding: 30px 0;
 `;
 
 export const BackIcon = styled.svg`
