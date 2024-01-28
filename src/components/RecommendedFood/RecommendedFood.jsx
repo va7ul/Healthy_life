@@ -1,24 +1,30 @@
+import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
+
+import { RecommendedPageList } from './RecommendedList/RecommendedList';
+import { fetchRecFoods } from '../../redux/recomendedFoods/recOperations';
+import { selectRecFoods } from '../../redux/recomendedFoods/recSelectors';
+
 import image from '../../assets/images/recommendedPage.png';
+import sprite from '../../assets/images/sprite.svg';
 import {
   RecImage,
   RecPageContentWrapper,
+  TitleWrap,
   RecPageWrapper,
-  RecPageTitle,
+  Title,
   SeeMoreBtn,
   Btnwrapp,
+  BackIcon,
 } from './RecommendedFood.styled';
-
-import { RecommendedPageList } from './RecommendedList/RecommendedList';
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchRecFoods } from '../../redux/recomendedFoods/recOperations';
-import { selectRecFoods } from '../../redux/recomendedFoods/recSelectors';
-import { useMediaQuery } from 'react-responsive';
-
-import { useEffect } from 'react';
 
 export const RecommendedFood = () => {
   const dispatch = useDispatch();
+  const location = useLocation();
+  const backLinkLocationRef = useRef(location.state?.from ?? '/');
 
   const [numberOfCardsToRender, setNumberOfCardsToRender] = useState(10);
   const isNotDesktop = useMediaQuery({ maxWidth: 2440 });
@@ -39,7 +45,15 @@ export const RecommendedFood = () => {
 
   return (
     <RecPageContentWrapper>
-      <RecPageTitle>Recommended food</RecPageTitle>
+      <TitleWrap>
+        <Link to={backLinkLocationRef.current}>
+          <BackIcon>
+            <use href={`${sprite}#icon-arrowright`}></use>
+          </BackIcon>
+        </Link>
+        <Title>Recommended food</Title>
+      </TitleWrap>
+
       <RecPageWrapper>
         <RecImage src={image} alt="Page image" />
         <RecommendedPageList numberOfCardsToRender={numberOfCardsToRender} />
