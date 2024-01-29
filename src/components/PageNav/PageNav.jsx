@@ -1,9 +1,13 @@
 import { NavBox, StyledLink } from "./PageNav.styled";
 
-export const PageNav = () => {
+export const PageNav = ({ setOpenModal }) => {
+    
+    const handleClick = () => {
+    setOpenModal(false)
+  };
     
     return (
-        <NavBox>
+        <NavBox onClick={handleClick}>
             <StyledLink to="/main">
                 Home
             </StyledLink>
