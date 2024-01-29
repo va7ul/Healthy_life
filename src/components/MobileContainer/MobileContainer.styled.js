@@ -38,13 +38,13 @@ export const MobileMenu = styled.div`
   flex-direction: column;
   gap: 40px;
   position: absolute;
-  top: 153px;
+  top: 260px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
   width: 300px;
-  height: 184px;
-  padding: 24px 0px 24px 24px;
+  height: auto;
+  padding: 24px;
   border-radius: 12px;
   box-shadow: 0px 4px 14px 0px rgba(227, 255, 168, 0.2);
   background-color: var(--primary-color-black-two);
