@@ -1,21 +1,23 @@
-import { NavLink } from 'react-router-dom';
-import { NavBox } from "./PageNav.styled";
+// import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { NavBox, StyledLink } from "./PageNav.styled";
 
 export const PageNav = () => {
+    // const [active, setActive] = useState("Home");
     return (
-        <NavBox>
-            <NavLink to="/welcome">
+        <NavBox  onClick={(event)=>setActive(event.target.textContent)}>
+            <StyledLink to="/main">
                 Home
-            </NavLink>
-            <NavLink to="/dashboard">
+            </StyledLink>
+            <StyledLink to="/dashboard">
                 Dashboard
-            </NavLink>
-            <NavLink to="/diary">
+            </StyledLink>
+            <StyledLink to="/diary">
                 Diary
-            </NavLink>
-            <NavLink to="/recommended-food">
+            </StyledLink>
+            <StyledLink to="/recommended-food">
                 Recommended
-            </NavLink>
+            </StyledLink>
         </NavBox>
     )
 };
