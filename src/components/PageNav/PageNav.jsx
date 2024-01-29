@@ -1,10 +1,14 @@
+import { useMediaQuery } from 'react-responsive';
 import { NavBox, StyledLink } from "./PageNav.styled";
 
 export const PageNav = ({ setOpenModal }) => {
-    
+    const mobileTabletVersion = useMediaQuery({ query: '(max-width:1439px)' });
+
     const handleClick = () => {
-    setOpenModal(false)
-  };
+        if (mobileTabletVersion) {
+            setOpenModal(false)
+        }
+    }
     
     return (
         <NavBox onClick={handleClick}>
