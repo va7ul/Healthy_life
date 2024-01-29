@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 
-import { useMediaQuery } from 'react-responsive';
 import PuffLoader from 'react-spinners/PuffLoader';
 import sprite from 'assets/images/sprite.svg';
 import { RecommendedCard } from '../RecommendedCard/RecommendedCard';
@@ -17,9 +16,6 @@ import {
   RecLinkWrapper,
   RecForMainWrapper,
   RecListTitle,
-  SeeMoreBtn,
-  BtnWrapper,
-  ListWrapper,
 } from './RecommendedList.styled';
 
 export const RecommendedList = () => {
@@ -83,10 +79,6 @@ export const RecommendedPageList = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
-  const [page, setPage] = useState(0);
-  const [numberOfCardsToRender, setNumberOfCardsToRender] = useState(10);
-  const isNotDesktop = useMediaQuery({ maxWidth: 2440 });
-
   if (isLoading) {
     return (
       <PuffLoader
@@ -100,29 +92,11 @@ export const RecommendedPageList = () => {
     return <div>Error: {error}</div>;
   }
 
-  const count = Math.floor(recommendedFoods.length / 10);
-
-  const handleSeeMoreClick = () => {
-    setNumberOfCardsToRender((prevNumberOfCards) => prevNumberOfCards + 10);
-    setPage(page + 1);
-  };
-
   return (
-    <ListWrapper>
-      <RecList>
-        {recommendedFoods.slice(0, numberOfCardsToRender).map((item) => (
-          <RecommendedCard key={item.name} {...item} />
-        ))}
-      </RecList>
-      {isNotDesktop && (
-        <BtnWrapper>
-          {page !== count ? (
-            <SeeMoreBtn onClick={handleSeeMoreClick}>Load more</SeeMoreBtn>
-          ) : (
-            <p>You have reached the end</p>
-          )}
-        </BtnWrapper>
-      )}
-    </ListWrapper>
+    <RecList>
+      {recommendedFoods.map((item) => (
+        <RecommendedCard key={item.name} {...item} />
+      ))}
+    </RecList>
   );
 };
