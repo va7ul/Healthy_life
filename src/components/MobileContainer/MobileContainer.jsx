@@ -3,6 +3,7 @@ import { GoalNav } from "../GoalNav/GoalNav"
 import { WeightNav } from "../WeightNav/WeightNav";
 import sprite from 'assets/images/sprite.svg';
 import { IconClose, IconMenu, MobileMenu, ButtonClose, DivLogo, Backdrop } from './MobileContainer.styled';
+import { PageNav } from '../PageNav/PageNav';
 
 export const MobileContainer = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -46,6 +47,7 @@ export const MobileContainer = () => {
                                 <use href={`${sprite}#icon-close-circle`}></use>
                             </IconClose>
                         </ButtonClose>
+                        <PageNav setOpenModal={setOpenModal}/>
                         <GoalNav setOpenModal={setOpenModal} />
                         <WeightNav setOpenModal={setOpenModal} />
                     </MobileMenu>
