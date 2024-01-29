@@ -6,8 +6,6 @@ export const NavBox = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  /* width: 109px;
-  height: 158px; */
 
   @media screen and (min-width: 834px) {
     display: none;
@@ -15,6 +13,7 @@ export const NavBox = styled.nav`
 
   @media screen and (min-width: 1440px) {
     display: flex;
+    flex-direction: row;
     gap: 40px;
     margin-right: 60px;
   }
