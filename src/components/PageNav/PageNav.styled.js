@@ -2,7 +2,17 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const NavBox = styled.nav`
-  display: none;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* width: 109px;
+  height: 158px; */
+
+  @media screen and (min-width: 834px) {
+    display: none;
+  }
+
   @media screen and (min-width: 1440px) {
     display: flex;
     gap: 40px;
