@@ -7,10 +7,10 @@ export const DesktopContainer = styled.div`
     align-items: center;
     gap: 40px;
   }
-
+  /* 
   @media screen and (min-width: 1440px) {
     gap: 80px;
-  }
+  } */
 `;
 
 export const Box = styled.div`
