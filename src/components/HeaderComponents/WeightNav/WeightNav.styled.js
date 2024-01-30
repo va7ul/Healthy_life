@@ -84,6 +84,7 @@ export const BoxDate = styled.div`
   align-items: center;
   gap: 6px;
   margin-bottom: 20px;
+
   @media screen and (min-width: 834px) {
     margin-bottom: 16px;
   }
@@ -101,6 +102,7 @@ export const ButtonSend = styled.button`
   &:hover {
     background-color: var(--secondary-color-yellow);
   }
+
   @media screen and (min-width: 834px) {
     width: 166px;
     margin-top: 0px;
@@ -124,6 +126,7 @@ export const InputWeight = styled(Field)`
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
+
   @media screen and (min-width: 834px) {
     width: 166px;
   }
@@ -165,6 +168,7 @@ export const ButtonClose = styled.button`
 
 export const IconClose = styled.svg`
   display: none;
+
   @media screen and (min-width: 834px) {
     display: block;
     width: 16px;
@@ -186,6 +190,7 @@ export const FormBlock = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 12px;
+
   @media screen and (min-width: 834px) {
     flex-direction: row;
   }
