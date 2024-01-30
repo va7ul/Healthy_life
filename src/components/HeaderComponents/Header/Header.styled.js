@@ -18,7 +18,6 @@ export const BoxContent = styled.nav`
     padding: 26px 36px 26px 34px;
     max-width: 1440px;
     margin: 0 auto;
-    gap: 100px;
   }
 `;
 

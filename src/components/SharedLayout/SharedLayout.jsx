@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Header } from 'components/Header/Header';
+import { Header } from '../HeaderComponents/Header/Header';
 import { Container, AppTitle } from './SharedLayout.styled';
 import PuffLoader from 'react-spinners/PuffLoader';
 

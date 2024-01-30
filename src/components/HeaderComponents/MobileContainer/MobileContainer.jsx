@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { GoalNav } from "../GoalNav/GoalNav"
 import { WeightNav } from "../WeightNav/WeightNav";
-import sprite from 'assets/images/sprite.svg';
-import { IconClose, IconMenu, MobileMenu, ButtonClose, DivLogo, Backdrop } from './MobileContainer.styled';
+import { IconClose, IconMenu, MobileMenu, ButtonClose, DivLogo, Backdrop, DivMenu, Box } from './MobileContainer.styled';
 import { PageNav } from '../PageNav/PageNav';
+import sprite from 'assets/images/sprite.svg';
 
 export const MobileContainer = () => {
+    const mobileVersion = useMediaQuery({ query: '(max-width:833px)' });
+
     const [openModal, setOpenModal] = useState(false);
 
     const isOpenModal = () => {
@@ -32,12 +35,17 @@ export const MobileContainer = () => {
 
     return (
         <>
-            <DivLogo>
-                <IconMenu onClick={isOpenModal}>
-                    <use href={`${sprite}#icon-menu`}></use>
-                </IconMenu>
-            </DivLogo>
-
+            <Box>
+                <DivLogo>
+                    <IconMenu onClick={isOpenModal}>
+                        <use href={`${sprite}#icon-menu`}></use>
+                    </IconMenu>
+                </DivLogo>
+                <DivMenu>
+                    <GoalNav setOpenModal={setOpenModal} />
+                    <WeightNav setOpenModal={setOpenModal} />
+                </DivMenu>
+            </Box>
             {openModal ? (
                 <Backdrop onClick={isOpenModal}>
                     <MobileMenu onClick={(e) => e.stopPropagation()}>
@@ -47,9 +55,15 @@ export const MobileContainer = () => {
                                 <use href={`${sprite}#icon-close-circle`}></use>
                             </IconClose>
                         </ButtonClose>
-                        <PageNav setOpenModal={setOpenModal}/>
-                        <GoalNav setOpenModal={setOpenModal} />
-                        <WeightNav setOpenModal={setOpenModal} />
+                        {mobileVersion ? (
+                            <>
+                                <PageNav setOpenModal={setOpenModal} />
+                                <GoalNav setOpenModal={setOpenModal} />
+                                <WeightNav setOpenModal={setOpenModal} />
+                            </>
+                        ) : (
+                            <PageNav setOpenModal={setOpenModal} />
+                        )}
                     </MobileMenu>
                 </Backdrop>
             ) : undefined}
