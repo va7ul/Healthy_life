@@ -48,13 +48,13 @@ export const ProfileSettingsCard = () => {
   const dispatch = useDispatch();
 
   const currentUserData = useSelector(selectUserData);
-  const { name, avatar, age, gender, height, weight, activityLevel } =
+  const { name, avatar, birthDate, gender, height, weight, activityLevel } =
     currentUserData;
 
   const initialValues = {
     name,
     avatar: avatar,
-    age,
+    birthDate,
     gender,
     height,
     weight,
@@ -66,11 +66,13 @@ export const ProfileSettingsCard = () => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       formik.values.activityLevel = Number(values.activityLevel);
+      console.log(formik.values.birthDate);
+      console.log(typeof formik.values.birthDate);
 
       let formData = new FormData();
       formData.append('avatar', formik.values.avatar);
       formData.append('name', formik.values.name);
-      formData.append('age', formik.values.age);
+      formData.append('birthDate', formik.values.birthDate);
       formData.append('gender', formik.values.gender);
       formData.append('height', formik.values.height);
       formData.append('weight', formik.values.weight);
@@ -145,18 +147,18 @@ export const ProfileSettingsCard = () => {
             </DownloadButton>
           </InputWrapper>
         </LabelInput>
-        <LabelInput htmlFor="age">
-          Your age
+        <LabelInput htmlFor="birthDate">
+          Date of birth
           <FieldStyled
-            id="age"
-            name="age"
-            type="number"
-            value={formik.values.age}
+            id="birthDate"
+            name="birthDate"
+            placeholder="dd.mm.yyyy"
+            value={formik.values.birthDate}
             onChange={formik.handleChange}
           />
-          {formik.errors.age && formik.touched.age && (
-            <ErrorMessageStyled id="feedback" name="age">
-              {formik.errors.age}
+          {formik.errors.birthDate && formik.touched.birthDate && (
+            <ErrorMessageStyled id="feedback" name="birthDate">
+              {formik.errors.birthDate}
             </ErrorMessageStyled>
           )}
         </LabelInput>
