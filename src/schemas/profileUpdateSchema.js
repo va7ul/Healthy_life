@@ -13,13 +13,13 @@ export const validationSchema = Yup.object().shape({
       if (this.isType(value)) {
         return value;
       }
-      const result = parse(originalValue, 'dd.mm.yyyy', new Date());
+      const result = parse(originalValue, 'dd.MM.yyyy', new Date());
       return result;
     })
     .min('1900-01-01', 'Date is too early')
     .max(new Date(), 'Please enter a correct date')
     .typeError('Please enter a valid date DD.MM.YYYY')
-    .required('BirthDate should be filled'),
+    .required('Date of birth should be filled'),
   gender: Yup.string().oneOf(['male', 'female']).required(),
   height: Yup.number('Enter correct number')
     .positive('Height should be positive')
