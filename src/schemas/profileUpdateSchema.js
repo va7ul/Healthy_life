@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+import parse from 'date-fns/parse';
 
 export const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -7,12 +8,18 @@ export const validationSchema = Yup.object().shape({
     .min(2, 'Too short name')
     .max(20, 'Too long name')
     .required('Name should be filled'),
-  age: Yup.number('Enter correct number')
-    .positive('Age should be positive')
-    .integer('Age should be integer')
-    .min(16, 'Incorrect data for calculation')
-    .max(120, 'Are you serious?')
-    .required('Age should be filled'),
+  birthDate: Yup.date()
+    .transform(function (value, originalValue) {
+      if (this.isType(value)) {
+        return value;
+      }
+      const result = parse(originalValue, 'dd.mm.yyyy', new Date());
+      return result;
+    })
+    .min('1900-01-01', 'Date is too early')
+    .max(new Date(), 'Please enter a correct date')
+    .typeError('Please enter a valid date DD.MM.YYYY')
+    .required('BirthDate should be filled'),
   gender: Yup.string().oneOf(['male', 'female']).required(),
   height: Yup.number('Enter correct number')
     .positive('Height should be positive')
