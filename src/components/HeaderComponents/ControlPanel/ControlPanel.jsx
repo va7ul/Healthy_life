@@ -2,22 +2,24 @@ import { useMediaQuery } from 'react-responsive';
 import { GoalNav } from "../GoalNav/GoalNav";
 import { UserInfoNav } from "../UserInfoNav/UserInfoNav";
 import { WeightNav } from "../WeightNav/WeightNav";
-import { DesktopContainer, Box } from "./ControlPanel.styled";
+import { DesktopContainer, Box, BoxMenu } from "./ControlPanel.styled";
 import { MobileContainer } from '../MobileContainer/MobileContainer';
 import { PageNav } from '../PageNav/PageNav';
 
 export const ControlPanel = () => {
-    const mobileVersion = useMediaQuery({ query: '(max-width:833px)' });
+    const tabletVersion = useMediaQuery({ query: '(max-width:1439px)' });
     
     return (
         <Box>
-            {mobileVersion ? (
+            {tabletVersion ? (
                 <MobileContainer />
             ) : (
                 <DesktopContainer>
                     <PageNav />
-                    <GoalNav />
-                    <WeightNav />
+                    <BoxMenu>
+                        <GoalNav />
+                        <WeightNav />
+                    </BoxMenu>
                 </DesktopContainer>)}
             <UserInfoNav />
         </Box>
