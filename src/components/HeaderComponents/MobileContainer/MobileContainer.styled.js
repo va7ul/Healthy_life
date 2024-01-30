@@ -52,7 +52,7 @@ export const MobileMenu = styled.div`
   background-color: var(--primary-color-black-two);
 
   @media screen and (min-width: 834px) {
-    top: 210px;
+    top: 245px;
     left: 178px;
     width: 326px;
     height: 286px;
