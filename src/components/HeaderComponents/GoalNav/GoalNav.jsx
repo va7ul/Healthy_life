@@ -10,15 +10,15 @@ import Menu from '@mui/material/Menu';
 import Fade from '@mui/material/Fade';
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from 'react';
-import { theme } from '../../GlobalStyle/';
-import { selectUserGender, selectUserGoal } from '../../redux/auth/authSelectors';
-import loseFat from '../../assets/images/loseFat.png';
-import maintain from '../../assets/images/maintain.png';
-import loseFat_girl from '../../assets/images/loseFat_girl.png';
-import maintain_girl from '../../assets/images/maintain_girl.png';
-import gainMuscle from '../../assets/images/gainMuscle.png';
+import { theme } from '../../../GlobalStyle/';
+import { selectUserGender, selectUserGoal } from '../../../redux/auth/authSelectors';
+import loseFat from '../../../assets/images/loseFat.png';
+import maintain from '../../../assets/images/maintain.png';
+import loseFat_girl from '../../../assets/images/loseFat_girl.png';
+import maintain_girl from '../../../assets/images/maintain_girl.png';
+import gainMuscle from '../../../assets/images/gainMuscle.png';
 import sprite from 'assets/images/sprite.svg';
-import { updateGoal } from '../../redux/auth/authOperations';
+import { updateGoal } from '../../../redux/auth/authOperations';
 import {
   DivImage,
   DivStyled,
@@ -147,7 +147,7 @@ export const GoalNav = ({ setOpenModal }) => {
   };
 
   return (
-    <div>
+    <div style={{ width: '180px' }}>
       <ButtonMenu
         id="fade-button"
         aria-controls={open ? 'fade-menu' : undefined}
@@ -156,12 +156,12 @@ export const GoalNav = ({ setOpenModal }) => {
         onClick={handleClick}
       >
         <DivImage>
-          <LoseFatBig src={currentImage} alt="Lose fat" />
+          <LoseFatBig src={currentImage} alt={currentValue} />
         </DivImage>
 
         <DivStyled>
           <MainText>Goal</MainText>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Text>{value}</Text>
 
             {mobileVersion ? (<IconRight>

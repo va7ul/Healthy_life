@@ -5,12 +5,20 @@ export const DesktopContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 140px;
+  }
+`;
+
+export const BoxMenu = styled.div`
+  @media screen and (min-width: 834px) {
+    display: flex;
+    align-items: center;
     gap: 40px;
   }
-  /* 
+
   @media screen and (min-width: 1440px) {
     gap: 80px;
-  } */
+  }
 `;
 
 export const Box = styled.div`
