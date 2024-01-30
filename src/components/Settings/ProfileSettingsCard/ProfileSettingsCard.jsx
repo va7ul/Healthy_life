@@ -152,7 +152,7 @@ export const ProfileSettingsCard = () => {
           <FieldStyled
             id="birthDate"
             name="birthDate"
-            placeholder="dd.mm.yyyy"
+            placeholder="00.00.0000"
             value={formik.values.birthDate}
             onChange={formik.handleChange}
           />
@@ -242,32 +242,32 @@ export const ProfileSettingsCard = () => {
               value="1.2"
               sx={formControlLabel}
               control={<Radio sx={radioStyled} />}
-              label="1.2 - if you do not have physical activity and sedentary work"
+              label="If you do not have physical activity and sedentary work"
             />
             <FormControlLabel
               value="1.375"
               sx={formControlLabel}
               control={<Radio sx={radioStyled} />}
-              label="1.375 - if you do short runs or light gymnastics 1-3 times a
+              label="If you do short runs or light gymnastics 1-3 times a
                   week"
             />
             <FormControlLabel
               value="1.55"
               sx={formControlLabel}
               control={<Radio sx={radioStyled} />}
-              label="1.55 - if you play sports with average loads 3-5 times a week"
+              label="If you play sports with average loads 3-5 times a week"
             />
             <FormControlLabel
               value="1.725"
               sx={formControlLabel}
               control={<Radio sx={radioStyled} />}
-              label="1.725 - if you train fully 6-7 times a week"
+              label="If you train fully 6-7 times a week"
             />
             <FormControlLabel
               value="1.9"
               sx={formControlLabel}
               control={<Radio sx={radioStyled} />}
-              label="1.9 - if your work is related to physical labor, you train 2
+              label="If your work is related to physical labor, you train 2
                   times a day and include strength exercises in your training
                   program"
             />
