@@ -182,8 +182,6 @@ export const buttonGroupStyled = {
 };
 
 export const buttonStyled = {
-  // display: 'flex',
-  // alignContent: 'center',
   lineHeight: 1.3,
   width: '212px',
   padding: '8px 10px',

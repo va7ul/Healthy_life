@@ -68,10 +68,17 @@ export const ProfileSettingsCard = () => {
     activityLevel,
   } = currentUserData;
 
+  const correctbirthDate =
+    birthDate.slice(8, 10) +
+    '.' +
+    birthDate.slice(5, 7) +
+    '.' +
+    birthDate.slice(0, 4);
+
   const initialValues = {
     name,
     avatar: avatar,
-    birthDate,
+    birthDate: correctbirthDate,
     gender,
     height,
     weight,

@@ -33,7 +33,7 @@ const SignUpPage = () => {
   const [password, setPassword] = useState('');
   const [goal, setGoal] = useState('Lose Fat');
   const [gender, setGender] = useState('male');
-  const [age, setAge] = useState('');
+  const [birthDate, setBirthDate] = useState('');
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [activityLevel, setActivityLevel] = useState('1.2');
@@ -68,10 +68,10 @@ const SignUpPage = () => {
 
   const handleSelectGender = (values) => {
     const selectedGender = values.gender;
-    const selectedAge = values.age;
+    const selectedBirthDate = values.birthDate;
 
     setGender(selectedGender);
-    setAge(selectedAge);
+    setBirthDate(selectedBirthDate);
     nextPage();
   };
 
@@ -95,7 +95,7 @@ const SignUpPage = () => {
         password,
         goal,
         gender,
-        age,
+        birthDate,
         height: Number(height),
         weight: Number(weight),
         activityLevel: Number(selectedActivity),
@@ -131,7 +131,7 @@ const SignUpPage = () => {
           onForm={handleSelectGender}
           onBackPage={backPage}
           gender={gender}
-          ageValue={age}
+          birthDateValue={birthDate}
         />
       )}
       {currentStep === 3 && (

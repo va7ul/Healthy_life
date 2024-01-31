@@ -34,4 +34,5 @@ export const validationSchema = Yup.object().shape({
     .max(200, 'Incorrect data for calculation')
     .required('Weight should be filled'),
   activityLevel: Yup.number().oneOf([1.2, 1.375, 1.55, 1.725, 1.9]).required(),
+  goal: Yup.string().oneOf(['Lose Fat', 'Maintain', 'Gain muscle']).required(),
 });
