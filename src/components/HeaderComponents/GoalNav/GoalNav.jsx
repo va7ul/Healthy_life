@@ -33,7 +33,8 @@ import {
   ButtonClose,
   IconRight,
   ButtonCancel,
-  Form
+  Form,
+  DivActiveImage
 } from './GoalNav.styled';
 
 const ButtonMenu = styled(Button)({
@@ -220,7 +221,7 @@ export const GoalNav = ({ setOpenModal }) => {
                   color: 'white.main',
                   marginLeft: '12px',
                 },
-                '& :hover.MuiTypography-root': {
+                '& :hover.MuiFormControlLabel-root .MuiFormControlLabel-label': {
                   color: '#B6C3FF',
                   fontFamily: 'Poppins500',
                 }
@@ -240,9 +241,9 @@ export const GoalNav = ({ setOpenModal }) => {
                       </DivImage>
                     }
                     checkedIcon={
-                      <DivImage>
+                      <DivActiveImage>
                         <LoseFat src={isGender === "male" ? loseFat : loseFat_girl} alt="Lose fat" />
-                      </DivImage>
+                      </DivActiveImage>
                     }
                   />
                 }
@@ -260,9 +261,9 @@ export const GoalNav = ({ setOpenModal }) => {
                       </DivImage>
                     }
                     checkedIcon={
-                      <DivImage>
+                      <DivActiveImage>
                         <LoseFat src={isGender === "male" ? maintain : maintain_girl} alt="Maintain" />
-                      </DivImage>
+                      </DivActiveImage>
                     }
                   />
                 }
@@ -281,9 +282,9 @@ export const GoalNav = ({ setOpenModal }) => {
                       </DivImage>
                     }
                     checkedIcon={
-                      <DivImage>
+                      <DivActiveImage>
                         <LoseFat src={gainMuscle} alt="Gain muscle" />
-                      </DivImage>
+                      </DivActiveImage>
                     }
                   />
                 }

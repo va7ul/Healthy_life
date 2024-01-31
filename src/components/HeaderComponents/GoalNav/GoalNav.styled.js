@@ -119,3 +119,10 @@ export const Form = styled.form`
     background-color: var(--primary-color-black-one);
   }
 `;
+
+export const DivActiveImage = styled.div`
+  border: 1px solid var(--primary-color-violet);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.01);
+  padding: 10px;
+`;
