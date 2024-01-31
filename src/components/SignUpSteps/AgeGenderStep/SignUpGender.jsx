@@ -1,5 +1,6 @@
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import parse from 'date-fns/parse';
 import image from '../../../assets/backgroundImages/genderAge.png';
 import {
   GenderAgeWrapper,
@@ -19,13 +20,20 @@ import {
   StyledForm,
 } from './SelectGenderAge.styled';
 
-const genderAgeSchema = Yup.object().shape({
+const genderBirthDateSchema = Yup.object().shape({
   gender: Yup.string().required('Gender is required'),
-  age: Yup.number()
-    .positive('Age must be a positive number')
-    .integer('Age must be an integer')
-    .max(150, 'Age must be less than 150')
-    .required('Age is required'),
+  birthDate: Yup.date()
+    .transform(function (value, originalValue) {
+      if (this.isType(value)) {
+        return value;
+      }
+      const result = parse(originalValue, 'dd.MM.yyyy', new Date());
+      return result;
+    })
+    .min('1900-01-01', 'Date is too early')
+    .max(new Date(), 'Please enter a correct date')
+    .typeError('Please enter a valid date DD.MM.YYYY')
+    .required('Date of birth should be filled'),
 });
 
 function SelectGender({ onForm, onBackPage }) {
@@ -36,8 +44,8 @@ function SelectGender({ onForm, onBackPage }) {
         <Title>Select gender, Age</Title>
         <Subtitle>Choose a goal so that we can help you effectively</Subtitle>
         <Formik
-          initialValues={{ gender: '', age: '' }}
-          validationSchema={genderAgeSchema}
+          initialValues={{ gender: '', birthDate: '' }}
+          validationSchema={genderBirthDateSchema}
           onSubmit={onForm}
         >
           {() => (
@@ -56,13 +64,9 @@ function SelectGender({ onForm, onBackPage }) {
                 </GenderWrap>
                 <ErrorMessage name="gender" component={StyledErrorMessage} />
               </RadioWrapper>
-              <Text>Your Age</Text>
-              <StyledInput
-                type="number"
-                name="age"
-                placeholder="Enter your age"
-              />
-              <ErrorMessage name="age" component={StyledErrorMessage} />
+              <Text>Date of birth</Text>
+              <StyledInput name="birthDate" placeholder="00.00.0000" />
+              <ErrorMessage name="birthDate" component={StyledErrorMessage} />
               <NextButton type="submit">Next</NextButton>
               <BackButton type="button" onClick={onBackPage}>
                 Back

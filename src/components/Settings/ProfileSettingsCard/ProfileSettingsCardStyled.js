@@ -182,6 +182,7 @@ export const buttonGroupStyled = {
 };
 
 export const buttonStyled = {
+  lineHeight: 1.3,
   width: '212px',
   padding: '8px 10px',
   border: '1px solid transparent',
@@ -195,4 +196,29 @@ export const ErrorMessageStyled = styled.div`
   font-family: 'Poppins400';
   font-size: 12px;
   margin-left: 4px;
+`;
+
+export const FormLabelText = styled.p`
+  font-family: 'Poppins400', sans-serif;
+  color: var(--primary-color-grey);
+  margin-top: 8px;
+`;
+
+export const DivImage = styled.div`
+  border: 1px solid var(--secondary-color-grey-one);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.01);
+  padding: 10px;
+`;
+
+export const LoseFat = styled.img`
+  width: 20px;
+  height: 20px;
+`;
+
+export const DivActiveImage = styled.div`
+  border: 1px solid var(--primary-color-green-lite);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.01);
+  padding: 10px;
 `;
