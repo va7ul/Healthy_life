@@ -13,6 +13,11 @@ import { validationSchema } from '../../../schemas/profileUpdateSchema';
 import { selectUserData } from '../../../redux/auth/authSelectors';
 import { updateUser } from '../../../redux/auth/authOperations';
 
+import loseFat from '../../../assets/images/loseFat.png';
+import maintain from '../../../assets/images/maintain.png';
+import loseFat_girl from '../../../assets/images/loseFat_girl.png';
+import maintain_girl from '../../../assets/images/maintain_girl.png';
+import gainMuscle from '../../../assets/images/gainMuscle.png';
 import sprite from '../../../assets/images/sprite.svg';
 import {
   FormWrapper,
@@ -31,6 +36,10 @@ import {
   DownloadButton,
   InputStyled,
   DownloadSpan,
+  FormLabelText,
+  DivImage,
+  DivActiveImage,
+  LoseFat,
 } from './ProfileSettingsCardStyled';
 
 Notify.init({
@@ -48,8 +57,16 @@ export const ProfileSettingsCard = () => {
   const dispatch = useDispatch();
 
   const currentUserData = useSelector(selectUserData);
-  const { name, avatar, birthDate, gender, height, weight, activityLevel } =
-    currentUserData;
+  const {
+    name,
+    avatar,
+    birthDate,
+    gender,
+    height,
+    weight,
+    goal,
+    activityLevel,
+  } = currentUserData;
 
   const initialValues = {
     name,
@@ -58,6 +75,7 @@ export const ProfileSettingsCard = () => {
     gender,
     height,
     weight,
+    goal,
     activityLevel,
   };
 
@@ -68,6 +86,8 @@ export const ProfileSettingsCard = () => {
       formik.values.activityLevel = Number(values.activityLevel);
       console.log(formik.values.birthDate);
       console.log(typeof formik.values.birthDate);
+      console.log(formik.values.goal);
+      console.log(typeof formik.values.goal);
 
       let formData = new FormData();
       formData.append('avatar', formik.values.avatar);
@@ -76,6 +96,7 @@ export const ProfileSettingsCard = () => {
       formData.append('gender', formik.values.gender);
       formData.append('height', formik.values.height);
       formData.append('weight', formik.values.weight);
+      formData.append('goal', formik.values.goal);
       formData.append('activityLevel', formik.values.activityLevel);
 
       dispatch(updateUser(formData)).then((result) => {
@@ -225,6 +246,105 @@ export const ProfileSettingsCard = () => {
           )}
           <ErrorMessageStyled name="weight" component="span" />
         </LabelInput>
+        <FormControl sx={{ gap: '12px' }}>
+          <FormLabel id="goal" sx={formLabelStyled}>
+            Target selection
+            <FormLabelText>
+              The service will adjust your calorie intake to your goal
+            </FormLabelText>
+          </FormLabel>
+          <RadioGroup
+            row
+            sx={{
+              gap: '12px',
+              '& .MuiFormControlLabel-root .MuiFormControlLabel-label': {
+                fontFamily: 'Poppins400',
+                fontSize: '14px',
+                color: 'white.main',
+                marginLeft: '12px',
+              },
+            }}
+            aria-labelledby="goal"
+            name="goal"
+            value={formik.values.goal}
+            onChange={formik.handleChange}
+          >
+            <FormControlLabel
+              sx={{ margin: '0px' }}
+              value="Lose Fat"
+              control={
+                <Radio
+                  sx={{ padding: '0px' }}
+                  icon={
+                    <DivImage>
+                      <LoseFat
+                        src={gender === 'male' ? loseFat : loseFat_girl}
+                        alt="Lose fat"
+                      />
+                    </DivImage>
+                  }
+                  checkedIcon={
+                    <DivActiveImage>
+                      <LoseFat
+                        src={gender === 'male' ? loseFat : loseFat_girl}
+                        alt="Lose fat"
+                      />
+                    </DivActiveImage>
+                  }
+                />
+              }
+              label="Lose Fat"
+            />
+
+            <FormControlLabel
+              sx={{ margin: '0px' }}
+              value="Maintain"
+              control={
+                <Radio
+                  sx={{ padding: '0px' }}
+                  icon={
+                    <DivImage>
+                      <LoseFat
+                        src={gender === 'male' ? maintain : maintain_girl}
+                        alt="Maintain"
+                      />
+                    </DivImage>
+                  }
+                  checkedIcon={
+                    <DivActiveImage>
+                      <LoseFat
+                        src={gender === 'male' ? maintain : maintain_girl}
+                        alt="Maintain"
+                      />
+                    </DivActiveImage>
+                  }
+                />
+              }
+              label="Maintain"
+            />
+
+            <FormControlLabel
+              sx={{ margin: '0px' }}
+              value="Gain Muscle"
+              control={
+                <Radio
+                  sx={{ padding: '0px' }}
+                  icon={
+                    <DivImage>
+                      <LoseFat src={gainMuscle} alt="Gain muscle" />
+                    </DivImage>
+                  }
+                  checkedIcon={
+                    <DivActiveImage>
+                      <LoseFat src={gainMuscle} alt="Gain muscle" />
+                    </DivActiveImage>
+                  }
+                />
+              }
+              label="Gain Muscle"
+            />
+          </RadioGroup>
+        </FormControl>
         <FormControl sx={{ gap: '12px' }}>
           <FormLabel id="activityLevel" sx={formLabelStyled}>
             Your activity
