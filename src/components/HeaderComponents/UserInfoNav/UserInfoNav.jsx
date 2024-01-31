@@ -9,8 +9,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogTitle from '@mui/material/DialogTitle';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { logOut } from '../../redux/auth/authOperations';
-import { selectUsername, selectUserAvatar } from '../../redux/auth/authSelectors';
+import { logOut } from '../../../redux/auth/authOperations';
+import { selectUsername, selectUserAvatar } from '../../../redux/auth/authSelectors';
 import { IconSetting, IconLogout, Link, IconDown, AvatarName, Container } from './UserInfoNav.styled';
 import sprite from 'assets/images/sprite.svg';
 

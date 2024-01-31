@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const IconMenu = styled.svg`
-  @media screen and (max-width: 833px) {
+  @media screen and (min-width: 320px) {
     width: 16px;
     height: 16px;
     fill: var(--primary-color-grey);
@@ -10,8 +10,10 @@ export const IconMenu = styled.svg`
       stroke: var(--primary-color-green-lite);
     }
   }
+
   @media screen and (min-width: 834px) {
-    display: none;
+    width: 20px;
+    height: 20px;
   }
 `;
 
@@ -38,7 +40,7 @@ export const MobileMenu = styled.div`
   flex-direction: column;
   gap: 40px;
   position: absolute;
-  top: 260px;
+  top: 250px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
@@ -48,6 +50,14 @@ export const MobileMenu = styled.div`
   border-radius: 12px;
   box-shadow: 0px 4px 14px 0px rgba(227, 255, 168, 0.2);
   background-color: var(--primary-color-black-two);
+
+  @media screen and (min-width: 834px) {
+    top: 245px;
+    left: 178px;
+    width: 326px;
+    height: 286px;
+    padding: 58px 40px;
+  }
 `;
 
 export const DivLogo = styled.div`
@@ -65,4 +75,20 @@ export const Backdrop = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 1100;
+`;
+
+export const DivMenu = styled.div`
+  display: none;
+
+  @media screen and (min-width: 834px) {
+    display: flex;
+    gap: 40px;
+    width: 346px;
+  }
+`;
+
+export const Box = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 65px;
 `;
