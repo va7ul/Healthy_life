@@ -11,6 +11,7 @@ export const ContainerDiary = styled.div`
 export const TitleWrap = styled.div`
   display: flex;
   gap: 16px;
+  margin-top: 20px;
   margin-bottom: 16px;
   align-items: center;
 `;

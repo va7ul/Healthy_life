@@ -2,7 +2,7 @@ import { Field } from 'formik';
 import { styled } from 'styled-components';
 
 export const RecordInputName = styled(Field)`
-  width: 276px;
+  width: 270px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -33,7 +33,7 @@ export const RecordInputName = styled(Field)`
 `;
 
 export const RecordInputCarbo = styled(Field)`
-  width: 276px;
+  width: 270px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -64,7 +64,7 @@ export const RecordInputCarbo = styled(Field)`
 `;
 
 export const RecordInputProtein = styled(Field)`
-  width: 276px;
+  width: 270px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -170,7 +170,7 @@ export const InputBlock = styled.div`
 export const Box = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 4px;
   @media screen and (min-width: 834px) {
     gap: 12px;
   }
@@ -222,16 +222,37 @@ export const CancelButton = styled.button`
 export const ContentBlock = styled.div`
   position: relative;
   width: 276px;
-  height: 546px;
+  height: 514px;
   border-radius: 12px;
   background-color: var(--primary-color-black-two);
 
   @media screen and (min-width: 834px) {
-    width: 756px;
-    height: 452px;
-    padding: 24px;
+    width: 684px;
+    height: 408px;
+    padding: 12px;
   }
 
   @media screen and (min-width: 1440px) {
+  }
+`;
+
+export const Wrapper = styled.div`
+  max-height: 270px;
+  margin: 15px 0 0 0;
+  overflow: auto;
+  padding-right: 4px;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #b6b6b6;
+    border-radius: 8px;
+    border: 1px solid #0f0f0f;
+  }
+
+  @media screen and (min-width: 834px) {
+    max-height: 200px;
   }
 `;

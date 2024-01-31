@@ -11,7 +11,7 @@ import {
   Title
 } from './Reacord.styled';
 import { addFood } from '../../redux/dailyFoodStatistics/foodOperations';
-import { AddIcon, Box, ButtonAdd, ButtonDelete, RecordInputCalories, RecordInputCarbo, RecordInputFat, RecordInputName, RecordInputProtein, CancelButton, ContentBlock } from './MealPopUpModal.styled';
+import { AddIcon, Box, ButtonAdd, ButtonDelete, RecordInputCalories, RecordInputCarbo, RecordInputFat, RecordInputName, RecordInputProtein, CancelButton, ContentBlock, Wrapper } from './MealPopUpModal.styled';
 import sprite from '../../assets/images/sprite.svg';
 import breakfast from '../../assets/images/Breakfast.png';
 import dinner from '../../assets/images/Dinner.png';
@@ -21,18 +21,21 @@ import { Formik, Form, FieldArray } from 'formik';
 import { InputBlock } from '../../components/ReacordMealPopUp/MealPopUpModal.styled'
 import { capitalize } from '@mui/material';
 
+
 const customStyles = {
   content: {
-    maxWidth: 'calc(100vw - 48px)',
+    maxWidth: 'calc(100vw + 20px)',
     maxHeight: 'calc(100vh - 24px)',
     top: '50%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    border: 'none',
+    transform: 'translate(-50%, -41%)',
     background: '#0F0F0F',
+    padding: '16px 12px',
+    borderRadius: '12px',
+    borderColor: '#0F0F0F',
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
@@ -40,7 +43,6 @@ const customStyles = {
     width: '100vw',
     height: '100vh',
   },
-  
 };
 
 Modal.setAppElement('#root');
@@ -74,14 +76,14 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
     closeModal();
   };
 
-  const img = (type) => {
-    if (typefood === "breakfast") {
+  const img = (typefood) => {
+    if (typefood === 'breakfast') {
       return breakfast;
-    } else if (typefood === "dinner") {
+    } else if (typefood === 'dinner') {
       return dinner;
-    } else if (typefood === "lunch") {
+    } else if (typefood === 'lunch') {
       return lunch;
-    } else if (typefood === "snack") {
+    } else if (typefood === 'snack') {
       return snack;
     }
   };
@@ -108,7 +110,7 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
             <Form>
               <FieldArray name="products">
                 {({ remove, push }) => (
-                  <div>
+                  <Wrapper>
                     {values.products.map((product, index) => (
                       <InputBlock key={index}>
                         <RecordInputName
@@ -121,54 +123,58 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
                           placeholder="Carbonoh."
                           value={values.products[index].carbogidrate}
                           type="number"
-                          min={1}
+                          min={0}
+                          max={200}
                         />
                         <RecordInputProtein
                           name={`products.${index}.protein`}
                           placeholder="Protein"
                           value={values.products[index].protein}
-                          min={1}
+                          min={0}
+                          max={200}
                           type="number"
                         />
                         <Box>
-                        <RecordInputFat
-                          name={`products.${index}.fat`}
-                          placeholder="Fat"
-                          value={values.products[index].fat}
-                          min={1}
-                          type="number"
-                        />
-                        <RecordInputCalories
-                          name={`products.${index}.calories`}
-                          placeholder="Calories"
-                          value={values.products[index].calories}
-                          min={1}
-                          type="number"
+                          <RecordInputFat
+                            name={`products.${index}.fat`}
+                            placeholder="Fat"
+                            value={values.products[index].fat}
+                            min={0}
+                            max={200}
+                            type="number"
                           />
-                         
-                        <ButtonDelete
-                          data-set={index}
-                          type="button"
-                          onClick={(e) => {
-                            const index = e.currentTarget.dataset.set;
-                            if (values.products.length === 1) {
-                              closeModal();
-                            }
-                            remove(index);
-                          }}
-                        >
-                          <svg
-                            style={{
-                              display: 'inline-block',
-                              width: '20px',
-                              height: ' 20px',
-                              fill: '#E3FFA8',
+                          <RecordInputCalories
+                            name={`products.${index}.calories`}
+                            placeholder="Calories"
+                            value={values.products[index].calories}
+                            min={0}
+                            max={3000}
+                            type="number"
+                          />
+
+                          <ButtonDelete
+                            data-set={index}
+                            type="button"
+                            onClick={(e) => {
+                              const index = e.currentTarget.dataset.set;
+                              if (values.products.length === 1) {
+                                closeModal();
+                              }
+                              remove(index);
                             }}
                           >
-                            <use href={`${sprite}#trash-delete`}></use>
-                          </svg>
+                            <svg
+                              style={{
+                                display: 'inline-block',
+                                width: '20px',
+                                height: ' 20px',
+                                fill: '#E3FFA8',
+                              }}
+                            >
+                              <use href={`${sprite}#trash-delete`}></use>
+                            </svg>
                           </ButtonDelete>
-                           </Box>
+                        </Box>
                       </InputBlock>
                     ))}
                     <ButtonAdd type="button" onClick={() => push(initialCard)}>
@@ -177,7 +183,7 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
                       </AddIcon>
                       Add more
                     </ButtonAdd>
-                  </div>
+                  </Wrapper>
                 )}
               </FieldArray>
               <ButtonBlock>
