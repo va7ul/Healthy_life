@@ -89,11 +89,7 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
   };
 
   return (
-    <Modal
-      isOpen={stateModal}
-      onRequestClose={closeModal}
-      style={(customStyles)}
-    >
+    <Modal isOpen={stateModal} onRequestClose={closeModal} style={customStyles}>
       <ContentBlock>
         <Title>Record your meal</Title>
         <MealContainer
@@ -127,13 +123,15 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
                           placeholder="Carbonoh."
                           value={values.products[index].carbogidrate}
                           type="number"
-                          min={1}
+                          min={0}
+                          max={200}
                         />
                         <RecordInputProtein
                           name={`products.${index}.protein`}
                           placeholder="Protein"
                           value={values.products[index].protein}
-                          min={1}
+                          min={0}
+                          max={200}
                           type="number"
                         />
                         <Box>
@@ -141,14 +139,16 @@ export const MealPopUpModal = ({ stateModal, closeModal, typefood }) => {
                             name={`products.${index}.fat`}
                             placeholder="Fat"
                             value={values.products[index].fat}
-                            min={1}
+                            min={0}
+                            max={200}
                             type="number"
                           />
                           <RecordInputCalories
                             name={`products.${index}.calories`}
                             placeholder="Calories"
                             value={values.products[index].calories}
-                            min={1}
+                            min={0}
+                            max={3000}
                             type="number"
                           />
 
