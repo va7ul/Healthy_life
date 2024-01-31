@@ -1,4 +1,4 @@
-import{s as t,k as x,m as E,n as G,j as e,o as f,t as m,p as q,q as V,v as Z,r as b,u as k,w as J,x as K,L as U,y as Q,z as X,A as Y,B as ee,C as te,D as re}from"./index-2cd840f4.js";import{C as _,A as ie,p as H,a as N,D as ne,b as oe,L as ae,B as se,c as le,d as ce}from"./index-b63eea8a.js";import{s as de,a as pe,b as xe,c as he,M as ge,d as me,A as ue,e as fe,f as we,g as ye,h as be,B as ve,L as je,D as ke,S as Ce}from"./MealPopUpModal-333b8030.js";import{R as $e}from"./RecommendedList-420dab99.js";const We=t.div`
+import{s as t,k as x,m as E,n as G,j as e,o as f,t as m,p as q,q as V,v as Z,r as b,u as k,w as J,x as K,L as U,y as Q,z as X,A as Y,B as ee,C as te,D as re}from"./index-2bf89dd7.js";import{C as _,A as ie,p as H,a as N,D as ne,b as oe,L as ae,B as se,c as le,d as ce}from"./index-6aad7f2b.js";import{s as de,a as pe,b as xe,c as he,M as ge,d as me,A as ue,e as fe,f as we,g as ye,h as be,B as ve,L as je,D as ke,S as Ce}from"./MealPopUpModal-2b3fef14.js";import{R as $e}from"./RecommendedList-add0029c.js";const We=t.div`
   width: 300px;
 
   @media screen and (min-width: 834px) {
@@ -425,6 +425,7 @@ import{s as t,k as x,m as E,n as G,j as e,o as f,t as m,p as q,q as V,v as Z,r a
 `,Dt=t.div`
   display: flex;
   gap: 16px;
+  margin-top: 20px;
   margin-bottom: 16px;
   align-items: center;
 `,Ft=t.h2`
