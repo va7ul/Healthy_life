@@ -49,3 +49,16 @@ export const updateFood = createAsyncThunk(
     return response.data;
   }
 );
+
+export const deleteOneProduct = createAsyncThunk(
+  'dailyStatisticsFood/deleteOneProduct',
+  async ({ id, foodType }, thunkAPI) => {
+    const { token } = thunkAPI.getState().auth;
+    setAuthHeader(token);
+
+    const response = await axios.delete(`/user/food-intake/${id}`, {
+      data: { foodType },
+    });
+    return response.data;
+  }
+);
