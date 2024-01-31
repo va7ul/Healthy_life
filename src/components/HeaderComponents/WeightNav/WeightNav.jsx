@@ -77,7 +77,11 @@ export const WeightNav = ({ setOpenModal }) => {
     const weightUser = useSelector(selectUserWeight);
     
     const today = new Date(Date.now());
-    const todayDate = (today.getDate() + '.' + (today.getMonth() + 1) + '.' + today.getFullYear());
+    let mm = today.getMonth() + 1;
+    let dd = today.getDate();
+    if (dd < 10) dd = '0' + dd;
+    if (mm < 10) mm = '0' + mm;
+    const todayDate = (dd + '.' + mm + '.' + today.getFullYear());
 
     const handleCancel = () => {
         setAnchorEl(null);

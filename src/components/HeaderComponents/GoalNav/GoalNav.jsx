@@ -261,7 +261,7 @@ export const GoalNav = ({ setOpenModal }) => {
                     }
                     checkedIcon={
                       <DivImage>
-                        <LoseFat src={maintain} alt="Maintain" />
+                        <LoseFat src={isGender === "male" ? maintain : maintain_girl} alt="Maintain" />
                       </DivImage>
                     }
                   />
