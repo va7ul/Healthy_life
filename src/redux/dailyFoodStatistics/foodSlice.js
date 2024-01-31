@@ -1,5 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { addFood, deleteFood, getFood, updateFood } from './foodOperations';
+import {
+  addFood,
+  deleteFood,
+  getFood,
+  updateFood,
+  deleteOneProduct,
+} from './foodOperations';
 
 const handleRejected = (state, action) => {
   state.isLoading = false;
@@ -63,6 +69,20 @@ const deleteHandlerFullfilled = (state, action) => {
   }
 };
 
+const deleteOneProductHandlerFullfilled = (state, action) => {
+  state.consumedFood._id = action.payload?._id;
+  state.consumedFood.totalCalories = action.payload?.totalCalories;
+  state.consumedFood.totalCarbs = action.payload?.totalCarbs;
+  state.consumedFood.totalProtein = action.payload?.totalProteins;
+  state.consumedFood.totalFat = action.payload?.totalFats;
+
+  console.log(action.payload);
+  state.consumedFood.breakfast = action.payload?.breakfast;
+  state.consumedFood.dinner = action.payload?.dinner;
+  state.consumedFood.lunch = action.payload?.lunch;
+  state.consumedFood.snack = action.payload?.snack;
+};
+
 const handleUpdateFoodFullfiled = (state, action) => {
   state.consumedFood.breakfast = action.payload?.breakfast;
   state.consumedFood.dinner = action.payload?.dinner;
@@ -107,7 +127,8 @@ const dailyStatisticsFoodSlice = createSlice({
       .addCase(addFood.fulfilled, handleAddFoodFullfiled)
       .addCase(updateFood.fulfilled, handleUpdateFoodFullfiled)
       .addCase(getFood.rejected, handleRejected)
-      .addCase(deleteFood.fulfilled, deleteHandlerFullfilled),
+      .addCase(deleteFood.fulfilled, deleteHandlerFullfilled)
+      .addCase(deleteOneProduct.fulfilled, deleteOneProductHandlerFullfilled),
 });
 export const { openHandler, writeSelectProduct } =
   dailyStatisticsFoodSlice.actions;

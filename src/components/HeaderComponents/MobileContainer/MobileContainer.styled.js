@@ -53,7 +53,7 @@ export const MobileMenu = styled.div`
 
   @media screen and (min-width: 834px) {
     top: 245px;
-    left: 178px;
+    left: 190px;
     width: 326px;
     height: 286px;
     padding: 58px 40px;
@@ -69,12 +69,17 @@ export const Backdrop = styled.div`
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1100;
+
+  @media screen and (min-width: 834px) {
+    width: 834px;
+  }
 `;
 
 export const DivMenu = styled.div`

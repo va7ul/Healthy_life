@@ -34,6 +34,7 @@ import { openHandler } from '../../../redux/dailyFoodStatistics/foodSlice';
 import sprite from '../../../assets/images/sprite.svg';
 import { MealPopUpModal } from '../../ReacordMealPopUp/MealPopUpModal';
 import { useState } from 'react';
+import { deleteOneProduct } from '../../../redux/dailyFoodStatistics/foodOperations';
 
 export const PlannerCard = ({
   title,
@@ -78,14 +79,17 @@ export const PlannerCard = ({
         </MealContainer>
         <MealSubscription>
           <MealSubTextMain>
-            <Carbo>Carbonohidrates: </Carbo><Amount> {!totalCarbs ? 0 : totalCarbs} </Amount>
+            <Carbo>Carbonohidrates: </Carbo>
+            <Amount> {!totalCarbs ? 0 : totalCarbs} </Amount>
           </MealSubTextMain>
           <MealSubWrapper>
             <MealSubText>
-              <Protein>Protein: </Protein><Amount> {!totalProtein ? 0 : totalProtein} </Amount>
+              <Protein>Protein: </Protein>
+              <Amount> {!totalProtein ? 0 : totalProtein} </Amount>
             </MealSubText>
             <MealSubTextFat>
-              <Fat>Fat: </Fat><Amount>{!totalFat ? 0 : totalFat}</Amount>
+              <Fat>Fat: </Fat>
+              <Amount>{!totalFat ? 0 : totalFat}</Amount>
             </MealSubTextFat>
           </MealSubWrapper>
         </MealSubscription>
@@ -122,18 +126,23 @@ export const PlannerCard = ({
                     </RenderContainerItem>
                   </RenderList>
                 </RenderContainer>
-              
-                <EditWrapper data-set={item._id} onClick={onOpenEditHandler}>
-                  <EditIcon>
+
+                <EditWrapper>
+                  <EditIcon data-set={item._id} onClick={onOpenEditHandler}>
                     <use href={`${sprite}#icon-edit-3`}></use>
                   </EditIcon>
-          
-                  <DeleteIcon>
+
+                  <DeleteIcon
+                    data-set={item._id}
+                    onClick={() =>
+                      dispatch(
+                        deleteOneProduct({ id: item._id, foodType: typefood })
+                      )
+                    }
+                  >
                     <use href={`${sprite}#trash-delete`}></use>
                   </DeleteIcon>
-
                 </EditWrapper>
-                
               </div>
             );
           })

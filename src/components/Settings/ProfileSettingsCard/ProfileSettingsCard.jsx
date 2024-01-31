@@ -13,6 +13,11 @@ import { validationSchema } from '../../../schemas/profileUpdateSchema';
 import { selectUserData } from '../../../redux/auth/authSelectors';
 import { updateUser } from '../../../redux/auth/authOperations';
 
+import loseFat from '../../../assets/images/loseFat.png';
+import maintain from '../../../assets/images/maintain.png';
+import loseFat_girl from '../../../assets/images/loseFat_girl.png';
+import maintain_girl from '../../../assets/images/maintain_girl.png';
+import gainMuscle from '../../../assets/images/gainMuscle.png';
 import sprite from '../../../assets/images/sprite.svg';
 import {
   FormWrapper,
@@ -31,6 +36,10 @@ import {
   DownloadButton,
   InputStyled,
   DownloadSpan,
+  FormLabelText,
+  DivImage,
+  DivActiveImage,
+  LoseFat,
 } from './ProfileSettingsCardStyled';
 
 Notify.init({
@@ -48,16 +57,32 @@ export const ProfileSettingsCard = () => {
   const dispatch = useDispatch();
 
   const currentUserData = useSelector(selectUserData);
-  const { name, avatar, age, gender, height, weight, activityLevel } =
-    currentUserData;
+  const {
+    name,
+    avatar,
+    birthDate,
+    gender,
+    height,
+    weight,
+    goal,
+    activityLevel,
+  } = currentUserData;
+
+  const correctbirthDate =
+    birthDate.slice(8, 10) +
+    '.' +
+    birthDate.slice(5, 7) +
+    '.' +
+    birthDate.slice(0, 4);
 
   const initialValues = {
     name,
     avatar: avatar,
-    age,
+    birthDate: correctbirthDate,
     gender,
     height,
     weight,
+    goal,
     activityLevel,
   };
 
@@ -66,14 +91,19 @@ export const ProfileSettingsCard = () => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       formik.values.activityLevel = Number(values.activityLevel);
+      console.log(formik.values.birthDate);
+      console.log(typeof formik.values.birthDate);
+      console.log(formik.values.goal);
+      console.log(typeof formik.values.goal);
 
       let formData = new FormData();
       formData.append('avatar', formik.values.avatar);
       formData.append('name', formik.values.name);
-      formData.append('age', formik.values.age);
+      formData.append('birthDate', formik.values.birthDate);
       formData.append('gender', formik.values.gender);
       formData.append('height', formik.values.height);
       formData.append('weight', formik.values.weight);
+      formData.append('goal', formik.values.goal);
       formData.append('activityLevel', formik.values.activityLevel);
 
       dispatch(updateUser(formData)).then((result) => {
@@ -145,18 +175,18 @@ export const ProfileSettingsCard = () => {
             </DownloadButton>
           </InputWrapper>
         </LabelInput>
-        <LabelInput htmlFor="age">
-          Your age
+        <LabelInput htmlFor="birthDate">
+          Date of birth
           <FieldStyled
-            id="age"
-            name="age"
-            type="number"
-            value={formik.values.age}
+            id="birthDate"
+            name="birthDate"
+            placeholder="00.00.0000"
+            value={formik.values.birthDate}
             onChange={formik.handleChange}
           />
-          {formik.errors.age && formik.touched.age && (
-            <ErrorMessageStyled id="feedback" name="age">
-              {formik.errors.age}
+          {formik.errors.birthDate && formik.touched.birthDate && (
+            <ErrorMessageStyled id="feedback" name="birthDate">
+              {formik.errors.birthDate}
             </ErrorMessageStyled>
           )}
         </LabelInput>
@@ -224,6 +254,105 @@ export const ProfileSettingsCard = () => {
           <ErrorMessageStyled name="weight" component="span" />
         </LabelInput>
         <FormControl sx={{ gap: '12px' }}>
+          <FormLabel id="goal" sx={formLabelStyled}>
+            Target selection
+            <FormLabelText>
+              The service will adjust your calorie intake to your goal
+            </FormLabelText>
+          </FormLabel>
+          <RadioGroup
+            row
+            sx={{
+              gap: '12px',
+              '& .MuiFormControlLabel-root .MuiFormControlLabel-label': {
+                fontFamily: 'Poppins400',
+                fontSize: '14px',
+                color: 'white.main',
+                marginLeft: '12px',
+              },
+            }}
+            aria-labelledby="goal"
+            name="goal"
+            value={formik.values.goal}
+            onChange={formik.handleChange}
+          >
+            <FormControlLabel
+              sx={{ margin: '0px' }}
+              value="Lose Fat"
+              control={
+                <Radio
+                  sx={{ padding: '0px' }}
+                  icon={
+                    <DivImage>
+                      <LoseFat
+                        src={gender === 'male' ? loseFat : loseFat_girl}
+                        alt="Lose fat"
+                      />
+                    </DivImage>
+                  }
+                  checkedIcon={
+                    <DivActiveImage>
+                      <LoseFat
+                        src={gender === 'male' ? loseFat : loseFat_girl}
+                        alt="Lose fat"
+                      />
+                    </DivActiveImage>
+                  }
+                />
+              }
+              label="Lose Fat"
+            />
+
+            <FormControlLabel
+              sx={{ margin: '0px' }}
+              value="Maintain"
+              control={
+                <Radio
+                  sx={{ padding: '0px' }}
+                  icon={
+                    <DivImage>
+                      <LoseFat
+                        src={gender === 'male' ? maintain : maintain_girl}
+                        alt="Maintain"
+                      />
+                    </DivImage>
+                  }
+                  checkedIcon={
+                    <DivActiveImage>
+                      <LoseFat
+                        src={gender === 'male' ? maintain : maintain_girl}
+                        alt="Maintain"
+                      />
+                    </DivActiveImage>
+                  }
+                />
+              }
+              label="Maintain"
+            />
+
+            <FormControlLabel
+              sx={{ margin: '0px' }}
+              value="Gain Muscle"
+              control={
+                <Radio
+                  sx={{ padding: '0px' }}
+                  icon={
+                    <DivImage>
+                      <LoseFat src={gainMuscle} alt="Gain muscle" />
+                    </DivImage>
+                  }
+                  checkedIcon={
+                    <DivActiveImage>
+                      <LoseFat src={gainMuscle} alt="Gain muscle" />
+                    </DivActiveImage>
+                  }
+                />
+              }
+              label="Gain Muscle"
+            />
+          </RadioGroup>
+        </FormControl>
+        <FormControl sx={{ gap: '12px' }}>
           <FormLabel id="activityLevel" sx={formLabelStyled}>
             Your activity
           </FormLabel>
@@ -240,32 +369,32 @@ export const ProfileSettingsCard = () => {
               value="1.2"
               sx={formControlLabel}
               control={<Radio sx={radioStyled} />}
-              label="1.2 - if you do not have physical activity and sedentary work"
+              label="If you do not have physical activity and sedentary work"
             />
             <FormControlLabel
               value="1.375"
               sx={formControlLabel}
               control={<Radio sx={radioStyled} />}
-              label="1.375 - if you do short runs or light gymnastics 1-3 times a
+              label="If you do short runs or light gymnastics 1-3 times a
                   week"
             />
             <FormControlLabel
               value="1.55"
               sx={formControlLabel}
               control={<Radio sx={radioStyled} />}
-              label="1.55 - if you play sports with average loads 3-5 times a week"
+              label="If you play sports with average loads 3-5 times a week"
             />
             <FormControlLabel
               value="1.725"
               sx={formControlLabel}
               control={<Radio sx={radioStyled} />}
-              label="1.725 - if you train fully 6-7 times a week"
+              label="If you train fully 6-7 times a week"
             />
             <FormControlLabel
               value="1.9"
               sx={formControlLabel}
               control={<Radio sx={radioStyled} />}
-              label="1.9 - if your work is related to physical labor, you train 2
+              label="If your work is related to physical labor, you train 2
                   times a day and include strength exercises in your training
                   program"
             />
