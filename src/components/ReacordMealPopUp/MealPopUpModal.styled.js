@@ -222,14 +222,14 @@ export const CancelButton = styled.button`
 export const ContentBlock = styled.div`
   position: relative;
   width: 276px;
-  height: 546px;
+  height: 514px;
   border-radius: 12px;
   background-color: var(--primary-color-black-two);
 
   @media screen and (min-width: 834px) {
-    width: 708px;
+    width: 684px;
     height: 408px;
-    padding: 24px;
+    padding: 12px;
   }
 
   @media screen and (min-width: 1440px) {

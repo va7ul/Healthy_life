@@ -18,16 +18,16 @@ export const BackDrop = styled.div`
 
 export const ContentBlock = styled.div`
   position: relative;
-  padding: 10px;
+  padding: 16px 12px;
   width: 300px;
-  height: 546px;
+  height: 500px;
   border-radius: 12px;
   background-color: var(--primary-color-black-two);
 
   @media screen and (min-width: 834px) {
     width: 676px;
     height: 280px;
-    padding: 24px;
+    padding: 12px;
   }
 `;
 
@@ -41,7 +41,7 @@ export const Title = styled.h2`
 `;
 
 export const RecordInputName = styled.input`
-  min-width: 276px;
+  max-width: 276px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -72,7 +72,7 @@ export const RecordInputName = styled.input`
 `;
 
 export const RecordInputCarbo = styled.input`
-  min-width: 276px;
+  max-width: 276px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -103,7 +103,7 @@ export const RecordInputCarbo = styled.input`
 `;
 
 export const RecordInputProtein = styled.input`
-  min-width: 276px;
+  max-width: 276px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -134,7 +134,7 @@ export const RecordInputProtein = styled.input`
 `;
 
 export const RecordInputFat = styled.input`
-  min-width: 120px;
+  width: 120px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -160,12 +160,12 @@ export const RecordInputFat = styled.input`
   }
 
   @media screen and (min-width: 834px) {
-    min-width: 61px;
+    max-width: 61px;
   }
 `;
 
 export const RecordInputCalories = styled.input`
-  min-width: 120px;
+  width: 120px;
   height: 36px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -191,7 +191,7 @@ export const RecordInputCalories = styled.input`
   }
 
   @media screen and (min-width: 834px) {
-    min-width: 78px;
+    max-width: 78px;
   }
 `;
 
@@ -216,26 +216,22 @@ export const RecordInputBigFirst = styled.input`
 `;
 
 export const InputBlock = styled.div`
-  min-width: 660px;
+  max-width: 660px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 16px;
   @media screen and (min-width: 834px) {
     flex-direction: row;
-    gap: 12px;
+    gap: 16px;
   }
 `;
 
 export const SubInputBlock = styled.div`
-  min-width: 276px;
+  max-width: 276px;
   display: flex;
   align-items: center;
-  gap: 8px;
-
-  @media screen and (min-width: 834px) {
-    gap: 12px;
-  }
+  gap: 16px;
 `;
 
 export const SubInput = styled.input`
@@ -256,23 +252,23 @@ export const SubInput = styled.input`
 `;
 
 export const ButtonBlock = styled.div`
-  margin-top: 60px;
   margin-top: 64px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   @media screen and (min-width: 834px) {
+    margin-top: 64px;
     flex-direction: row-reverse;
     position: absolute;
-    right: 24px;
-    bottom: 24px;
+    right: 12px;
+    bottom: 12px;
     gap: 86px;
   }
 `;
 
 export const Button = styled.button`
   display: block;
-  width: 256px;
+  width: 276px;
   padding: 8px 10px;
   border-radius: 12px;
   background: var(--primary-color-green-lite);
@@ -289,6 +285,9 @@ export const Button = styled.button`
 
   &:hover {
     background-color: var(--secondary-color-yellow);
+  }
+  @media screen and (min-width: 834px) {
+    width: 212px;
   }
 `;
 

@@ -5,12 +5,17 @@ export const CalendarGlobalStyles = createGlobalStyle`
     background-color: #0F0F0F;
     border-radius: 12px;
     overflow-y: scroll;
-    scrollbar-width: none;
     box-shadow: 0px 4px 14px 0px  rgba(227, 255, 168, 0.2);
     
-    &::-webkit-scrollbar { 
-    width: 0;
+&::-webkit-scrollbar {
+    width: 6px;
   }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #202020;
+    border-radius: 8px;
+    border: 1px solid #202020;
+  };
 }
   .MuiList-root {
      padding-top: 10px;
