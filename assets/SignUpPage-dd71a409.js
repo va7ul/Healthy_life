@@ -1,4 +1,4 @@
-import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e as se,f as V,u as ce,g as le}from"./index-2bf89dd7.js";import{n as E}from"./notiflix-notify-aio-1897c0af.js";import{i as de}from"./welcomepage-479bde8c.js";import{i as pe,a as me}from"./eye-off-93a1a949.js";import{p as he}from"./parse-9c30c6b3.js";const L=(i,n)=>{const[o,p]=a.useState(i),[r,c]=a.useState(null),[d,x]=a.useState(!1);return a.useEffect(()=>{d&&n.validate(o).then(()=>c(null)).catch(m=>c(m.message))},[o,d,n]),{value:o,error:r,onChange:m=>{p(m.target.value)},onBlur:()=>{x(!0),n.validate(o).then(()=>c(null)).catch(m=>c(m.message))}}},xe=/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,u=F().shape({name:j().trim().strict().min(2,"Name is too short (minimum 2 characters)").max(50,"Name is too long (maximum 50 characters)").required("Name is required"),email:j().trim().strict().matches(xe,"Oops! That doesn´t look like a valid email address. Try again?").required("Email is required"),password:j().trim().strict().min(6,"Password is too short (minimum 6 characters)").max(50,"Password is too long (maximum 50 characters)").required("Password is required")}),ge=async(i,n,o,p)=>{try{await u.fields.name.validate(i),await u.fields.email.validate(n),await u.fields.password.validate(o),p(!0)}catch{p(!1)}},X={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},ue=t.div`
+import{r as a,c as F,a as j,s as t,L as ce,j as e,F as D,b as h,d as N,E as b,e as le,f as V,u as de,g as pe}from"./index-4dfbfae1.js";import{n as E}from"./notiflix-notify-aio-f4d7481f.js";import{i as me}from"./welcomepage-479bde8c.js";import{i as he,a as xe}from"./eye-off-25fb77c2.js";import{p as ge}from"./parse-9c30c6b3.js";const L=(i,n)=>{const[s,p]=a.useState(i),[r,c]=a.useState(null),[d,x]=a.useState(!1);return a.useEffect(()=>{d&&n.validate(s).then(()=>c(null)).catch(m=>c(m.message))},[s,d,n]),{value:s,error:r,onChange:m=>{p(m.target.value)},onBlur:()=>{x(!0),n.validate(s).then(()=>c(null)).catch(m=>c(m.message))}}},ue=/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,u=F().shape({name:j().trim().strict().min(2,"Name is too short (minimum 2 characters)").max(50,"Name is too long (maximum 50 characters)").required("Name is required"),email:j().trim().strict().matches(ue,"Oops! That doesn´t look like a valid email address. Try again?").required("Email is required"),password:j().trim().strict().min(6,"Password is too short (minimum 6 characters)").max(50,"Password is too long (maximum 50 characters)").required("Password is required")}),fe=async(i,n,s,p)=>{try{await u.fields.name.validate(i),await u.fields.email.validate(n),await u.fields.password.validate(s),p(!0)}catch{p(!1)}},X={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},ye=t.div`
   margin: 0 auto;
   background-color: var(--primary-color-black-one);
   display: flex;
@@ -8,7 +8,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media (min-width: 834px) {
     padding-top: 20px;
   }
-`,fe=t.div`
+`,be=t.div`
   display: flex;
   flex-direction: column;
 
@@ -19,7 +19,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     margin-top: 80px;
     align-items: flex-start;
   }
-`,ye=t.div`
+`,we=t.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +36,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     justify-content: center;
     align-items: flex-start;
   }
-`,be=t.img`
+`,ve=t.img`
   width: 300px;
   height: 296px;
 
@@ -49,7 +49,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     width: 592px;
     height: 588px;
   }
-`,we=t.h1`
+`,ke=t.h1`
   color: var(--color-primary-white, #fff);
   font-size: 24px;
   font-weight: 500;
@@ -65,7 +65,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     text-align: start;
   }
-`,ve=t.h2`
+`,je=t.h2`
   color: var(--color-primary-gray, #b6b6b6);
   font-size: 18px;
   font-weight: 400;
@@ -82,7 +82,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     text-align: start;
   }
-`,ke=t.form`
+`,Fe=t.form`
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -124,7 +124,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     font-size: 14px;
     line-height: 1.43;
   }
-`,je=t.button`
+`,Se=t.button`
   display: block;
   width: 100%;
   padding: 8px 10px;
@@ -154,7 +154,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-`,Fe=t.div`
+`,ze=t.div`
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -168,11 +168,11 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     margin-top: 145px;
     justify-content: flex-start;
   }
-`,Se=t.p`
+`,$e=t.p`
   flex-shrink: 0;
   line-height: 1.42;
   color: var(--primary-color-grey);
-`,ze=t(oe)`
+`,Be=t(ce)`
   color: var(--primary-color-white);
   line-height: 1.42;
   font-weight: 500;
@@ -201,19 +201,19 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   margin-left: 9px;
   font-size: 12px;
   font-family: 'Poppins400';
-`,Be=t.svg`
+`,Ce=t.svg`
   width: 16px;
   height: 16px;
   stroke: ${X.iconStroke};
   cursor: pointer;
-`,$e=t.div`
+`,Ee=t.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 14px;
   display: flex;
   align-items: center;
-`,Ce=({onForm:i,nameValue:n,emailValue:o,passwordValue:p})=>{const r=L(n,u.fields.name),c=L(o,u.fields.email),d=L(p,u.fields.password),[x,w]=a.useState(!1),S=()=>{w(!x)},[m,z]=a.useState(!1),f=(C,H)=>H?"1px solid #e74a3b":C?"1px solid #3cbc81":"1px solid var(--primary-color-green-lite)",{value:B}=r,{value:v}=c,{value:$}=d;return a.useEffect(()=>{ge(B,v,$,z)},[B,v,$,z]),e.jsxs(ye,{children:[e.jsx(be,{src:de,alt:"illustration-sport-and-fitness-tracker"}),e.jsxs(fe,{children:[e.jsx(we,{children:"Sign up"}),e.jsx(ve,{children:"You need to register to use the service"}),e.jsxs(ke,{onSubmit:i,children:[e.jsx(I,{children:e.jsx(G,{style:{border:f(r.touched,r.error)},type:"text",name:"name",placeholder:"Name",value:r.value,onChange:r.onChange,onBlur:r.onBlur,autoComplete:"off"})}),r.error&&e.jsx(A,{children:r.error}),e.jsx(I,{children:e.jsx(G,{style:{border:f(r.touched,r.error)},type:"email",name:"email",placeholder:"E-mail",value:c.value,onChange:c.onChange,onBlur:c.onBlur,autoComplete:"off"})}),c.error&&e.jsx(A,{children:c.error}),e.jsxs(I,{children:[e.jsx(G,{style:{border:f(r.touched,r.error)},type:x?"text":"password",name:"password",placeholder:"Password",value:d.value,id:"myInput",onChange:d.onChange,onBlur:d.onBlur,autoComplete:"off"}),e.jsx($e,{children:e.jsx(Be,{onClick:S,children:e.jsx("image",{href:x?pe:me})})})]}),d.error&&e.jsx(A,{children:d.error}),e.jsx(je,{type:"submit",disabled:!m,children:"Next"})]}),e.jsxs(Fe,{children:[e.jsx(Se,{children:"Do you already have an account?"}),e.jsx(ze,{to:"/signin",children:"Sign in"})]})]})]})},Ee="/Healthy_life/assets/goals-941daa22.png",M="/Healthy_life/assets/checked-icon-f2266a6d.svg",Pe={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},Ne=t(N)`
+`,Pe=({onForm:i,nameValue:n,emailValue:s,passwordValue:p})=>{const r=L(n,u.fields.name),c=L(s,u.fields.email),d=L(p,u.fields.password),[x,w]=a.useState(!1),S=()=>{w(!x)},[m,z]=a.useState(!1),f=(C,H)=>H?"1px solid #e74a3b":C?"1px solid #3cbc81":"1px solid var(--primary-color-green-lite)",{value:$}=r,{value:v}=c,{value:B}=d;return a.useEffect(()=>{fe($,v,B,z)},[$,v,B,z]),e.jsxs(we,{children:[e.jsx(ve,{src:me,alt:"illustration-sport-and-fitness-tracker"}),e.jsxs(be,{children:[e.jsx(ke,{children:"Sign up"}),e.jsx(je,{children:"You need to register to use the service"}),e.jsxs(Fe,{onSubmit:i,children:[e.jsx(I,{children:e.jsx(G,{style:{border:f(r.touched,r.error)},type:"text",name:"name",placeholder:"Name",value:r.value,onChange:r.onChange,onBlur:r.onBlur,autoComplete:"off"})}),r.error&&e.jsx(A,{children:r.error}),e.jsx(I,{children:e.jsx(G,{style:{border:f(r.touched,r.error)},type:"email",name:"email",placeholder:"E-mail",value:c.value,onChange:c.onChange,onBlur:c.onBlur,autoComplete:"off"})}),c.error&&e.jsx(A,{children:c.error}),e.jsxs(I,{children:[e.jsx(G,{style:{border:f(r.touched,r.error)},type:x?"text":"password",name:"password",placeholder:"Password",value:d.value,id:"myInput",onChange:d.onChange,onBlur:d.onBlur,autoComplete:"off"}),e.jsx(Ee,{children:e.jsx(Ce,{onClick:S,children:e.jsx("image",{href:x?he:xe})})})]}),d.error&&e.jsx(A,{children:d.error}),e.jsx(Se,{type:"submit",disabled:!m,children:"Next"})]}),e.jsxs(ze,{children:[e.jsx($e,{children:"Do you already have an account?"}),e.jsx(Be,{to:"/signin",children:"Sign in"})]})]})]})},De="/Healthy_life/assets/goals-941daa22.png",M="/Healthy_life/assets/checked-icon-f2266a6d.svg",Ne={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},He=t(D)`
   @media screen and (min-width: 834px) {
     width: 380px;
     margin: 0 auto;
@@ -261,7 +261,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   line-height: 20px;
   text-align: left;
   margin-bottom: 24px;
-`;const De=t.div`
+`;const Le=t.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,7 +280,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     align-items: flex-start;
     padding-bottom: 72px;
   }
-`,He=t.img`
+`,Ge=t.img`
   height: 296px;
   width: 300px;
   background: transparent;
@@ -294,7 +294,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     width: 592px;
     height: 588px;
   }
-`,Le=t.div`
+`,Ie=t.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -306,7 +306,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     margin-top: 80px;
     align-items: flex-start;
   }
-`,Ge=t.h1`
+`,Ae=t.h1`
   color: var(--color-primary-white, #fff);
   font-size: 24px;
   font-weight: 500;
@@ -322,7 +322,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     text-align: start;
   }
-`,Ie=t.p`
+`,qe=t.p`
   color: var(--color-primary-gray, #b6b6b6);
   font-size: 18px;
   font-weight: 400;
@@ -339,7 +339,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     text-align: start;
   }
-`,Ae=t.div`
+`,Ve=t.div`
   display: flex;
   flex-direction: column;
 
@@ -362,7 +362,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   line-height: 1.5;
   display: flex;
   align-items: center;
-`;const qe=t.button`
+`;const We=t.button`
   display: block;
   width: 100%;
   padding: 8px 10px;
@@ -389,7 +389,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     width: 212px;
   }
-`,Ve=t.button`
+`,Me=t.button`
   display: block;
   width: 100%;
   margin-top: 20px;
@@ -416,8 +416,8 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     width: 212px;
   }
-`,We=t.div`
-  color: ${i=>i.color||Pe.error};
+`,Te=t.div`
+  color: ${i=>i.color||Ne.error};
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
   letter-spacing: var(--main-letter-spacing);
@@ -425,7 +425,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   margin-left: 9px;
   font-size: 12px;
   font-family: 'Poppins400';
-`,Me=F().shape({goal:j().required("Selecting a goal is required")});function Te({onForm:i,onBackPage:n}){return e.jsxs(De,{children:[e.jsx(He,{src:Ee,alt:"illustration-summer-hiking"}),e.jsxs(Le,{children:[e.jsx(Ge,{children:"Your goal"}),e.jsx(Ie,{children:"Choose a goal so that we can help you effectively"}),e.jsx(D,{initialValues:{goal:""},validationSchema:Me,onSubmit:i,children:()=>e.jsxs(Ne,{children:[e.jsxs(Ae,{children:[e.jsxs(q,{children:[e.jsx(P,{type:"radio",name:"goal",value:"Lose Fat"}),"Lose Fat"]}),e.jsxs(q,{children:[e.jsx(P,{type:"radio",name:"goal",value:"Maintain"}),"Maintain"]}),e.jsxs(q,{children:[e.jsx(P,{type:"radio",name:"goal",value:"Gain Muscle"}),"Gain Muscle"]})]}),e.jsx(b,{name:"goal",component:We}),e.jsx(qe,{type:"submit",children:"Next"}),e.jsx(Ve,{type:"button",onClick:n,children:"Back"})]})})]})]})}const Re="/Healthy_life/assets/genderAge-63bb302d.png",Ye={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},Ue=t.div`
+`,Re=F().shape({goal:j().required("Selecting a goal is required")});function Ye({onForm:i,onBackPage:n}){return e.jsxs(Le,{children:[e.jsx(Ge,{src:De,alt:"illustration-summer-hiking"}),e.jsxs(Ie,{children:[e.jsx(Ae,{children:"Your goal"}),e.jsx(qe,{children:"Choose a goal so that we can help you effectively"}),e.jsx(N,{initialValues:{goal:""},validationSchema:Re,onSubmit:i,children:()=>e.jsxs(He,{children:[e.jsxs(Ve,{children:[e.jsxs(q,{children:[e.jsx(P,{type:"radio",name:"goal",value:"Lose Fat"}),"Lose Fat"]}),e.jsxs(q,{children:[e.jsx(P,{type:"radio",name:"goal",value:"Maintain"}),"Maintain"]}),e.jsxs(q,{children:[e.jsx(P,{type:"radio",name:"goal",value:"Gain Muscle"}),"Gain Muscle"]})]}),e.jsx(b,{name:"goal",component:Te}),e.jsx(We,{type:"submit",children:"Next"}),e.jsx(Me,{type:"button",onClick:n,children:"Back"})]})})]})]})}const Ue="/Healthy_life/assets/genderAge-63bb302d.png",_e={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},Oe=t.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -443,7 +443,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     padding-top: 20px;
     padding-bottom: 72px;
   }
-`,_e=t.img`
+`,Qe=t.img`
   height: 296px;
   width: 300px;
   background: transparent;
@@ -457,7 +457,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     width: 592px;
     height: 570px;
   }
-`,Oe=t.div`
+`,Ze=t.div`
   @media (min-width: 834px) {
     display: flex;
     flex-direction: column;
@@ -467,7 +467,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media (min-width: 1440px) {
     align-items: flex-start;
   }
-`,Qe=t.h1`
+`,Xe=t.h1`
   color: var(--primary-color-white);
   font-size: 24px;
   font-weight: 500;
@@ -485,7 +485,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     text-align: start;
   }
-`,Ze=t.p`
+`,Je=t.p`
   color: var(--primary-color-grey);
   font-size: 18px;
   font-weight: 400;
@@ -502,7 +502,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     text-align: start;
   }
-`,Xe=t(N)`
+`,Ke=t(D)`
   display: flex;
   flex-direction: column;
 
@@ -513,14 +513,14 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     width: 212px;
   }
-`,Je=t.div`
+`,et=t.div`
   margin-bottom: 24px;
   width: 234px;
 
   @media screen and (min-width: 1440px) {
     align-items: flex-start;
   }
-`,Ke=t.div`
+`,tt=t.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -548,7 +548,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   &::placeholder {
     color: #555;
   }
-`;const et=t.button`
+`;const it=t.button`
   display: block;
   width: 100%;
   padding: 8px 10px;
@@ -572,7 +572,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   &:focus {
     background-color: var(--secondary-color-yellow);
   }
-`,tt=t.button`
+`,nt=t.button`
   display: block;
   width: 100%;
   margin-top: 20px;
@@ -633,7 +633,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   line-height: 20px;
   text-align: start;
   margin-bottom: 24px;
-`;t.div``;const it=t(h)`
+`;t.div``;const rt=t(h)`
   position: relative;
   width: 100%;
   padding: 8px 10px;
@@ -675,13 +675,13 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   line-height: 1.42;
   text-align: start;
 `,_=t.div`
-  color: ${i=>i.color||Ye.error};
+  color: ${i=>i.color||_e.error};
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
   letter-spacing: var(--main-letter-spacing);
   margin-top: 5px;
   font-size: 12px;
-`,nt=F().shape({gender:j().required("Gender is required"),birthDate:se().transform(function(i,n){return this.isType(i)?i:he(n,"dd.MM.yyyy",new Date)}).min("1900-01-01","Date is too early").max(new Date,"Please enter a correct date").typeError("Please enter a valid date DD.MM.YYYY").required("Date of birth should be filled")});function rt({onForm:i,onBackPage:n}){return e.jsxs(Ue,{children:[e.jsx(_e,{src:Re,alt:"illustration-gender-and-age"}),e.jsxs(Oe,{children:[e.jsx(Qe,{children:"Select gender, Age"}),e.jsx(Ze,{children:"Choose a goal so that we can help you effectively"}),e.jsx(D,{initialValues:{gender:"",birthDate:""},validationSchema:nt,onSubmit:i,children:()=>e.jsxs(Xe,{children:[e.jsxs(Je,{children:[e.jsx(U,{children:"Gender"}),e.jsxs(Ke,{children:[e.jsxs(Y,{children:[e.jsx(W,{type:"radio",name:"gender",value:"male"}),"Male"]}),e.jsxs(Y,{children:[e.jsx(W,{type:"radio",name:"gender",value:"female"}),"Female"]})]}),e.jsx(b,{name:"gender",component:_})]}),e.jsx(U,{children:"Date of birth"}),e.jsx(it,{name:"birthDate",placeholder:"00.00.0000"}),e.jsx(b,{name:"birthDate",component:_}),e.jsx(et,{type:"submit",children:"Next"}),e.jsx(tt,{type:"button",onClick:n,children:"Back"})]})})]})]})}const at="/Healthy_life/assets/bodyParameters-dbc57aec.png",ot={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},st=t.div`
+`,at=F().shape({gender:j().required("Gender is required"),birthDate:le().transform(function(i,n){return this.isType(i)?i:ge(n,"dd.MM.yyyy",new Date)}).min("1900-01-01","Date is too early").max(new Date,"Please enter a correct date").typeError("Please enter a valid date DD.MM.YYYY").required("Date of birth should be filled")});function ot({onForm:i,onBackPage:n}){return e.jsxs(Oe,{children:[e.jsx(Qe,{src:Ue,alt:"illustration-gender-and-age"}),e.jsxs(Ze,{children:[e.jsx(Xe,{children:"Select gender, Age"}),e.jsx(Je,{children:"Choose a goal so that we can help you effectively"}),e.jsx(N,{initialValues:{gender:"",birthDate:""},validationSchema:at,onSubmit:i,children:()=>e.jsxs(Ke,{children:[e.jsxs(et,{children:[e.jsx(U,{children:"Gender"}),e.jsxs(tt,{children:[e.jsxs(Y,{children:[e.jsx(W,{type:"radio",name:"gender",value:"male"}),"Male"]}),e.jsxs(Y,{children:[e.jsx(W,{type:"radio",name:"gender",value:"female"}),"Female"]})]}),e.jsx(b,{name:"gender",component:_})]}),e.jsx(U,{children:"Date of birth"}),e.jsx(rt,{name:"birthDate",placeholder:"00.00.0000"}),e.jsx(b,{name:"birthDate",component:_}),e.jsx(it,{type:"submit",children:"Next"}),e.jsx(nt,{type:"button",onClick:n,children:"Back"})]})})]})]})}const st="/Healthy_life/assets/bodyParameters-dbc57aec.png",ct={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},lt=t.div`
   background-color: var(--primary-color-black-one);
   display: flex;
   flex-direction: column;
@@ -700,7 +700,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     padding-top: 20px;
     padding-bottom: 72px;
   }
-`,ct=t.img`
+`,dt=t.img`
   height: 296px;
   width: 300px;
   background: transparent;
@@ -714,7 +714,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     width: 592px;
     height: 588px;
   }
-`,lt=t.div`
+`,pt=t.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -729,7 +729,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     align-items: flex-start;
     flex-direction: column;
   }
-`,dt=t.h2`
+`,mt=t.h2`
   color: var(--primary-color-white);
   font-size: 24px;
   font-weight: 500;
@@ -745,7 +745,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     text-align: start;
   }
-`,pt=t.h2`
+`,ht=t.h2`
   color: var(--primary-color-grey);
   font-size: 18px;
   font-weight: 400;
@@ -762,7 +762,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     text-align: start;
   }
-`,mt=t.div`
+`,xt=t.div`
   @media screen and (min-width: 834px) {
     margin: 0 auto;
     width: 380px;
@@ -813,7 +813,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
-`,ht=t.button`
+`,gt=t.button`
   display: block;
   width: 100%;
   padding: 8px 10px;
@@ -840,7 +840,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     width: 212px;
   }
-`,xt=t.button`
+`,ut=t.button`
   display: block;
   width: 100%;
   padding: 8px 10px;
@@ -869,7 +869,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     width: 212px;
   }
 `,Z=t.div`
-  color: ${i=>i.color||ot.error};
+  color: ${i=>i.color||ct.error};
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
   letter-spacing: var(--main-letter-spacing);
@@ -877,7 +877,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   /* margin-left: 9px; */
   font-size: 12px;
   font-family: 'Poppins400';
-`,gt=F().shape({height:V().min(50,"Height must be at least 50cm").max(250,"Height must be less than 250cm").positive("Height must be a positive number").integer("Height must be an integer").required("Height is required"),weight:V().min(30,"Weight must be at least 30kg").max(150,"Weight must be less than 150kg").positive("Weight must be a positive number").integer("Weight must be an integer").required("Weight is required")});function ut({onForm:i,onBackPage:n}){return e.jsxs(st,{children:[e.jsx(ct,{src:at,alt:"Body parameters"}),e.jsxs(lt,{children:[e.jsx(dt,{children:"Body parameters"}),e.jsx(pt,{children:"Enter your parameters for correct performance tracking"}),e.jsx(D,{initialValues:{height:"",weight:""},validationSchema:gt,onSubmit:i,children:e.jsx(N,{children:e.jsxs(mt,{children:[e.jsxs(O,{children:["Height",e.jsx(h,{as:Q,type:"number",name:"height",placeholder:"Enter your height (in cm)"}),e.jsx(b,{name:"height",component:Z})]}),e.jsxs(O,{style:{marginTop:"24px"},children:["Weight",e.jsx(h,{as:Q,type:"number",name:"weight",placeholder:"Enter your weight (in kg)"}),e.jsx(b,{name:"weight",component:Z})]}),e.jsx(ht,{type:"submit",children:"Next"}),e.jsx(xt,{type:"button",onClick:n,children:"Back"})]})})})]})]})}const ft="/Healthy_life/assets/activity-0332f4f4.png",yt={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},bt=t.div`
+`,ft=F().shape({height:V().min(50,"Height must be at least 50cm").max(250,"Height must be less than 250cm").positive("Height must be a positive number").integer("Height must be an integer").required("Height is required"),weight:V().min(30,"Weight must be at least 30kg").max(150,"Weight must be less than 150kg").positive("Weight must be a positive number").integer("Weight must be an integer").required("Weight is required")});function yt({onForm:i,onBackPage:n}){return e.jsxs(lt,{children:[e.jsx(dt,{src:st,alt:"Body parameters"}),e.jsxs(pt,{children:[e.jsx(mt,{children:"Body parameters"}),e.jsx(ht,{children:"Enter your parameters for correct performance tracking"}),e.jsx(N,{initialValues:{height:"",weight:""},validationSchema:ft,onSubmit:i,children:e.jsx(D,{children:e.jsxs(xt,{children:[e.jsxs(O,{children:["Height",e.jsx(h,{as:Q,type:"number",name:"height",placeholder:"Enter your height (in cm)"}),e.jsx(b,{name:"height",component:Z})]}),e.jsxs(O,{style:{marginTop:"24px"},children:["Weight",e.jsx(h,{as:Q,type:"number",name:"weight",placeholder:"Enter your weight (in kg)"}),e.jsx(b,{name:"weight",component:Z})]}),e.jsx(gt,{type:"submit",children:"Next"}),e.jsx(ut,{type:"button",onClick:n,children:"Back"})]})})})]})]})}const bt="/Healthy_life/assets/activity-0332f4f4.png",wt={text:"#FFFFFF",inputBorder:"#45FFBC",inputBorderHover:"#21CE99",error:"#e74a3b",success:"#3cbc81",background:"transparent",iconStroke:"#FFFFFF"},vt=t.div`
   background-color: var(--primary-color-black-one);
   display: flex;
   flex-direction: column;
@@ -898,7 +898,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     padding-top: 20px;
     padding-bottom: 72px;
   }
-`,wt=t.img`
+`,kt=t.img`
   height: 296px;
   width: 300px;
   background: transparent;
@@ -912,7 +912,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     width: 592px;
     height: 588px;
   }
-`,vt=t.div`
+`,jt=t.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -928,7 +928,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     align-items: flex-start;
     width: 328px;
   }
-`,kt=t.h2`
+`,Ft=t.h2`
   color: var(--primary-color-white);
   font-size: 24px;
   font-weight: 500;
@@ -945,7 +945,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     text-align: start;
     align-items: flex-start;
   }
-`,jt=t.h3`
+`,St=t.h3`
   color: var(--primary-color-grey);
   font-size: 18px;
   font-weight: 400;
@@ -963,7 +963,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     text-align: start;
     align-items: flex-start;
   }
-`,Ft=t.div`
+`,zt=t.div`
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -985,7 +985,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   }
 `;t(h)`
   accent-color: #0f0;
-`;const St=t.button`
+`;const $t=t.button`
   display: block;
   width: 100%;
   padding: 8px 10px;
@@ -1016,7 +1016,7 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
     margin-left: 0;
     width: 212px;
   }
-`,zt=t.button`
+`,Bt=t.button`
   display: block;
   width: 100%;
   margin-top: 20px;
@@ -1043,8 +1043,8 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   @media screen and (min-width: 1440px) {
     width: 212px;
   }
-`,Bt=t.div`
-  color: ${i=>i.color||yt.error};
+`,Ct=t.div`
+  color: ${i=>i.color||wt.error};
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
   letter-spacing: var(--main-letter-spacing);
@@ -1096,4 +1096,4 @@ import{r as a,c as F,a as j,s as t,L as oe,j as e,F as N,b as h,d as D,E as b,e 
   line-height: 20px;
   text-align: left;
   margin-bottom: 24px;
-`;const $t=F().shape({activity:V().required("Selecting an activity level is required")});function Ct({onBackPage:i,onForm:n}){return e.jsxs(bt,{children:[e.jsx(wt,{src:ft,alt:"Activity illustration"}),e.jsxs(vt,{children:[e.jsx(kt,{children:"Your Activity"}),e.jsx(jt,{children:"To correctly calculate calorie and water intake"}),e.jsx(D,{initialValues:{activityLevel:""},validationSchema:$t,onSubmit:n,children:e.jsxs(N,{children:[e.jsxs(Ft,{children:[e.jsxs(k,{children:[e.jsx(y,{type:"radio",name:"activity",value:"1.2"}),"If you do not have physical activity and sedentary work"]}),e.jsxs(k,{children:[e.jsx(y,{type:"radio",name:"activity",value:"1.375"}),"If you do short runs or light gymnastics 1-3 times a week"]}),e.jsxs(k,{children:[e.jsx(y,{type:"radio",name:"activity",value:"1.55"}),"If you play sports with average loads 3-5 times a week"]}),e.jsxs(k,{children:[e.jsx(y,{type:"radio",name:"activity",value:"1.725"}),"If you train fully 6-7 times a week"]}),e.jsxs(k,{children:[e.jsx(y,{type:"radio",name:"activity",value:"1.9"}),"If your work is related to physical labor, you train 2 times a day and include strength exercises in your training program"]})]}),e.jsx(b,{name:"activity",component:Bt}),e.jsx(St,{type:"submit",children:"Sign Up"}),e.jsx(zt,{onClick:i,children:"Back"})]})})]})]})}E.Notify.init({showOnlyTheLastOne:!0,cssAnimationStyle:"from-bottom",clickToClose:!0,messageMaxLength:200,timeout:5e3,width:"300px"});const Lt=()=>{const[i,n]=a.useState(0),o=()=>{n(i+1)},p=()=>{n(i-1)},[r,c]=a.useState(""),[d,x]=a.useState(""),[w,S]=a.useState(""),[m,z]=a.useState("Lose Fat"),[f,B]=a.useState("male"),[v,$]=a.useState(""),[C,H]=a.useState(""),[T,J]=a.useState(""),[K,R]=a.useState("1.2"),ee=ce(),te=async s=>{s.preventDefault();const l={name:s.target.name.value,email:s.target.email.value,password:s.target.password.value};try{await u.validate(l,{abortEarly:!1}),c(l.name),x(l.email),S(l.password),o()}catch(g){E.Notify.failure(g.errors.join(", "))}},ie=s=>{const l=s.goal;z(l),o()},ne=s=>{const l=s.gender,g=s.birthDate;B(l),$(g),o()},re=s=>{const l=s.height,g=s.weight;H(l),J(g),o()},ae=s=>{const l=s.activity;R(l),ee(le({name:r,email:d,password:w,goal:m,gender:f,birthDate:v,height:Number(C),weight:Number(T),activityLevel:Number(l)})).then(g=>{g.meta.requestStatus==="fulfilled"?E.Notify.success(`Hey ${r}, you're all set! Let's get started!`):E.Notify.failure("There was a problem with your registration.")})};return e.jsxs(ue,{children:[i===0&&e.jsx(Ce,{onForm:te,nameValue:r,emailValue:d,passwordValue:w}),i===1&&e.jsx(Te,{onForm:ie,onBackPage:p,goal:m}),i===2&&e.jsx(rt,{onForm:ne,onBackPage:p,gender:f,birthDateValue:v}),i===3&&e.jsx(ut,{onForm:re,onBackPage:p,heightValue:C,weightValue:T}),i===4&&e.jsx(Ct,{onForm:ae,onBackPage:p,activity:K,setActivity:R})]})};export{Lt as default};
+`;const Et=F().shape({activity:V().required("Selecting an activity level is required")});function Pt({onBackPage:i,onForm:n}){return e.jsxs(vt,{children:[e.jsx(kt,{src:bt,alt:"Activity illustration"}),e.jsxs(jt,{children:[e.jsx(Ft,{children:"Your Activity"}),e.jsx(St,{children:"To correctly calculate calorie and water intake"}),e.jsx(N,{initialValues:{activityLevel:""},validationSchema:Et,onSubmit:n,children:e.jsxs(D,{children:[e.jsxs(zt,{children:[e.jsxs(k,{children:[e.jsx(y,{type:"radio",name:"activity",value:"1.2"}),"If you do not have physical activity and sedentary work"]}),e.jsxs(k,{children:[e.jsx(y,{type:"radio",name:"activity",value:"1.375"}),"If you do short runs or light gymnastics 1-3 times a week"]}),e.jsxs(k,{children:[e.jsx(y,{type:"radio",name:"activity",value:"1.55"}),"If you play sports with average loads 3-5 times a week"]}),e.jsxs(k,{children:[e.jsx(y,{type:"radio",name:"activity",value:"1.725"}),"If you train fully 6-7 times a week"]}),e.jsxs(k,{children:[e.jsx(y,{type:"radio",name:"activity",value:"1.9"}),"If your work is related to physical labor, you train 2 times a day and include strength exercises in your training program"]})]}),e.jsx(b,{name:"activity",component:Ct}),e.jsx($t,{type:"submit",children:"Sign Up"}),e.jsx(Bt,{onClick:i,children:"Back"})]})})]})]})}E.Notify.init({showOnlyTheLastOne:!0,cssAnimationStyle:"from-bottom",clickToClose:!0,messageMaxLength:200,timeout:5e3,width:"300px"});const qt=()=>{const[i,n]=a.useState(0),s=()=>{n(i+1)},p=()=>{n(i-1)},[r,c]=a.useState(""),[d,x]=a.useState(""),[w,S]=a.useState(""),[m,z]=a.useState("Lose Fat"),[f,$]=a.useState("male"),[v,B]=a.useState(""),[C,H]=a.useState(""),[T,J]=a.useState(""),[K,R]=a.useState("1.2"),ee=de(),te=async o=>{o.preventDefault();const l={name:o.target.name.value,email:o.target.email.value,password:o.target.password.value};try{await u.validate(l,{abortEarly:!1}),c(l.name),x(l.email),S(l.password),s()}catch(g){E.Notify.failure(g.errors.join(", "))}},ie=o=>{const l=o.goal;z(l),s()},ne=o=>{const l=o.gender,g=o.birthDate.slice(0,2),oe=o.birthDate.slice(3,5),se=`${o.birthDate.slice(6)}.${oe}.${g}`;$(l),B(se),s()},re=o=>{const l=o.height,g=o.weight;H(l),J(g),s()},ae=o=>{const l=o.activity;R(l),ee(pe({name:r,email:d,password:w,goal:m,gender:f,birthDate:v,height:Number(C),weight:Number(T),activityLevel:Number(l)})).then(g=>{g.meta.requestStatus==="fulfilled"?E.Notify.success(`Hey ${r}, you're all set! Let's get started!`):E.Notify.failure("There was a problem with your registration.")})};return e.jsxs(ye,{children:[i===0&&e.jsx(Pe,{onForm:te,nameValue:r,emailValue:d,passwordValue:w}),i===1&&e.jsx(Ye,{onForm:ie,onBackPage:p,goal:m}),i===2&&e.jsx(ot,{onForm:ne,onBackPage:p,gender:f,birthDateValue:v}),i===3&&e.jsx(yt,{onForm:re,onBackPage:p,heightValue:C,weightValue:T}),i===4&&e.jsx(Pt,{onForm:ae,onBackPage:p,activity:K,setActivity:R})]})};export{qt as default};
