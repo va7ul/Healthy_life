@@ -68,7 +68,12 @@ const SignUpPage = () => {
 
   const handleSelectGender = (values) => {
     const selectedGender = values.gender;
-    const selectedBirthDate = values.birthDate;
+    const day = values.birthDate.slice(0, 2);
+    const month = values.birthDate.slice(3, 5);
+    const year = values.birthDate.slice(6);
+    const newBirthDate = `${year}.${month}.${day}`;
+
+    const selectedBirthDate = newBirthDate;
 
     setGender(selectedGender);
     setBirthDate(selectedBirthDate);
