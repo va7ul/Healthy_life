@@ -91,15 +91,16 @@ export const ProfileSettingsCard = () => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       formik.values.activityLevel = Number(values.activityLevel);
-      console.log(formik.values.birthDate);
-      console.log(typeof formik.values.birthDate);
-      console.log(formik.values.goal);
-      console.log(typeof formik.values.goal);
+
+      const day = formik.values.birthDate.slice(0, 2);
+      const month = formik.values.birthDate.slice(3, 5);
+      const year = formik.values.birthDate.slice(6);
+      const newBirthDate = `${year}.${month}.${day}`;
 
       let formData = new FormData();
       formData.append('avatar', formik.values.avatar);
       formData.append('name', formik.values.name);
-      formData.append('birthDate', formik.values.birthDate);
+      formData.append('birthDate', newBirthDate);
       formData.append('gender', formik.values.gender);
       formData.append('height', formik.values.height);
       formData.append('weight', formik.values.weight);
