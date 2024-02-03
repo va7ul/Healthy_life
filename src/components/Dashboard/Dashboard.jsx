@@ -100,7 +100,7 @@ export const Dashboard = () => {
           <DashboardWrapper>
             <MonthWrapper>
               <CalendarWrapper>
-                <PrevBtn type="button">
+                <PrevBtn>
                   <LinkBtnItem to={backLink}>
                     <IconArrowLeftWrapper>
                       <use href={`${sprite}#icon-arrowright`}></use>

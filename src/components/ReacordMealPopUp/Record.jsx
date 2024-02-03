@@ -98,7 +98,7 @@ export const Record = ({
             />
             <RecordInputCarbo
               min={0}
-              max={100}
+              max={200}
               type={'number'}
               onChange={(e) => {
                 setCarbogidrate(e.target.value);
@@ -108,7 +108,7 @@ export const Record = ({
             />
             <RecordInputProtein
               min={0}
-              max={100}
+              max={200}
               type={'number'}
               onChange={(e) => {
                 setProtein(e.target.value);
@@ -119,7 +119,7 @@ export const Record = ({
             <SubInputBlock>
               <RecordInputFat
                 min={0}
-                max={100}
+                max={200}
                 type={'number'}
                 onChange={(e) => {
                   setFat(e.target.value);
@@ -129,7 +129,7 @@ export const Record = ({
               />
               <RecordInputCalories
                 min={0}
-                max={400}
+                max={3000}
                 type={'number'}
                 onChange={(e) => {
                   setCalories(e.target.value);
