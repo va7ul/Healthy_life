@@ -1,4 +1,4 @@
-import{s as i,u as o,A as c,r as s,B as r,j as e,L as p,o as x}from"./index-4dfbfae1.js";import{a as m}from"./RecommendedList-2956517d.js";const h="/Healthy_life/assets/recommendedPage-3bc9c0df.png",l=i.div`
+import{s as i,u as o,A as c,r as s,B as r,j as e,L as p,o as x}from"./index-995fca2a.js";import{a as m}from"./RecommendedList-f197a0b5.js";const h="/Healthy_life/assets/recommendedPage-3bc9c0df.png",l=i.div`
   display: flex;
   flex-direction: column;
   /* justify-content: flex-end; */
